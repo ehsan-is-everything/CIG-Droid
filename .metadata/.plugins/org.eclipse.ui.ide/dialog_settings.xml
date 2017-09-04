@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git"/>
+		<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/FlowDroid"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-concolic"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-core"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /soot-infoflow-develop"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /soot-infoflow-android-develop"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /soot-develop"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /jasmin-develop"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /heros-develop"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

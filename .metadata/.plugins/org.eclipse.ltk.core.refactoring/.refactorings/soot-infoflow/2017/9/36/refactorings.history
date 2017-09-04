@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void copyFromSDK(String fileName, String targetPath, String SDKPath, String relativePath)&apos; from &apos;soot.jimple.infoflow.util.SystemClassHandler.isClassInSystemPackage()&apos; to &apos;soot.jimple.infoflow.util.SystemClassHandler&apos;&#x0A;- Original project: &apos;soot-infoflow&apos;&#x0A;- Method name: &apos;copyFromSDK&apos;&#x0A;- Destination type: &apos;soot.jimple.infoflow.util.SystemClassHandler&apos;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;copyFromSDK&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;soot.jimple.infoflow.util{SystemClassHandler.java" name="copyFromSDK" replace="false" selection="1961 451" stamp="1504507517407" version="1.0" visibility="2"/>
+</session>

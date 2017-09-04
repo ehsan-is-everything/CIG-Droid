@@ -1,0 +1,52 @@
+package ICFG;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import soot.MethodOrMethodContext;
+import soot.jimple.toolkits.callgraph.CallGraph;
+import soot.jimple.toolkits.callgraph.Edge;
+import soot.util.dot.DotGraph;
+import soot.util.queue.QueueReader;
+
+public class Test {
+	public static void main(String[] args) throws IOException, XmlPullParserException {
+		CallGraph cfg = new ExtractCFG().analyzeAPKFile(args[0], args[1]);
+		SerializeCallGraph.serializeCallGraph(cfg, 0, null);
+		
+		System.out.println();
+
+	}
+
+	public static class SerializeCallGraph {
+		public static File serializeCallGraph(CallGraph graph, int ID, String fileName) {
+			if (fileName == null) {
+				fileName = soot.SourceLocator.v().getOutputDir();
+				if (fileName.length() > 0) {
+					fileName = fileName + java.io.File.separator;
+				}
+				fileName = fileName + "call-graph" + ID + DotGraph.DOT_EXTENSION;
+			}
+			DotGraph canvas = new DotGraph("call-graph");
+			QueueReader<Edge> listener = graph.listener();
+			while (listener.hasNext()) {
+				Edge next = listener.next();
+
+				MethodOrMethodContext src = next.getSrc();
+				MethodOrMethodContext tgt = next.getTgt();
+				canvas.drawNode(src.toString()
+				// src.method().getJavaSourceStartLineNumber()
+				);
+				canvas.drawNode(tgt.toString()
+				// +tgt.method().getJavaSourceStartLineNumber()
+				);
+				canvas.drawEdge(src.toString(), tgt.toString());
+
+			}
+			canvas.plot(fileName);
+			return new File(fileName);
+		}
+	}
+}

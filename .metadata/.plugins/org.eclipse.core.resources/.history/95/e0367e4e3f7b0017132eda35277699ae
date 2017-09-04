@@ -1,0 +1,15 @@
+package ICFG;
+
+import java.io.IOException;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import soot.jimple.toolkits.callgraph.CallGraph;
+
+public class Test {
+	public static void main(String[] args) throws IOException, XmlPullParserException {
+		CallGraph cfg = new ExtractCFG().analyzeAPKFile(args[0], args[1]);
+		System.out.println();
+		
+	}
+}

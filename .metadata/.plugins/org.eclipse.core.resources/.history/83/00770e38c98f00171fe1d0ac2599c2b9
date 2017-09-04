@@ -1,0 +1,12 @@
+
+public class Toolbar extends View {
+    Toolbar() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	private static final String TAG = "Toolbar";
+
+
+
+}

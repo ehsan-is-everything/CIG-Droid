@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="ICFG.ExtractCFG"/>
+<fullyQualifiedTypeName name="soot.Scene"/>
+<fullyQualifiedTypeName name="soot.jimple.toolkits.callgraph.CallGraph"/>
+<fullyQualifiedTypeName name="soot.jimple.infoflow.results.InfoflowResults"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="soot.util.dot.DotGraph"/>
+<fullyQualifiedTypeName name="soot.util.queue.QueueReader"/>
+<fullyQualifiedTypeName name="soot.jimple.toolkits.callgraph.Edge"/>
+<fullyQualifiedTypeName name="soot.MethodOrMethodContext"/>
+<fullyQualifiedTypeName name="ICFG.Test.SerializeCallGraph"/>
+</qualifiedTypeNameHistroy>

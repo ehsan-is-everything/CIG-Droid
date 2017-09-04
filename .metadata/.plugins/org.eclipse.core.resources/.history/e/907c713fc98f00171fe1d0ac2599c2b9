@@ -1,0 +1,22 @@
+
+package android.support.v7.widget;
+
+import android.content.Context;
+import android.view.View;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class Toolbar extends View {
+    Toolbar() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	private static final String TAG = "Toolbar";
+
+
+
+}

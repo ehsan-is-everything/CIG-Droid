@@ -1,0 +1,16 @@
+package android.view;
+
+public class View {
+
+	public class OnClickListener {
+
+		public void onClick(View view) {
+			// TODO Auto-generated method stub
+			
+		}
+
+	}
+	public void setOnClickListener(OnClickListener l) {
+        
+    }
+}

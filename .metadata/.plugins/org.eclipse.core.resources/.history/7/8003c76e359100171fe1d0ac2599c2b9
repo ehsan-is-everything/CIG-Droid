@@ -1,0 +1,26 @@
+package ICFG;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import soot.MethodOrMethodContext;
+import soot.jimple.toolkits.callgraph.CallGraph;
+import soot.jimple.toolkits.callgraph.Edge;
+import soot.util.dot.DotGraph;
+import soot.util.queue.QueueReader;
+
+public class Test {
+	
+	public static void main(String[] args) throws IOException, XmlPullParserException {
+		CallGraph cfg = ExtractCFG.analyzeAPKFile(args[0], args[1]);
+		ExtractCFG.serializeCallGraph(cfg, 0, null);
+		ExtractCFG.printDummyMain();
+		ExtractCFG.serializeDummyMain("/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Ver 0.0.0/dummyMain/dummyMain");
+		System.out.println();
+
+	}
+
+	
+}
