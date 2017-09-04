@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Build Status](http://soot-build.cs.uni-paderborn.de/jenkins/buildStatus/icon?job=soot/heros-build)](http://soot-build.cs.uni-paderborn.de/jenkins/job/soot/job/heros-build/)
 
 ![Logo](logo/heros-logo.png)
@@ -89,3 +90,6 @@ Pre-compiled versions of Heros are available on our [nightly build server](http:
 [6]: http://dx.doi.org/10.1007/978-3-642-11970-5_8
 [7]: https://github.com/Sable/heros/blob/master/LICENSE.txt
 [8]: https://github.com/Sable/soot/blob/master/src/soot/jimple/toolkits/ide/icfg/JimpleBasedInterproceduralCFG.java
+=======
+hello heros!
+>>>>>>> db6d8b48b95868eda83a4c0c209b0de273e40c2f
