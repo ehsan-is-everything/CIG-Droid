@@ -1,7 +1,8 @@
 package android.view;
 
-public class View {
 
+public class View {
+	public OnClickListener mOnClickListener;
 	 /**
      * Interface definition for a callback to be invoked when a view is clicked.
      */
@@ -13,13 +14,14 @@ public class View {
          */
         void onClick(View v);
     }
+ 
 	public void setOnClickListener(OnClickListener l) {
-        
+       mOnClickListener=l; 
     }
-	public final View findViewById( int id) {
+	public final View findViewById(int id) {
         if (id < 0) {
             return null;
         }
-        return null;
+        return this;
     }
 }

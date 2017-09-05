@@ -6,7 +6,7 @@ public class FragmentActivity extends BaseFragmentActivityDonut  {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		
+		super.onCreate(savedInstanceState);
 	}
 
 	public void setContentView(int layoutResID) {

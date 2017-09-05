@@ -16,22 +16,21 @@
 
 package android.app;
 
-
-
 import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
+
 
 
 
 public class Activity {
-	Window mWindow;
+	View mWindow;
 	
     protected void onCreate(Bundle savedInstanceState) {
-        
+    	mWindow = new View();
     }
 
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,8 +46,9 @@ public class Activity {
       
         return null;
     }
-	 public View findViewById( int id) {
+	public View findViewById( int id) {
 	        return mWindow.findViewById(id);
-	    }
+	}
+	
 	 
 }

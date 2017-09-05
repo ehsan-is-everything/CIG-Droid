@@ -25,12 +25,12 @@ public final class Snackbar {
 
 	public static Snackbar make( View view,  CharSequence text,
             int duration) {
-        return null;
+        return new Snackbar();
     }
 
 	public Snackbar setAction(String string, Object object) {
 		// TODO Auto-generated method stub
-		return null;
+		return new Snackbar();
 	}
 
 	public void show() {
