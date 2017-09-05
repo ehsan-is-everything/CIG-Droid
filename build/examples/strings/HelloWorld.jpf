@@ -1,0 +1,24 @@
+target=strings.HelloWorld
+
+@using=jpf-core
+@using=jpf-symbc
+
+classpath=${jpf-symbc}/build/examples
+sourcepath=${jpf-symbc}/src/examples
+#classpath=/home/miroslav/Research/jpf/jpf-symbc/build/examples
+#sourcepath=/home/miroslav/Research/jpf/jpf-symbc/src/examples
+symbolic.strings = true
+symbolic.concolic = true
+
+#symbolic.dp=choco
+symbolic.string_dp=z3str
+symbolic.string_dp_timeout_ms=3000
+symbolic.debug=on
+symbolic.method= strings.HelloWorld.hello(sym#sym)
+search.depth_limit = 10
+search.multiple_errors=true
+
+#listener = gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener
+#listener = sidechannel.TimingChannelListener
+listener=gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener 
+vm.storage.class=nil
