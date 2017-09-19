@@ -12,3 +12,5 @@ symbolic.lazy = true
 
 symbolic.method = lazyinit.paramAndPoly.TestParamAndPolymorphism.run(sym#sym), lazyinit.paramAndPoly.Node.isNext(sym), lazyinit.paramAndPoly.Node.isNextObject(sym)
 #listener = gov.nasa.jpf.symbc.SymbolicListener
+listener=gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener
+#,gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener

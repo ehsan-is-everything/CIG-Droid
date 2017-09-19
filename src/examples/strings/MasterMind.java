@@ -3,19 +3,24 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 import java.io.File;
-
+import gov.nasa.jpf.symbc.Debug;
 
 public class MasterMind {
 	public static void main(String[] args){
 
 
+	test();
+		
+	}
 
-		Random gen= new Random();
+	public static void test(){
+Random gen= new Random();
 		int target= 0;
 		// while(hasDupes(target= (gen.nextInt(9000) + 1000)));
 		String targetStr = target +"";
 		boolean guessed = false;
 		Scanner input = new Scanner(System.in);
+		String in=input.nextLine();
 		int guesses = 0;
 		do{
 			int bulls = 0;
@@ -23,7 +28,7 @@ public class MasterMind {
 			System.out.print("Guess a 4-digit number with no duplicate digits: ");
 			int guess;
 			try{
-				guess = Integer.parseInt(args[1].trim());
+				guess = Debug.makeSymbolicInteger("guess");//Integer.parseInt(in.trim());
 				if(hasDupes(guess) || guess < 1000) continue;
 			}catch(InputMismatchException e){
 				continue;
@@ -44,7 +49,7 @@ public class MasterMind {
 			}
 		}while(!guessed);
 		System.out.println("You won after "+guesses+" guesses!");
-	}
+}
  
 	public static boolean hasDupes(int num){
 		boolean[] digs = new boolean[10];

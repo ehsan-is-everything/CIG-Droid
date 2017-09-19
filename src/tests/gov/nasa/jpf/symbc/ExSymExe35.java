@@ -19,32 +19,32 @@
 package gov.nasa.jpf.symbc;
 import gov.nasa.jpf.symbc.Symbolic;
 
-public class ExSymExe30 {
+public class ExSymExe35 {
 	
 	@Symbolic ("true")
-	static float staticGlobalFloat = 0.1f;
+	static int staticGlobalFloat = 1;
 	@Symbolic ("true")
-	float globalFloat = 4.4f;
+	int globalFloat = 4;
 	@Symbolic ("true")
 	static int staticGlobalInt = 0;
 	@Symbolic ("true")
 	int globalInt = 4;
 	
   public static void main (String[] args) {
-	  float x = 3;
-	  float y = 5;
-	  ExSymExe30 inst = new ExSymExe30();
-	  inst.test(x, y, 9.99f);
-		//test(x, y, 9.99f);
+	  int x = 3;
+	  int y = 5;
+//	  ExSymExe35 inst = new ExSymExe35();
+//	  inst.test(x, y, 9);
+		test(x, y, 9);
   }
 
   /*
    * test FNEG, FADD, FSUB, FDIV, FMUL, FREM, FCMPG & FCMPL bytecodes
    */
   
-  //public void test (float x, float z, float r) { //invokevirtual
-//  public static void test (float x, float z, float r) { //invokestatic
-  private void test (float x, float z, float r) { //invokespecial
+  //public void test (int x, int z, int r) { //invokevirtual
+  public static void test (int x, int z, int r) { //invokestatic
+  //private void test (int x, int z, int r) { //invokespecial
 	  
 	  float a = staticGlobalFloat;
 	  float b = z;
@@ -71,9 +71,11 @@ public class ExSymExe30 {
 	  
 	  float remain = a % d; //FREM - not supported
 	  	  
-	  System.out.println("Testing ExSymExe30");
-	  if(a>5)
+	  System.out.println("Testing ExSymExe35"+ staticGlobalFloat);
+	  if(staticGlobalFloat==1){
+		System.out.println("branch assert");
 		assert(false);
+		}
 	  if ( x < z) //FCMPG
 	  //if ( mul2 <= mul) //FCMPG
 	  //if ( mul2 != mul) //FCMPL

@@ -4,7 +4,7 @@ sourcepath=${jpf-symbc}/src/examples
 
 #symbolic.dp=choco
 symbolic.strings=true
-symbolic.string_dp=z3str2
+symbolic.string_dp=z3str
 symbolic.string_dp_timeout_ms=3000
 symbolic.debug=true
 
