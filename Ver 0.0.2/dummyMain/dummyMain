@@ -1,0 +1,68 @@
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.example.lab.testak_textinput.MainActivity $r1;
+        boolean $z0, $z1;
+        com.example.lab.testak_textinput.MainActivity$1 $r2;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label01:
+        if $i0 == 0 goto label10;
+
+     label02:
+        $r1 = new com.example.lab.testak_textinput.MainActivity;
+
+        specialinvoke $r1.<com.example.lab.testak_textinput.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label10;
+
+        virtualinvoke $r1.<com.example.lab.testak_textinput.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label03:
+        if $i0 == 3 goto label08;
+
+     label04:
+        if $i0 == 4 goto label05;
+
+        $z0 = virtualinvoke $r1.<com.example.lab.testak_textinput.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null);
+
+     label05:
+        if $i0 == 5 goto label06;
+
+        $z1 = virtualinvoke $r1.<com.example.lab.testak_textinput.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>(null);
+
+     label06:
+        $r2 = new com.example.lab.testak_textinput.MainActivity$1;
+
+        specialinvoke $r2.<com.example.lab.testak_textinput.MainActivity$1: void <init>(com.example.lab.testak_textinput.MainActivity)>($r1);
+
+        if $i0 == 6 goto label07;
+
+        virtualinvoke $r2.<com.example.lab.testak_textinput.MainActivity$1: void onClick(android.view.View)>(null);
+
+     label07:
+        $r2 = null;
+
+        if $i0 == 7 goto label04;
+
+     label08:
+        if $i0 == 8 goto label03;
+
+        if $i0 == 9 goto label09;
+
+        if $i0 == 10 goto label03;
+
+     label09:
+        $r1 = null;
+
+        if $i0 == 11 goto label02;
+
+     label10:
+        if $i0 == 12 goto label01;
+
+        return;
+    }
