@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = new Toolbar();//(Toolbar) findViewById(R.id.toolbar);;
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);		
        /*FloatingActionButton*/ View fab = /*(FloatingActionButton)*/ findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener()

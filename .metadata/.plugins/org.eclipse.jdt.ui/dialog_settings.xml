@@ -5,6 +5,7 @@
 	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="2" key="CallHierarchyViewPart.field_mode"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
+	<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/build" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="3" key="CallHierarchyViewPart.orientation"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<item value="823" key="CallHierarchyViewPart.ratio1"/>
@@ -38,6 +39,9 @@
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>

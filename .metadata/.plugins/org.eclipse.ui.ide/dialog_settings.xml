@@ -4,6 +4,13 @@
 		<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git"/>
 		<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/FlowDroid"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item value="563" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="384" key="DIALOG_HEIGHT"/>
+		<item value="359" key="DIALOG_X_ORIGIN"/>
+		<item value="116" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>

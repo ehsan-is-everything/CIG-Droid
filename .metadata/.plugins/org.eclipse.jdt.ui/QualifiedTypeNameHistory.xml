@@ -10,4 +10,6 @@
 <fullyQualifiedTypeName name="soot.jimple.toolkits.callgraph.Edge"/>
 <fullyQualifiedTypeName name="soot.MethodOrMethodContext"/>
 <fullyQualifiedTypeName name="ICFG.Test.SerializeCallGraph"/>
+<fullyQualifiedTypeName name="gov.nasa.jpf.symbc.Debug"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
 </qualifiedTypeNameHistroy>
