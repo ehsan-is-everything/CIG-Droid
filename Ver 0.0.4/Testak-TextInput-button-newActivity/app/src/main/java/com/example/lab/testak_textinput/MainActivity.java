@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(st.charAt(0)=='a') {
+                if(st.charAt(0)!='a') {
                     Intent myIntent = new Intent(MainActivity.this,
                             SecondActivity.class);
+                    myIntent.putExtra("ID", 125);
                     startActivity(myIntent);
                 }
             }
