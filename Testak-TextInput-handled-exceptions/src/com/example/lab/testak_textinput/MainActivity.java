@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 			String content = et.getText().toString();
 			Debug.printSymbolicRef(content, "CONTENT_VALUE_IN_MAIN!!!:::>>");
 			if (content != null) {
-				int st = Debug.makeSymbolicInteger("st");//Integer.parseInt(content);
+				int st = Debug.makeSymbolicInteger("st");// Integer.parseInt(content);
 				// st=Debug.makeSymbolicInteger("st");
-				if (content.equals("ALI") && st==0) {
+				if (content.equals("ALI") && st == 0) {
 					assert (false);
 				}
 			}
