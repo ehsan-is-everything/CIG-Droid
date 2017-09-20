@@ -4,9 +4,9 @@ target=com.example.lab.testak_textinput.dummyMain
 #@using=jpf-symbc
 
 
-classpath=/home/ehsan/eclipse-java-workspace/Testak-TextInput-handled-exceptions/bin
+classpath=/home/ehsan/eclipse-java-workspace/Testak-TextInput-button/bin
 
-sourcepath=/home/ehsan/eclipse-java-workspace/Testak-TextInput-handled-exceptions/src
+sourcepath=/home/ehsan/eclipse-java-workspace/Testak-TextInput-button/src
 
 # analyze TestPaths.testMe(int x, boolean b) using symbolic values for 'x' and
 # concrete value for 'b'
