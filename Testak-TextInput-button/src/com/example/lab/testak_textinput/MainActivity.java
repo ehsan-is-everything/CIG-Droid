@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = new Toolbar();`//(Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = new Toolbar();//(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         EditText et=(EditText)Debug.makeSymbolicRef("et", new EditText());//(EditText) findViewById(R.id.editText);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        FloatingActionButton fab = new FloatingActionButton();//(FloatingActionButton) findViewById(R.id.fab);
+        View fab =findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button b= new Button();//(Button) findViewById(R.id.button);
+        View b= findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
