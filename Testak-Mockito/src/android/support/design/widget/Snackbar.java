@@ -19,9 +19,9 @@ package android.support.design.widget;
 import android.view.View;
 
 
-public final class Snackbar {
+public class Snackbar {
 
-    public static final int LENGTH_LONG = 0;
+    public static int LENGTH_LONG = 0;
 
 	public static Snackbar make( View view,  CharSequence text,
             int duration) {
