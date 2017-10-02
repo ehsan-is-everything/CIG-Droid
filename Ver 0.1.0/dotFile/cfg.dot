@@ -1,0 +1,47 @@
+digraph "call-graph" {
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"
+    "<android.app.Activity: void <clinit>()>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<android.app.Activity: void <clinit>()>";
+    "<com.example.mahmoud.testak.MainActivity$1: void <init>(com.example.mahmoud.testak.MainActivity)>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.mahmoud.testak.MainActivity$1: void <init>(com.example.mahmoud.testak.MainActivity)>";
+    "<com.example.mahmoud.testak.MainActivity$1: void onClick(android.view.View)>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.mahmoud.testak.MainActivity$1: void onClick(android.view.View)>";
+    "<android.support.design.widget.Snackbar: void <clinit>()>"
+    "<com.example.mahmoud.testak.MainActivity$1: void onClick(android.view.View)>"->"<android.support.design.widget.Snackbar: void <clinit>()>";
+    "<android.support.design.widget.Snackbar: android.support.design.widget.Snackbar make(android.view.View,java.lang.CharSequence,int)>"
+    "<com.example.mahmoud.testak.MainActivity$1: void onClick(android.view.View)>"->"<android.support.design.widget.Snackbar: android.support.design.widget.Snackbar make(android.view.View,java.lang.CharSequence,int)>";
+    "<java.lang.Object: void <init>()>"
+    "<com.example.mahmoud.testak.MainActivity$1: void <init>(com.example.mahmoud.testak.MainActivity)>"->"<java.lang.Object: void <init>()>";
+    "<java.lang.Object: void finalize()>"
+    "<java.lang.Object: void <init>()>"->"<java.lang.Object: void finalize()>";
+    "<java.lang.RuntimeException: void <init>(java.lang.String)>"
+    "<java.lang.Object: void finalize()>"->"<java.lang.RuntimeException: void <init>(java.lang.String)>";
+    "<java.lang.RuntimeException: void <init>(java.lang.String)>"->"<java.lang.RuntimeException: void <init>(java.lang.String)>";
+    "<java.lang.Exception: void <init>()>"
+    "<java.lang.RuntimeException: void <init>(java.lang.String)>"->"<java.lang.Exception: void <init>()>";
+    "<java.lang.Object: void <init>()>"->"<java.lang.RuntimeException: void <init>(java.lang.String)>";
+    "<com.example.mahmoud.testak.MainActivity: void <init>()>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.mahmoud.testak.MainActivity: void <init>()>";
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>";
+    "<com.example.mahmoud.testak.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.mahmoud.testak.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>";
+    "<com.example.mahmoud.testak.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.mahmoud.testak.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>";
+    "<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
+    "<com.example.mahmoud.testak.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>"->"<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>";
+    "<android.support.v7.app.AppCompatActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+    "<com.example.mahmoud.testak.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"->"<android.support.v7.app.AppCompatActivity: boolean onOptionsItemSelected(android.view.MenuItem)>";
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"->"<com.example.mahmoud.testak.MainActivity$1: void <init>(com.example.mahmoud.testak.MainActivity)>";
+    "<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>"
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"->"<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>";
+    "<android.support.v7.app.AppCompatActivity: void setContentView(int)>"
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"->"<android.support.v7.app.AppCompatActivity: void setContentView(int)>";
+    "<android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>"
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"->"<android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>";
+    "<android.support.v7.app.AppCompatActivity: void setSupportActionBar(android.support.v7.widget.Toolbar)>"
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"->"<android.support.v7.app.AppCompatActivity: void setSupportActionBar(android.support.v7.widget.Toolbar)>";
+    "<com.example.mahmoud.testak.MainActivity: void onCreate(android.os.Bundle)>"->"<android.support.v7.app.AppCompatActivity: android.view.View findViewById(int)>";
+    "<android.support.v7.app.AppCompatActivity: void <init>()>"
+    "<com.example.mahmoud.testak.MainActivity: void <init>()>"->"<android.support.v7.app.AppCompatActivity: void <init>()>";
+}
