@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/jpf-core/src/main/gov/nasa/jpf/tool/RunJPF.java"/>
+<listEntry value="/jpf-core/src/main/gov/nasa/jpf/JPF.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -21,8 +21,8 @@
 <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry path=&quot;3&quot; projectName=&quot;jpf-core&quot; type=&quot;1&quot;/&gt;&#10;"/>
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="gov.nasa.jpf.tool.RunJPF"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;${resource_loc}&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="gov.nasa.jpf.JPF"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="+sourcepath=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/src/examples/&#10;+classpath=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/src/examples/&#10;+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory&#10;+vm.classpath=.&#10;+vm.storage.class=&#10;+symbolic.concolic=true&#10;+symbolic.debug=on&#10;+symbolic.method=concolic.DART.test(sym#sym)&#10;+search.multiple_errors=true&#10;+jpf.report.console.finished=&#10;+listener=gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener,gov.nasa.jpf.listener.CoverageAnalyzer&#10;concolic.DART"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="jpf-symbc"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx1024m -ea"/>
 </launchConfiguration>

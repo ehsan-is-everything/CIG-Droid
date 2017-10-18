@@ -119,7 +119,9 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
 //	    } catch (Exception e) {
 //	    }
 //	}
-
+//اگه یه جایی پراپرتی نقض شد این تابع فراخوانی میشه.
+//می ره آخرین نقطه انتخاب که بر اساس پی سی هست رو پیدا می کنه
+//خطا رو بر میداره همراه با پی سی کنار هم چاپ می کنه و داخل خلاصه متد نگهداری می کنه
 
 	@Override
 	public void propertyViolated (Search search){
@@ -169,7 +171,8 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
 		//}
 	}
 	
-	
+//در این متد دو حالت بررسی می شود. وقتی یک متد فراخوانی میشه و وقتی ریترن میشه.
+//وقتی متد فراخوانی میشه. اطالاعات متد مثل نام آرگومان ها تایپشون و نمادین یا عینی بودنشون در میاره می ریزه توی خلاصه متدها
 	
 
 	@Override

@@ -20,17 +20,17 @@ package concolic;
 
 //import java.util.concurrent.ThreadLocalRandom;
 //import gov.nasa.jpf.symbc.Symbolic;
-import gov.nasa.jpf.symbc.*;
+//import gov.nasa.jpf.symbc.*;
 // taken from the original DART paper
 
 public class DART {
 //@Symbolic ("true")
 //static int a;
-public static void test(/*int x, int y*/) {
-		/*if (y>=5+x && x > 0){
+public static void test(int x, int y) {
+		if (y>=5+x && x > 0){
 			if(x>0 && y==10) {
-				while(x>3)
-					x++;
+				//while(x>3)
+				//	x++;
 				abort();
 			}
 		} else {
@@ -38,14 +38,14 @@ public static void test(/*int x, int y*/) {
 				abort();
 			else
 				y=100;
-		}*/
+		}
 
 //@Symbolic ("true")
 //int 
 //int a = ThreadLocalRandom.current().nextInt(-1000, 1000 + 1);
-Integer a=(Integer)Debug.makeSymbolicRef("a",new Integer(2));
+//Integer a=(Integer)Debug.makeSymbolicRef("a",new Integer(2));
 //int a=(int)Math.random();
-if(a>=0){abort();}
+//if(a>=0){abort();}
 		
 
 	}
@@ -59,7 +59,7 @@ if(a>=0){abort();}
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//test(-2,100);
-test();
+		test(-2,100);
+		//test();
 	}
 }
