@@ -19,6 +19,5 @@
 	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/android-jar/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/android-jar/android-17-api.jar"/>
-	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/android-jar/soot-android17.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

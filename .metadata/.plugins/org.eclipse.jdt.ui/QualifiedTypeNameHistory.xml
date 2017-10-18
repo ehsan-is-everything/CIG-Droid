@@ -12,4 +12,16 @@
 <fullyQualifiedTypeName name="ICFG.Test.SerializeCallGraph"/>
 <fullyQualifiedTypeName name="gov.nasa.jpf.symbc.Debug"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.app.ActionBar"/>
+<fullyQualifiedTypeName name="A"/>
+<fullyQualifiedTypeName name="org.mockito.Mock"/>
+<fullyQualifiedTypeName name="org.mockito.InjectMocks"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="junit.framework.AssertionFailedError"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="org.mockito.junit.MockitoRule"/>
+<fullyQualifiedTypeName name="org.mockito.junit.MockitoJUnit"/>
+<fullyQualifiedTypeName name="org.junit.Rule"/>
+<fullyQualifiedTypeName name="B"/>
+<fullyQualifiedTypeName name="org.mockito.internal.creation.MockSettingsImpl"/>
 </qualifiedTypeNameHistroy>

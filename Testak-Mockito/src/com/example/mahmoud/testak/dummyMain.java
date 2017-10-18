@@ -22,29 +22,29 @@ import android.support.v7.widget.Toolbar;
 
 @RunWith(MockitoJUnitRunner.class)
 public class dummyMain {
-	 @Mock
-	 Bundle Bundle;
+	@Mock
+	Bundle Bundle;
 
 	@Mock
 	FloatingActionButton FloatingActionButton;
-
+	@Mock
+	AppCompatActivity AppCompatActivity;
 	@Mock
 	Snackbar Snackbar;
 	
-	@Mock
-	Menu Menu;
-
-	@Mock
-	MenuItem MenuItem;
-
 	@Mock
 	View View;
 
 	@Mock
 	Toolbar Toolbar;
 	
-//	@Mock
-//	AppCompatActivity AppCompatActivity;	
+	
+	
+	@Mock
+	Menu Menu;
+
+	@Mock
+	MenuItem MenuItem;	
 
 	@InjectMocks
 	MainActivity ma;
