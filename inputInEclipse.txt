@@ -1,0 +1,12 @@
++sourcepath=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/src/examples/
++classpath=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/src/examples/
++vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
++vm.classpath=.
++vm.storage.class=
++symbolic.concolic=true
++symbolic.debug=on
++symbolic.method=concolic.DART.test(sym#sym)
++search.multiple_errors=true
++jpf.report.console.finished=
++listener=gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener,gov.nasa.jpf.listener.CoverageAnalyzer
+concolic.DART
