@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Testak-TextInput.iml" filepath="$PROJECT_DIR$/Testak-TextInput.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testak-TextInput-button.iml" filepath="$PROJECT_DIR$/Testak-TextInput-button.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

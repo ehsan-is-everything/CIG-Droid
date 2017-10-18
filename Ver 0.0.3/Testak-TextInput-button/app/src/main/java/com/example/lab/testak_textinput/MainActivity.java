@@ -1,5 +1,7 @@
 package com.example.lab.testak_textinput;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         EditText et=(EditText) findViewById(R.id.editText);
         final String st =et.getText().toString();
 
-
+//        final SQLiteDatabase db=openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
+//        db.execSQL("CREATE TABLE IF NOT EXISTS student(stdno VARCHAR,name VARCHAR,marks VARCHAR);");
+//        db.execSQL("INSERT INTO student VALUES('9031066','ehsan','20'");
+//        db.execSQL("INSERT INTO student VALUES('9031068','hamid','19'");
+//        db.execSQL("INSERT INTO student VALUES('9031806','seyed','20'");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
 
@@ -39,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(st.charAt(0)=='a') {
-                    assert(false);
-                }
+               // db.execSQL("SELECT * FROM student where stdno='"+st+"'");
             }
         });
 
