@@ -131,20 +131,15 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	// می کنه
 	@Override
 	public void stateAdvanced(Search search) {
-		
+
 		VM vm = search.getVM();
 		ThreadInfo ti = vm.getCurrentThread();
 		StackFrame sf = ti.getTopFrame();
-		MethodInfo mi = sf.getMethodInfo();
-		String methodName = mi.getBaseName();
-		
-		String[]staticPath=getPathFromStaticAnalysis(vm.getConfig());
-		
-	}
-
-	private String[] getPathFromStaticAnalysis(Config config) {
-		// TODO Auto-generated method stub
-		return null;
+		if (sf != null) {
+			MethodInfo mi = sf.getMethodInfo();
+			String methodName = mi.getBaseName();
+			System.err.println(methodName);
+		}
 	}
 
 	@Override
@@ -230,9 +225,17 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 
 				if (isMethodSink(shortName, longName, className)) {
 					result = "-----------------STACK TRACE OF CURRENT APPLICATION RUN";
-					if (isInputOfSinkSymbolic(sf)) {
+					String[] symList = isInputOfSinkSymbolic(sf);
+					if (symList != null) {
 						result += " FOR CATCHING VULNERABILITY--------------\n\n";
 						result += makeStackTrace(sf);
+						result += "-----------------ID OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------\n\n";
+						int counter=1;
+						for(String id : symList) {
+							result +=counter+") "+id+"\n";
+							counter++;
+						}
+						result +="\n-----------------END OF NAME OF IDS----------------------------\n\n";
 					} else {
 						result += " FOR WARNING ABOUT A DANGEROUS PATH--------------\n\n";
 						result += makeStackTrace(sf);
@@ -463,20 +466,25 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 		return stackTrace;
 	}
 
-	private boolean isInputOfSinkSymbolic(StackFrame sf) {
+	private String[] isInputOfSinkSymbolic(StackFrame sf) {
 		Object[] obj = sf.getSlotAttrs();
 		for (Object object : obj) {
 			if (object != null) {
 				if (object instanceof DerivedStringExpression) {
 					DerivedStringExpression query = (DerivedStringExpression) object;
 					if (!query.trackedSymVars.isEmpty()) {
-						return true;
+						String[] symList = new String[query.trackedSymVars.size()];
+						for (int i = 0; i < query.trackedSymVars.size(); i++) {
+							String tmp = query.trackedSymVars.get(i);
+							symList[i] = tmp.substring(0, tmp.indexOf('['));
+						}
+						return symList;
 					}
 				}
 			}
 		}
 
-		return false;
+		return null;
 	}
 
 	private boolean isMethodSink(String shortName, String longName, String className) {
