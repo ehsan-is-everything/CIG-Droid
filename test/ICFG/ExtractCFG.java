@@ -1,5 +1,6 @@
 package ICFG;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
 /*******************************************************************************
@@ -16,20 +17,29 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import soot.MethodOrMethodContext;
 import soot.Scene;
+import soot.SootClass;
 import soot.SootMethod;
 import soot.jimple.infoflow.android.SetupApplication;
 import soot.jimple.infoflow.results.InfoflowResults;
 import soot.jimple.infoflow.taintWrappers.EasyTaintWrapper;
 import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.jimple.toolkits.callgraph.Edge;
+import soot.jimple.toolkits.callgraph.Targets;
 import soot.util.dot.DotGraph;
 import soot.util.queue.QueueReader;
 
@@ -38,8 +48,24 @@ import soot.util.queue.QueueReader;
  *
  */
 public class ExtractCFG {
-
+	private static String FileAddress = null;
+	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
 	private static SetupApplication setupApplication;
+
+	private static HashMap<Integer, String> listofInputEntries = new HashMap<>();
+
+	private static void WriteResultsToFile(String result) {
+		// The name of the file to open.
+		String fileName = FileAddress;
+
+		try (PrintWriter out = new PrintWriter(fileName)) {
+			out.println(result);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.err.println("CANT WRITE RESULTS IN FILE!!!!");
+		}
+
+	}
 
 	/**
 	 * Analyzes the given APK file for extracting CFG of App.
@@ -108,6 +134,120 @@ public class ExtractCFG {
 		// res.printResultsToConsole();
 		return Scene.v().getCallGraph();
 
+	}
+
+	public static void bestPathes(String fileName, String androidJars, String AppInputsFileAddress)
+			throws IOException, XmlPullParserException {
+		FileAddress = AppInputsFileAddress;
+
+		CallGraph cfg = analyzeAPKFile(fileName, androidJars);
+
+		Iterator<Edge> it = cfg.iterator();
+
+		LinkedList<SootMethod> listofTargetMethods = new LinkedList<>();
+
+		while (it.hasNext()) {
+			Edge e = it.next();
+			if (e.getSrc().method().retrieveActiveBody().toString().contains("rawQuery")) {
+				SootMethod targetMethod = e.getSrc().method();
+				if (!listofTargetMethods.contains(targetMethod))
+					listofTargetMethods.add(targetMethod);
+			}
+			// System.out.print("KIND::" + e.kind() + " SRC STM:: " +
+			// e.getSrc().method().retrieveActiveBody());
+			// System.out.println(" TRG::" + e.tgt().getName() + "\n");
+		}
+
+		for (SootMethod targetMethod : listofTargetMethods) {
+			Stack<SootMethod> stack = new Stack<>();
+			stack.push(targetMethod);
+			visit(cfg, stack);
+			bestPathes.add(stack);
+		}
+	}
+
+	private static void visit(CallGraph cg, Stack<SootMethod> stack) {
+
+		// iterate over unvisited parents
+		Iterator<Edge> ptargets = cg.edgesInto(stack.peek());
+		// String s=stack.peek().getDeclaringClass().getJavaPackageName();
+		// String s=stack.peek().getDeclaringClass().getJavaStyleName();
+
+		if (ptargets != null) {
+			while (ptargets.hasNext()) {
+				Edge p = (Edge) (ptargets.next());
+				SootMethod sm = p.getSrc().method();
+				if (sm.getName().equals("dummyMainMethod")) {
+					stack.push(sm);
+					makeSPFdummyMainInfo(stack);
+					return;
+				}
+
+				// if (!stack.peek().getSignature().equals(p.getSignature())) {
+				stack.push(sm);
+				visit(cg, stack);
+				// }
+			}
+		}
+
+		// iterate over unvisited children
+		/*
+		 * Iterator<MethodOrMethodContext> ctargets = new Targets(cg.edgesOutOf(k));
+		 * 
+		 * 
+		 * if (ctargets != null) { while (ctargets.hasNext()) { SootMethod c =
+		 * (SootMethod) ctargets.next(); if (c == null) System.out.println("c is null");
+		 * // dot.drawEdge(identifier, c.getName());
+		 * 
+		 * 
+		 * if (!visited.containsKey(c.getSignature())) visit(cg, c); } }
+		 */
+	}
+
+	private static void makeSPFdummyMainInfo(Stack<SootMethod> stack) {
+		SootMethod SootDummyMain = stack.pop();
+
+		String result = "This is Static information for building SPF dummyMain class::\n\n\n";
+		int counter = 1;
+
+		while (!stack.isEmpty()) {
+			SootMethod currentMethod = stack.pop();
+			String className = currentMethod.getDeclaringClass().getJavaStyleName();
+			if (className.contains("$")) {
+				String parentClassName = className.substring(0, className.indexOf('$'));
+				SootClass currentClass = hasClass(parentClassName);
+				if (currentClass != null) {
+					List<SootMethod> list = currentClass.getMethods();
+					for (SootMethod sm : list) {
+						if (sm.getActiveBody().toString().contains(className)) {
+							result = +counter + ") \"LISTENER\" Method :: " + currentMethod.getName() + " in "
+									+ className + " that declares in " + sm.getName() + " from Class:: "
+									+ sm.getDeclaringClass().getJavaPackageName() + "."
+									+ sm.getDeclaringClass().getJavaStyleName() + "\n\n"
+									+ "Find findViewById(#int) method in following code related to " + className
+									+ "\n\nActive Body of this Method in Jimple is::\n\n"
+									+ sm.getActiveBody().toString() + "\n\n";
+						}
+					}
+				}
+			} else {
+				result = +counter + ") \"NORMAL\" Method :: " + currentMethod.getDeclaringClass().getJavaStyleName()
+						+ "from Class:: " + currentMethod.getDeclaringClass().getJavaPackageName() + "\n\n";
+			}
+			counter++;
+		}
+		System.out.println(result);
+		WriteResultsToFile(result);
+	}
+
+	private static SootClass hasClass(String className) {
+		Iterator<SootClass> it = Scene.v().getApplicationClasses().iterator();
+		while (it.hasNext()) {
+			SootClass current = it.next();
+			if (current.getJavaStyleName().equals(className))
+				return current;
+		}
+		return null;
 	}
 
 	/**
