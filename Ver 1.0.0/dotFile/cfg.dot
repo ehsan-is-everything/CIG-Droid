@@ -62,14 +62,14 @@ digraph "call-graph" {
     "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.lab.testak_textinput.MainActivity: void <init>()>";
     "<com.example.lab.testak_textinput.MainActivity: void onCreate(android.os.Bundle)>"
     "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.lab.testak_textinput.MainActivity: void onCreate(android.os.Bundle)>";
-    "<com.example.lab.testak_textinput.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
-    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.lab.testak_textinput.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>";
     "<com.example.lab.testak_textinput.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>"
     "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.lab.testak_textinput.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>";
-    "<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
-    "<com.example.lab.testak_textinput.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>"->"<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>";
+    "<com.example.lab.testak_textinput.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
+    "<dummyMainClass: void dummyMainMethod(java.lang.String[])>"->"<com.example.lab.testak_textinput.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>";
     "<android.support.v7.app.AppCompatActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"
     "<com.example.lab.testak_textinput.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>"->"<android.support.v7.app.AppCompatActivity: boolean onOptionsItemSelected(android.view.MenuItem)>";
+    "<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>"
+    "<com.example.lab.testak_textinput.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>"->"<android.support.v7.app.AppCompatActivity: android.view.MenuInflater getMenuInflater()>";
     "<com.example.lab.testak_textinput.MainActivity: void onCreate(android.os.Bundle)>"->"<com.example.lab.testak_textinput.MainActivity$2: void <init>(com.example.lab.testak_textinput.MainActivity,android.widget.EditText,android.database.sqlite.SQLiteDatabase,android.widget.TextView)>";
     "<com.example.lab.testak_textinput.MainActivity: void onCreate(android.os.Bundle)>"->"<com.example.lab.testak_textinput.MainActivity$1: void <init>(com.example.lab.testak_textinput.MainActivity,android.database.sqlite.SQLiteDatabase)>";
     "<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>"
