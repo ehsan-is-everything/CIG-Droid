@@ -85,6 +85,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	private Map<String, MethodSummary> allSummaries;
 	private String currentMethodName = "";
 	private String result = null;
+	private boolean sinkMethodFound = false;
 
 	public SymbolicListener(Config conf, JPF jpf) {
 		jpf.addPublisherExtension(ConsolePublisher.class, this);
@@ -222,20 +223,31 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 				/*
 				 * MY CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				 */
-
+				if (sinkMethodFound && isLeakageMethod(shortName, longName, className)) {
+					String[] symList = isInputOfMethodSymbolic(sf);
+					result += "-----------------INFO OF OBJECTS THAT CAUSE LEAKAGE--------------\n\n";
+					if (symList != null) {
+						int counter=0;
+						for (String id : symList) {
+							result += counter + ") " + id + "\n";
+							counter++;
+						}
+						result += "\n-----------------END OF OBJECTS INFO----------------------------\n\n";
+					}
+				}
 				if (isMethodSink(shortName, longName, className)) {
 					result = "-----------------STACK TRACE OF CURRENT APPLICATION RUN";
-					String[] symList = isInputOfSinkSymbolic(sf);
+					String[] symList = isInputOfMethodSymbolic(sf);
 					if (symList != null) {
 						result += " FOR CATCHING VULNERABILITY--------------\n\n";
 						result += makeStackTrace(sf);
 						result += "-----------------ID OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------\n\n";
-						int counter=1;
-						for(String id : symList) {
-							result +=counter+") "+id+"\n";
+						int counter = 1;
+						for (String id : symList) {
+							result += counter + ") " + id + "\n";
 							counter++;
 						}
-						result +="\n-----------------END OF NAME OF IDS----------------------------\n\n";
+						result += "\n-----------------END OF NAME OF IDS----------------------------\n\n";
 					} else {
 						result += " FOR WARNING ABOUT A DANGEROUS PATH--------------\n\n";
 						result += makeStackTrace(sf);
@@ -451,6 +463,13 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 		}
 	}
 
+	private boolean isLeakageMethod(String shortName, String longName, String className) {
+		if (shortName.equals("setText") && className.equals("android.widget.TextView")) {
+			return true;
+		} else
+			return false;
+	}
+
 	private String makeStackTrace(StackFrame sf) {
 		String stackTrace = "";
 		int counter = 1;
@@ -466,7 +485,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 		return stackTrace;
 	}
 
-	private String[] isInputOfSinkSymbolic(StackFrame sf) {
+	private String[] isInputOfMethodSymbolic(StackFrame sf) {
 		Object[] obj = sf.getSlotAttrs();
 		for (Object object : obj) {
 			if (object != null) {
@@ -488,9 +507,10 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	}
 
 	private boolean isMethodSink(String shortName, String longName, String className) {
-		if (shortName.equals("rawQuery") && className.equals("android.database.sqlite.SQLiteDatabase"))
+		if (shortName.equals("rawQuery") && className.equals("android.database.sqlite.SQLiteDatabase")) {
+			sinkMethodFound = true;
 			return true;
-		else
+		} else
 			return false;
 	}
 
