@@ -12,9 +12,9 @@
 		</section>
 	</section>
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
-		<item value="500" key="SashWeightTree"/>
-		<item value="500" key="SashWeightDetails"/>
-		<item value="662" key="WIDTH"/>
-		<item value="175" key="HEIGHT"/>
+		<item value="794" key="SashWeightTree"/>
+		<item value="205" key="SashWeightDetails"/>
+		<item value="546" key="WIDTH"/>
+		<item value="150" key="HEIGHT"/>
 	</section>
 </section>

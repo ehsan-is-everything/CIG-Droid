@@ -16,16 +16,19 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc-vul-detection"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-core"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/concolic-walk-master/snapshots/jpf-core"/>
+			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/concolic-walk-master/tools/jpf/jpf-symbc"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/CIG-Droid/soot-infoflow-android-develop"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/CIG-Droid/soot-infoflow-develop"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/CIG-Droid/soot-develop"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/CIG-Droid/jasmin-develop"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/CIG-Droid/heros-develop"/>
-			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-core"/>
 			<item value="/home/ehsan/eclipse-java-workspace/JPF-Mockito"/>
 			<item value="/home/ehsan/eclipse-java-workspace/Testak-Mockito"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-concolic"/>
-			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /soot-infoflow-develop"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /soot-infoflow-android-develop"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android CFG /soot-develop"/>

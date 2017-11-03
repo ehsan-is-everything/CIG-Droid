@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import gov.nasa.jpf.symbc.Debug;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = new Toolbar();//(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final EditText et=new EditText();//(EditText) findViewById(R.id.editText);
+        final EditText et=(EditText)Debug.makeSymbolicRef("R.id.editText", new EditText());//new EditText(); //findViewById(R.id.editText);
 
 
         final SQLiteDatabase db=SQLiteDatabase.openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);

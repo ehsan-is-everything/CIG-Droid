@@ -1,12 +1,14 @@
 package android.database.sqlite;
 
 import java.io.File;
+import java.util.LinkedList;
 
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.os.CancellationSignal;
+import gov.nasa.jpf.symbc.Debug;
 
 public class SQLiteDatabase {
 	private static final int CREATE_IF_NECESSARY = 0;
@@ -67,10 +69,10 @@ public class SQLiteDatabase {
 
 	}
 
-	public void execSQL(String sql) /*throws SQLException*/ {
+	public void execSQL(String sql) /* throws SQLException */ {
 	}
 
-	public void execSQL(String sql, Object[] bindArgs) /*throws SQLException*/ {
+	public void execSQL(String sql, Object[] bindArgs) /* throws SQLException */ {
 
 	}
 
@@ -99,209 +101,209 @@ public class SQLiteDatabase {
 		// releaseReference();
 		// }
 		return new Cursor() {
-			
+
 			@Override
 			public void setExtras(Bundle extras) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public Bundle respond(Bundle extras) {
 				// TODO Auto-generated method stub
-				return null;
+				return (Bundle) Debug.makeSymbolicRef("Bundle", extras);
 			}
-			
+
 			@Override
 			public boolean requery() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("requery()");
 			}
-			
+
 			@Override
 			public boolean moveToPrevious() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("moveToPrevious()");
 			}
-			
+
 			@Override
 			public boolean moveToPosition(int position) {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("moveToPosition()");
 			}
-			
+
 			@Override
 			public boolean moveToNext() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("moveToNext()");
 			}
-			
+
 			@Override
 			public boolean moveToLast() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("moveToLast()");
 			}
-			
+
 			@Override
 			public boolean moveToFirst() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("moveToFirst()");
 			}
-			
+
 			@Override
 			public boolean move(int offset) {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("move()");
 			}
-			
+
 			@Override
 			public boolean isNull(int columnIndex) {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("isNull()");
 			}
-			
+
 			@Override
 			public boolean isLast() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("isLast");
 			}
-			
+
 			@Override
 			public boolean isFirst() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("isFirst()");
 			}
-			
+
 			@Override
 			public boolean isClosed() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("isClosed()");
 			}
-			
+
 			@Override
 			public boolean isBeforeFirst() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("isBeforeFirst()");
 			}
-			
+
 			@Override
 			public boolean isAfterLast() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("isAfterLast()");
 			}
-			
+
 			@Override
 			public boolean getWantsAllOnMoveCalls() {
 				// TODO Auto-generated method stub
-				return false;
+				return Debug.makeSymbolicBoolean("getWantsAllOnMoveCalls()");
 			}
-			
+
 			@Override
 			public int getType(int columnIndex) {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getType()");
 			}
-			
+
 			@Override
 			public String getString(int columnIndex) {
 				// TODO Auto-generated method stub
-				return null;
+				return Debug.makeSymbolicString("getString()");
 			}
-			
+
 			@Override
 			public short getShort(int columnIndex) {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicShort("getShort()");
 			}
-			
+
 			@Override
 			public int getPosition() {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getPosition()");
 			}
-			
+
 			@Override
 			public long getLong(int columnIndex) {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicLong("getLong()");
 			}
-			
+
 			@Override
 			public int getInt(int columnIndex) {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getInt()");
 			}
-			
+
 			@Override
 			public float getFloat(int columnIndex) {
 				// TODO Auto-generated method stub
-				return 0;
+				return (float) Debug.makeSymbolicReal("getFloat()");
 			}
-			
+
 			@Override
 			public Bundle getExtras() {
 				// TODO Auto-generated method stub
-				return null;
+				return (Bundle) Debug.makeSymbolicRef("getExtras()", new Bundle());
 			}
-			
+
 			@Override
 			public double getDouble(int columnIndex) {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicReal("getDouble()");
 			}
-			
+
 			@Override
 			public int getCount() {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getCount()");
 			}
-			
+
 			@Override
 			public String[] getColumnNames() {
-				// TODO Auto-generated method stub
-				return null;
+				// TODO extend the makeSymbolic()
+				return (String[]) Debug.makeSymbolicRef("getColumnNames()", (new LinkedList<String>()).toArray());
 			}
-			
+
 			@Override
 			public String getColumnName(int columnIndex) {
 				// TODO Auto-generated method stub
-				return null;
+				return Debug.makeSymbolicString("getColumnName()");
 			}
-			
+
 			@Override
 			public int getColumnIndexOrThrow(String columnName) throws IllegalArgumentException {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getColumnIndexOrThrow()");
 			}
-			
+
 			@Override
 			public int getColumnIndex(String columnName) {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getColumnIndex()");
 			}
-			
+
 			@Override
 			public int getColumnCount() {
 				// TODO Auto-generated method stub
-				return 0;
+				return Debug.makeSymbolicInteger("getColumnCount()");
 			}
-			
+
 			@Override
 			public byte[] getBlob(int columnIndex) {
 				// TODO Auto-generated method stub
-				return null;
+				return (byte[]) Debug.makeSymbolicRef("getBlob()", (new LinkedList<String>()).toArray());
 			}
-			
+
 			@Override
 			public void deactivate() {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void close() {
 				// TODO Auto-generated method stub
-				
+
 			}
 		};
 	}
