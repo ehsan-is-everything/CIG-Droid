@@ -66,6 +66,7 @@ import gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral;
 import gov.nasa.jpf.util.Pair;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -86,6 +87,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	private String currentMethodName = "";
 	private String result = null;
 	private boolean sinkMethodFound = false;
+	private String resultofLeakage;
 
 	public SymbolicListener(Config conf, JPF jpf) {
 		jpf.addPublisherExtension(ConsolePublisher.class, this);
@@ -224,21 +226,22 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 				 * MY CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				 */
 				if (sinkMethodFound && isLeakageMethod(shortName, longName, className)) {
-					String[] symList = isInputOfMethodSymbolic(sf);
-					result += "-----------------INFO OF OBJECTS THAT CAUSE LEAKAGE--------------\n\n";
-					if (symList != null) {
-						int counter=0;
-						for (String id : symList) {
-							result += counter + ") " + id + "\n";
-							counter++;
+					ArrayList<String> symList = isInputOfMethodSymbolic(sf);
+
+					if (symList != null && !symList.isEmpty()) {
+						if (!result.contains("-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------\n\n"
+								+ "Method is " + className + "." + shortName + "\n"
+								+ "\n-----------------END OF OBJECT INFO----------------------------\n\n")) {
+							result += "-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------\n\n";
+							result += "Method is " + className + "." + shortName + "()\n";
+							result += "\n-----------------END OF OBJECT INFO----------------------------\n\n";
 						}
-						result += "\n-----------------END OF OBJECTS INFO----------------------------\n\n";
 					}
 				}
 				if (isMethodSink(shortName, longName, className)) {
 					result = "-----------------STACK TRACE OF CURRENT APPLICATION RUN";
-					String[] symList = isInputOfMethodSymbolic(sf);
-					if (symList != null) {
+					ArrayList<String> symList = isInputOfMethodSymbolic(sf);
+					if (symList != null && !symList.isEmpty()) {
 						result += " FOR CATCHING VULNERABILITY--------------\n\n";
 						result += makeStackTrace(sf);
 						result += "-----------------ID OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------\n\n";
@@ -485,19 +488,25 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 		return stackTrace;
 	}
 
-	private String[] isInputOfMethodSymbolic(StackFrame sf) {
+	private ArrayList<String> isInputOfMethodSymbolic(StackFrame sf) {
 		Object[] obj = sf.getSlotAttrs();
-		for (Object object : obj) {
-			if (object != null) {
-				if (object instanceof DerivedStringExpression) {
-					DerivedStringExpression query = (DerivedStringExpression) object;
-					if (!query.trackedSymVars.isEmpty()) {
-						String[] symList = new String[query.trackedSymVars.size()];
-						for (int i = 0; i < query.trackedSymVars.size(); i++) {
-							String tmp = query.trackedSymVars.get(i);
-							symList[i] = tmp.substring(0, tmp.indexOf('['));
+		if (obj != null) {
+			for (Object object : obj) {
+				if (object != null) {
+					if (object instanceof DerivedStringExpression) {
+						DerivedStringExpression query = (DerivedStringExpression) object;
+						if (!query.trackedSymVars.isEmpty()) {
+							ArrayList<String> symList = new ArrayList<>(query.trackedSymVars.size());
+							for (int i = 0; i < query.trackedSymVars.size(); i++) {
+								String tmp = query.trackedSymVars.get(i);
+								if (query.toString().contains(tmp))
+									if (tmp.contains("["))
+										symList.add(tmp.substring(0, tmp.indexOf('[')));
+									else
+										symList.add(tmp);
+							}
+							return symList;
 						}
-						return symList;
 					}
 				}
 			}

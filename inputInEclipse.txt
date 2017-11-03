@@ -1,4 +1,3 @@
-+target=com.example.lab.testak_textinput.dummyMain
 +sourcepath=/home/ehsan/eclipse-java-workspace/Testak-textinput-button-sql-vul/src
 +classpath=/home/ehsan/eclipse-java-workspace/Testak-textinput-button-sql-vul/bin
 +vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
@@ -6,13 +5,11 @@
 +vm.storage.class=
 +symbolic.concolic=true
 +symbolic.debug=on
-+symbolic.lazy=on
-+symbolic.lazy.subtypes = true
 +symbolic.strings=true
-+symbolic.string_dp=z3str
-+symbolic.arrays=true
-+symbolic.method=com.example.lab.testak_textinput.onCreate(conc)
++symbolic.lazy=true
++symbolic.method=com.example.lab.testak_textinput.MainActivity.onCreate(conc)
 +search.multiple_errors=true
 +jpf.report.console.finished=
 +listener=gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener,gov.nasa.jpf.listener.CoverageAnalyzer
++search.depth_limit=10
 com.example.lab.testak_textinput.dummyMain
