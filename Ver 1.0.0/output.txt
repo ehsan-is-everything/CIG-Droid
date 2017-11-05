@@ -26,7 +26,7 @@ JavaPathfinder core system v8.0 (rev 32+) - (C) 2005-2014 United States Governme
 ====================================================== system under test
 com.example.lab.testak_textinput.dummyMain.main()
 
-====================================================== search started: 10/25/17 3:40 PM
+====================================================== search started: 11/5/17 2:43 PM
 com.example.lab.testak_textinput.dummyMain.main
 com.example.lab.testak_textinput.MainActivity.onCreate
 gov.nasa.jpf.vm.Verify.randomBool
@@ -59,11 +59,548 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 gov.nasa.jpf.symbc.Debug.makeFieldsSymbolic
 New sym int R.id.editText[379] min=-2147483648, max=2147483647
 New sym int R.id.editText[379].content.length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 1
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 1
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+dbCursor.moveToNext() != 0
+--------end after splitting------------
 numeric PC: constraint # = 1
-R.id.editText[379] != -1 -> true
+dbCursor.moveToNext() != 0 -> true
 
-constraint # = 1
-R.id.editText[379] != -1
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() != 0
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 1
+dbCursor.moveToNext() = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 1
+dbCursor.moveToNext() = 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 1
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() = 0
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() = 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 2
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 -> true
+
+constraint # = 2
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 2
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 3
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 3
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:5 sat:5 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:6 sat:6 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 4
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 4
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:7 sat:7 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:8 sat:8 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 5
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 5
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:9 sat:9 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:10 sat:10 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 6
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 6
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+
+====================================================== search constraint
+depth limit reached: 10
+
+====================================================== snapshot 
+no live threads
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:11 sat:11 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:12 sat:12 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+====================================================== search constraint
+depth limit reached: 10
+
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at com.example.lab.testak_textinput.MainActivity$2.onClick(MainActivity.java:57)
+	at com.example.lab.testak_textinput.dummyMain.main(dummyMain.java:12)
+
 
 ====================================================== Method Sequences
 [(expected = java.lang.NullPointerException.class), 		com_example_lab_testak_textinput_mainactivity.onCreate(null);, ##EXCEPTION## "java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object..."]
@@ -108,6 +645,32 @@ com.example.lab.testak_textinput.MainActivity.onCreate(null)  --> "java.lang.Nul
 </table>
 
 ====================================================== Vulnerability Detection Result
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.rawQueryWithFactory(SQLiteDatabase$CursorFactory,String,String[],String,CancellationSignal)
+2) android.database.sqlite.SQLiteDatabase.rawQuery(String,String[])
+3) com.example.lab.testak_textinput.MainActivity$2.onClick(View)
+4) com.example.lab.testak_textinput.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editText developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.widget.TextView.setText()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
 -----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
 
 1) android.database.sqlite.SQLiteDatabase.rawQuery(String,String[])
@@ -116,11 +679,18 @@ com.example.lab.testak_textinput.MainActivity.onCreate(null)  --> "java.lang.Nul
 
 -----------------END OF STACK TRACE--------------
 
------------------ID OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
 
-1) R.id.editText
+1) R.id.editText developer sanitizer for this input is OFF
 
 -----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.widget.TextView.setText()
+
+
+-----------------END OF OBJECT INFO----------------------------
 
 
 
@@ -145,8 +715,8 @@ bytecode            line                basic-block         branch              
 0.70 (14/20)        0.57 (4/7)          0.67 (6/9)           -                  0.50 (3/6)          android.app.Activity
 0.50 (3/6)          0.50 (1/2)          0.33 (1/3)           -                  0.50 (1/2)          android.content.Context
  -                   -                   -                   -                   -                  android.database.Cursor
-0.55 (42/76)        0.67 (12/18)        0.52 (13/25)         -                  0.54 (7/13)         android.database.sqlite.SQLiteDatabase
-0.11 (8/71)         0.08 (3/36)         0.08 (3/36)          -                  0.06 (2/35)         android.database.sqlite.SQLiteDatabase$1
+0.23 (70/298)       0.23 (14/60)        0.18 (14/77)        0.00 (0/6)          0.35 (8/23)         android.database.sqlite.SQLiteDatabase
+0.10 (12/119)       0.11 (4/37)         0.08 (6/72)          -                  0.09 (3/35)         android.database.sqlite.SQLiteDatabase$1
 1.00 (7/7)          1.00 (3/3)          1.00 (4/4)           -                  1.00 (2/2)          android.support.v4.app.BaseFragmentActivityDonut
 0.88 (7/8)          0.75 (3/4)          0.80 (4/5)           -                  0.67 (2/3)          android.support.v4.app.FragmentActivity
 1.00 (9/9)          1.00 (5/5)          1.00 (6/6)           -                  1.00 (4/4)          android.support.v7.app.AppCompatActivity
@@ -161,7 +731,7 @@ bytecode            line                basic-block         branch              
  -                   -                   -                   -                   -                  char
 0.78 (69/88)        0.74 (17/23)        0.72 (21/29)        0.00 (0/1)          0.50 (2/4)          com.example.lab.testak_textinput.MainActivity
 0.41 (9/22)         0.33 (2/6)          0.29 (2/7)           -                  0.50 (1/2)          com.example.lab.testak_textinput.MainActivity$1
-0.51 (47/92)        0.64 (7/11)         0.41 (15/37)        0.00 (0/1)          1.00 (2/2)          com.example.lab.testak_textinput.MainActivity$2
+1.00 (92/92)        1.00 (11/11)        1.00 (37/37)        1.00 (1/1)          1.00 (2/2)          com.example.lab.testak_textinput.MainActivity$2
 0.86 (18/21)        0.83 (5/6)          0.75 (6/8)           -                  0.50 (1/2)          com.example.lab.testak_textinput.dummyMain
  -                   -                   -                   -                   -                  double
  -                   -                   -                   -                   -                  float
@@ -202,7 +772,7 @@ bytecode            line                basic-block         branch              
  -                   -                   -                   -                   -                  java.lang.Runnable
 0.00 (0/23)         0.00 (0/10)         0.00 (0/10)          -                  0.00 (0/5)          java.lang.RuntimeException
 0.03 (4/147)        0.03 (1/31)         0.04 (2/56)         0.00 (0/4)          0.04 (1/26)         java.lang.Short
-0.06 (27/468)       0.08 (9/108)        0.04 (6/143)        0.00 (0/14)         0.07 (3/43)         java.lang.String
+0.07 (34/468)       0.09 (10/108)       0.07 (10/143)       0.00 (0/14)         0.12 (5/43)         java.lang.String
 0.35 (6/17)         0.00 (0/2)          0.50 (4/8)           -                  0.50 (2/4)          java.lang.String$CaseInsensitiveComparator
 0.00 (0/455)        0.00 (0/61)         0.00 (0/174)         -                  0.00 (0/89)         java.lang.StringBuilder
 0.38 (50/130)       0.27 (11/41)        0.33 (16/49)        0.25 (1/4)          0.11 (2/19)         java.lang.System
@@ -233,20 +803,20 @@ bytecode            line                basic-block         branch              
  -                   -                   -                   -                   -                  void
 
 ------------------------------------------------------------------------------------------------------------
-0.12 (1817/14869)   0.06 (188/3082)     0.05 (221/4483)     0.01 (6/747)        0.06 (73/1160)      1.00 (83/83)       total
+0.13 (1901/15139)   0.06 (196/3125)     0.05 (251/4571)     0.01 (7/753)        0.07 (77/1170)      1.00 (83/83)       total
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Calling 'getText()..."
 
 ====================================================== statistics
-elapsed time:       00:00:01
-states:             new=7,visited=0,backtracked=7,end=1
-search:             maxDepth=5,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=5
-heap:               new=495,released=29,maxLive=386,gcCycles=4
-instructions:       3689
+elapsed time:       00:00:02
+states:             new=17,visited=0,backtracked=17,end=5
+search:             maxDepth=10,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=10
+heap:               new=639,released=217,maxLive=464,gcCycles=14
+instructions:       4159
 max memory:         371MB
-loaded code:        classes=85,methods=1707
+loaded code:        classes=85,methods=1717
 
-====================================================== search finished: 10/25/17 3:40 PM
+====================================================== search finished: 11/5/17 2:43 PM
 
