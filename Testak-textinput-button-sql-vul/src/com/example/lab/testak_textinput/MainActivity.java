@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = new Toolbar();//(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final EditText et=(EditText)Debug.makeSymbolicRef("R.id.editText", new EditText());//new EditText(); //findViewById(R.id.editText);
+        final EditText et=(EditText)Debug.makeSymbolicRef("R.id.editText", new EditText());//findViewById(R.id.editText); //new EditText(); 
 
 
         final SQLiteDatabase db=SQLiteDatabase.openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
