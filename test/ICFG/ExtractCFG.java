@@ -22,6 +22,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -144,11 +145,19 @@ public class ExtractCFG {
 
 		Iterator<Edge> it = cfg.iterator();
 
-		LinkedList<SootMethod> listofTargetMethods = new LinkedList<>();
+		ArrayList<SootMethod> listofTargetMethods = new ArrayList<>();
 
 		while (it.hasNext()) {
 			Edge e = it.next();
-			if (e.getSrc().method().retrieveActiveBody().toString().contains("rawQuery")) {
+			String acvtiveBodyOfCurrentMethod = e.getSrc().method().retrieveActiveBody().toString();
+			if (acvtiveBodyOfCurrentMethod.contains("rawQuery")
+					|| acvtiveBodyOfCurrentMethod.contains("rawQueryWithFactory")
+					|| acvtiveBodyOfCurrentMethod.contains("query")
+					|| acvtiveBodyOfCurrentMethod.contains("queryWithFactory")
+					|| acvtiveBodyOfCurrentMethod.contains("delete")
+					|| acvtiveBodyOfCurrentMethod.contains("updateWithOnConflict")
+					|| acvtiveBodyOfCurrentMethod.contains("execSQL")
+					|| acvtiveBodyOfCurrentMethod.contains("update")) {
 				SootMethod targetMethod = e.getSrc().method();
 				if (!listofTargetMethods.contains(targetMethod))
 					listofTargetMethods.add(targetMethod);
