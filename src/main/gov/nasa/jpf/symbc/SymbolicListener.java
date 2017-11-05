@@ -65,11 +65,16 @@ import gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral;
 
 import gov.nasa.jpf.util.Pair;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Stack;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
@@ -85,9 +90,14 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 
 	private Map<String, MethodSummary> allSummaries;
 	private String currentMethodName = "";
-	private String result = null;
+	// private String result = "";
+	// private HashMap<String, ArrayList<VulPart>> vulResult = new HashMap<>();
+	private VulnerabiltyResult vulResult = new VulnerabiltyResult();
+	private ArrayList<VulPart> vulArrayList = new ArrayList<>();
 	private boolean sinkMethodFound = false;
 	private String resultofLeakage;
+	private int warningCounter = 1;
+	private int dangerCounter = 1;
 
 	public SymbolicListener(Config conf, JPF jpf) {
 		jpf.addPublisherExtension(ConsolePublisher.class, this);
@@ -225,35 +235,79 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 				/*
 				 * MY CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				 */
-				if (sinkMethodFound && isLeakageMethod(shortName, longName, className)) {
-					ArrayList<String> symList = isInputOfMethodSymbolic(sf);
+				/*
+				 * if(isNextInstructionInputMethod(nextInstruction)) { //TODO change the next
+				 * instruction to makeSymbolicRef() result="change"; }
+				 */
 
-					if (symList != null && !symList.isEmpty()) {
-						if (!result.contains("-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------\n\n"
-								+ "Method is " + className + "." + shortName + "\n"
-								+ "\n-----------------END OF OBJECT INFO----------------------------\n\n")) {
-							result += "-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------\n\n";
-							result += "Method is " + className + "." + shortName + "()\n";
-							result += "\n-----------------END OF OBJECT INFO----------------------------\n\n";
-						}
+				if (isLeakageMethod(shortName, longName, className)) {
+					String[] symList = isInputOfLeakageMethodSymbolic(sf, shortName);
+					// instead of sink method, i should trace the symbolic var till target method
+					if (symList != null) {
+						VulPart vp = new VulPart();
+						vp.setHeader("-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------\n\n");
+						vp.setContent(new String[] { "Method is " + className + "." + shortName + "()\n" });
+						vp.setEnd("\n-----------------END OF OBJECT INFO----------------------------\n\n");
+						// String out = "-----------------INFO OF OBJECT THAT CAUSE
+						// LEAKAGE--------------\n\n"
+						// + "Method is " + className + "." + shortName + "()\n"
+						// + "\n-----------------END OF OBJECT INFO----------------------------\n\n";
+						// if (!result.contains(out)) {
+						// result += out;
+						// }
+
+						vulResult.putLeakgeMethod(vp, symList);
+						sinkMethodFound = false;
 					}
+
 				}
 				if (isMethodSink(shortName, longName, className)) {
-					result = "-----------------STACK TRACE OF CURRENT APPLICATION RUN";
-					ArrayList<String> symList = isInputOfMethodSymbolic(sf);
+					// result += "\n\n-----------------STACK TRACE OF CURRENT APPLICATION RUN";
+					HashMap<String, String> symList = isInputOfMethodSymbolic(sf, shortName);
 					if (symList != null && !symList.isEmpty()) {
-						result += " FOR CATCHING VULNERABILITY--------------\n\n";
-						result += makeStackTrace(sf);
-						result += "-----------------ID OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------\n\n";
-						int counter = 1;
-						for (String id : symList) {
-							result += counter + ") " + id + "\n";
+						VulPart vp = new VulPart();
+						vp.setHeader(
+								"\n\n-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------\n\n");
+						// result += " FOR CATCHING VULNERABILITY--------------\n\n";
+						vp.setContent(makeStackTrace(sf));
+						// result += makeStackTrace(sf);
+						vp.setEnd("\n-----------------END OF STACK TRACE--------------\n\n");
+						// result += "-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION
+						// VULNERABILITY--------------\n\n";
+						vulArrayList.add(vp);
+						VulPart vp2 = new VulPart();
+						vp2.setHeader(
+								"-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------\n\n");
+						int counter = 0;
+						String res[] = new String[symList.size()];
+						for (String id : symList.keySet()) {
+							res[counter] = id + " developer sanitizer for this input is " + symList.get(id);
 							counter++;
 						}
-						result += "\n-----------------END OF NAME OF IDS----------------------------\n\n";
+						vp2.setContent(res);
+						vp2.setEnd("\n-----------------END OF NAME OF IDS----------------------------\n\n");
+						// result += "\n-----------------END OF NAME OF
+						// IDS----------------------------\n\n";
+						vulArrayList.add(vp2);
+						sinkMethodFound = true;
+						vulResult.put("VUL_" + dangerCounter, (ArrayList<VulPart>) vulArrayList.clone());
+						dangerCounter++;
+						vulArrayList.clear();
 					} else {
-						result += " FOR WARNING ABOUT A DANGEROUS PATH--------------\n\n";
-						result += makeStackTrace(sf);
+						// VulPart vp = new VulPart();
+						// vp.setHeader(
+						// "\n\n-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR WARNING
+						// ABOUT A DANGEROUS PATH--------------\n\n");
+						// // result += " FOR WARNING ABOUT A DANGEROUS PATH--------------\n\n";
+						// // result += makeStackTrace(sf);
+						// vp.setContent(makeStackTrace(sf));
+						// vp.setEnd("\n-----------------END OF STACK TRACE--------------\n\n");
+						// vulArrayList.add(vp);
+						// vulResult.put("WARNING_" + warningCounter, (ArrayList<VulPart>)
+						// vulArrayList.clone());
+						// warningCounter++;
+						// vulArrayList.clear();
+						// sinkMethodFound = false;
 					}
 				}
 
@@ -466,29 +520,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 		}
 	}
 
-	private boolean isLeakageMethod(String shortName, String longName, String className) {
-		if (shortName.equals("setText") && className.equals("android.widget.TextView")) {
-			return true;
-		} else
-			return false;
-	}
-
-	private String makeStackTrace(StackFrame sf) {
-		String stackTrace = "";
-		int counter = 1;
-		while (sf.getPrevious() != null) {
-			String mn = counter + ") " + sf.getClassName();
-			mn += "." + sf.getMethodInfo().getLongName();
-
-			stackTrace += mn + "\n";
-			sf = sf.getPrevious();
-			counter++;
-		}
-		stackTrace += "\n-----------------END OF STACK TRACE--------------\n\n";
-		return stackTrace;
-	}
-
-	private ArrayList<String> isInputOfMethodSymbolic(StackFrame sf) {
+	private String[] isInputOfLeakageMethodSymbolic(StackFrame sf, String shortName) {
 		Object[] obj = sf.getSlotAttrs();
 		if (obj != null) {
 			for (Object object : obj) {
@@ -496,14 +528,266 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 					if (object instanceof DerivedStringExpression) {
 						DerivedStringExpression query = (DerivedStringExpression) object;
 						if (!query.trackedSymVars.isEmpty()) {
-							ArrayList<String> symList = new ArrayList<>(query.trackedSymVars.size());
+							HashMap<String, String> symList = new HashMap<>(query.trackedSymVars.size());
+							for (int i = 0; i < query.trackedSymVars.size(); i++) {
+								String tmp = query.trackedSymVars.get(i);
+								if (query.toString().contains(tmp)) {
+									return makeStackTrace(sf.getPrevious());
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	private class VulnerabiltyResult {
+		private HashMap<String, ArrayList<VulPart>> result;
+
+		public VulnerabiltyResult() {
+			result = new HashMap<>();
+		}
+
+		public void putLeakgeMethod(VulPart vp, String[] symList) {
+			Iterator<ArrayList<VulPart>> it = result.values().iterator();
+			while (it.hasNext()) {
+				ArrayList<VulPart> array = it.next();
+				if (array.get(0).isContentContain(symList)) {
+					if (array.size() < 3)
+						array.add(vp);
+				}
+			}
+
+		}
+
+		public String printVulResult() {
+			String report = "";
+			Iterator<String> res = result.keySet().iterator();
+			while (res.hasNext()) {
+				String key = res.next();
+				for (VulPart vp : result.get(key)) {
+					report += vp.getHeader() + vp.getContentToStringForPrint() + vp.getEnd();
+				}
+			}
+			return report;
+		}
+
+		public void put(String key, ArrayList<VulPart> arrayResult) {
+			// if (key.contains("WARNING_")) {
+			// Iterator<String> it = result.keySet().iterator();
+			// if (!it.hasNext()) {
+			// result.put(key, arrayResult);
+			// return;
+			// }
+			// while (it.hasNext()) {
+			// String in = it.next();
+			// if (!in.contains("WARNING_"))
+			// continue;
+			// ArrayList<VulPart> value = result.get(in);
+			// for (int i = 0; i < value.size(); i++) {
+			// if
+			// (value.get(i).getContentToString().contains(arrayResult.get(i).getContentToString()))
+			// {
+			// continue;
+			// } else if
+			// (!arrayResult.get(i).getContentToString().equals(value.get(i).getContentToString())
+			// && arrayResult.get(i).getContentToString()
+			// .contains(value.get(i).getContentToString())) {
+			// if (i > 0) {
+			// result.get(in).remove(i);
+			// result.get(in).add(arrayResult.get(i));
+			// return;
+			// } else if (i == 0) {
+			// result.replace(in, arrayResult);
+			// return;
+			// }
+			// } else {
+			// result.put(key, arrayResult);
+			// return;
+			// }
+			// }
+			// }
+			// } else if (key.contains("VUL_")) {
+			if (result.isEmpty()) {
+				result.put(key, arrayResult);
+				return;
+			}
+			Iterator<String> it = result.keySet().iterator();
+			while (it.hasNext()) {
+				String in = it.next();
+				ArrayList<VulPart> value = result.get(in);
+				for (int i = 0; i < value.size(); i++) {
+					if (value.get(i).getContent().equals(arrayResult.get(i).getContent())) {
+						continue;
+					} else if (!arrayResult.get(i).getContent().equals(value.get(i).getContent())
+							&& arrayResult.get(i).getContentToString().contains(value.get(i).getContentToString())) {
+						if (i == 0) {
+							if (arrayResult.get(1).getContent().equals(value.get(1).getContent())) {
+								result.get(in).remove(value);
+								result.put(key, arrayResult);
+								return;
+							} else {
+								continue;
+							}
+						} else if (i == 1) {
+							result.put(key, arrayResult);
+							return;
+						}
+					} else {
+						result.put(key, arrayResult);
+						return;
+					}
+				}
+
+			}
+		}
+	}
+
+	private class VulPart {
+		private String header = "";
+		private String end = "";
+		private String content[] = null;
+
+		public boolean isContentContain(String[] con) {
+			String in = "";
+			String out = "";
+			for (String c : con)
+				in += c;
+			for (String c : content) {
+				out += c;
+			}
+			if (in.contains(out) || out.contains(in)) {
+				return true;
+			}
+			return false;
+		}
+
+		public String getHeader() {
+			return header;
+		}
+
+		public void setHeader(String header) {
+			this.header = header;
+		}
+
+		public String getEnd() {
+			return end;
+		}
+
+		public void setEnd(String end) {
+			this.end = end;
+		}
+
+		public String[] getContent() {
+			return content;
+		}
+
+		public String getContentToString() {
+			String res = "";
+			for (String s : content) {
+				res += s;
+			}
+			return res;
+		}
+
+		public String getContentToStringForPrint() {
+			String res = "";
+			int counter = 1;
+			for (String s : content) {
+				res += counter + ") " + s + "\n";
+				counter++;
+			}
+			return res;
+		}
+
+		public void setContent(String[] strings) {
+			this.content = strings;
+		}
+	}
+
+	private boolean isNextInstructionInputMethod(Instruction nextInstruction) {
+		if (nextInstruction.getMethodInfo().getName().contains("findViewById")) {
+			// nextInstruction.
+			return true;
+		}
+		return false;
+	}
+
+	private boolean isLeakageMethod(String shortName, String longName, String className) {
+		if (shortName.equals("setText") && className.equals("android.widget.TextView")) {
+			return true;
+		} else
+			return false;
+	}
+
+	private String[] makeStackTrace(StackFrame sf) {
+		String stackTrace[] = new String[sf.getDepth()];
+		int counter = 0;
+
+		while (sf.getPrevious() != null) {
+			String mn = sf.getClassName();
+			mn += "." + sf.getMethodInfo().getLongName();
+
+			stackTrace[counter] = mn;
+			sf = sf.getPrevious();
+			counter++;
+		}
+		return stackTrace;
+	}
+
+	private HashMap<String, String> isInputOfMethodSymbolic(StackFrame sf, String shortName) {
+		Object[] obj = sf.getSlotAttrs();
+		if (obj != null) {
+			for (Object object : obj) {
+				if (object != null) {
+					if (object instanceof DerivedStringExpression) {
+						DerivedStringExpression query = (DerivedStringExpression) object;
+						if (!query.trackedSymVars.isEmpty()) {
+							HashMap<String, String> symList = new HashMap<>(query.trackedSymVars.size());
 							for (int i = 0; i < query.trackedSymVars.size(); i++) {
 								String tmp = query.trackedSymVars.get(i);
 								if (query.toString().contains(tmp))
-									if (tmp.contains("["))
-										symList.add(tmp.substring(0, tmp.indexOf('[')));
-									else
-										symList.add(tmp);
+									// TODO need attention. it should be debugged!!!
+									if (shortName.equals("update") || shortName.equals("delete")
+											|| shortName.equals("updateWithOnConflict")) {
+										if (query.toString().contains("?"))
+											symList.put(tmp, "ON");
+										else
+											symList.put(tmp, "OFF");
+									}
+
+								if (shortName.equals("execSQL")) {
+									if (query.toString().toLowerCase().contains("update")
+											|| query.toString().toLowerCase().contains("delete")) {
+										if (tmp.contains("[")) {
+											if (query.toString().contains("?"))
+												symList.put(tmp.substring(0, tmp.indexOf('[')), "ON");
+											else
+												symList.put(tmp.substring(0, tmp.indexOf('[')), "OFF");
+										} else {
+											if (query.toString().contains("?"))
+												symList.put(tmp, "ON");
+											else
+												symList.put(tmp, "OFF");
+										}
+									} else {
+										return null;
+									}
+								} else {
+									if (tmp.contains("[")) {
+										if (query.toString().contains("?"))
+											symList.put(tmp.substring(0, tmp.indexOf('[')), "ON");
+										else
+											symList.put(tmp.substring(0, tmp.indexOf('[')), "OFF");
+									} else {
+										if (query.toString().contains("?"))
+											symList.put(tmp, "ON");
+										else
+											symList.put(tmp, "OFF");
+									}
+								}
 							}
 							return symList;
 						}
@@ -516,11 +800,38 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	}
 
 	private boolean isMethodSink(String shortName, String longName, String className) {
-		if (shortName.equals("rawQuery") && className.equals("android.database.sqlite.SQLiteDatabase")) {
-			sinkMethodFound = true;
-			return true;
-		} else
-			return false;
+		String sinks[] = { "android.database.sqlite.SQLiteDatabase.rawQuery",
+				"android.database.sqlite.SQLiteDatabase.rawQueryWithFactory",
+				"android.database.sqlite.SQLiteDatabase.query", "android.database.sqlite.SQLiteDatabase.update",
+				"android.database.sqlite.SQLiteDatabase.queryWithFactory",
+				"android.database.sqlite.SQLiteDatabase.delete",
+				"android.database.sqlite.SQLiteDatabase.updateWithOnConflict",
+				"android.database.sqlite.SQLiteDatabase.execSQL" };
+
+		for (String sink : sinks)
+			if (sink.equals(className + "." + shortName)) {
+				return true;
+			}
+
+		return false;
+	}
+
+	private HashMap<String, String> readSinksFromfile() {
+		HashMap<String, String> list = new HashMap<>();
+		try (BufferedReader br = new BufferedReader(new FileReader(""))) {
+			String line;
+			int counter = 1;
+			while ((line = br.readLine()) != null) {
+				list.put(counter + "", line);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	/*
@@ -733,8 +1044,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 		}
 
 		publisher.publishTopicStart("Vulnerability Detection Result");
-		if (result != null)
-			pw.println(result);
+		pw.println(vulResult.printVulResult());
 	}
 
 	protected class MethodSummary {

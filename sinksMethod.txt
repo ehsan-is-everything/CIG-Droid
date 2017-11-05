@@ -1,0 +1,8 @@
+android.database.sqlite.SQLiteDatabase.rawQuery
+android.database.sqlite.SQLiteDatabase.rawQueryWithFactory
+android.database.sqlite.SQLiteDatabase.query
+android.database.sqlite.SQLiteDatabase.update
+android.database.sqlite.SQLiteDatabase.queryWithFactory
+android.database.sqlite.SQLiteDatabase.delete
+android.database.sqlite.SQLiteDatabase.updateWithOnConflict
+android.database.sqlite.SQLiteDatabase.execSQL

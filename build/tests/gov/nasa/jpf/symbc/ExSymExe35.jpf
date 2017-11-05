@@ -1,0 +1,8 @@
+target=gov.nasa.jpf.symbc.ExSymExe30
+classpath=${jpf-symbc}/src/tests
+sourcepath=${jpf-symbc}/src/tests
+listener = gov.nasa.jpf.symbc.SymbolicListener
+symbolic.method=gov.nasa.jpf.symbc.ExSymExe.test(sym#sym#sym)
+search.multiple_errors=true 
+symbolic.debug=on
+listener=gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener
