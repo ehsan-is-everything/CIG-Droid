@@ -22,7 +22,7 @@ public class Test {
 	/**
 	 * @param args
 	 *            args[0]::APKAddress. args[1]::AndroidJar file in SDK. args[2]::address
-	 *            to result file. args[3]::address to dummyMain file.
+	 *            to result folder for dummy main.
 	 * @throws IOException
 	 * @throws XmlPullParserException
 	 */

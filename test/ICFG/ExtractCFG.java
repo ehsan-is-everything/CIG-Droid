@@ -49,15 +49,17 @@ import soot.util.queue.QueueReader;
  *
  */
 public class ExtractCFG {
-	private static String FileAddress = null;
+	private static String dmFolderAddress = null;
 	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
 	private static SetupApplication setupApplication;
 
 	private static HashMap<Integer, String> listofInputEntries = new HashMap<>();
+	private static int counter = 1;
 
 	private static void WriteResultsToFile(String result) {
 		// The name of the file to open.
-		String fileName = FileAddress;
+		String fileName = dmFolderAddress + "dummyMain" + counter;
+		counter++;
 
 		try (PrintWriter out = new PrintWriter(fileName)) {
 			out.println(result);
@@ -137,9 +139,9 @@ public class ExtractCFG {
 
 	}
 
-	public static void bestPathes(String fileName, String androidJars, String AppInputsFileAddress)
+	public static void bestPathes(String fileName, String androidJars, String dummyMainFolderAddress)
 			throws IOException, XmlPullParserException {
-		FileAddress = AppInputsFileAddress;
+		dmFolderAddress = dummyMainFolderAddress;
 
 		CallGraph cfg = analyzeAPKFile(fileName, androidJars);
 
@@ -240,12 +242,13 @@ public class ExtractCFG {
 					}
 				}
 			} else {
-				result = +counter + ") \"NORMAL\" Method :: " + currentMethod.getDeclaringClass().getJavaStyleName()
-						+ "from Class:: " + currentMethod.getDeclaringClass().getJavaPackageName() + "\n\n";
+				result = +counter + ") \"NORMAL\" Method :: " + currentMethod.getName() + " from Class:: "
+						+ currentMethod.getDeclaringClass().getJavaPackageName() + "."
+						+ currentMethod.getDeclaringClass().getJavaStyleName() + "\n\n";
 			}
 			counter++;
 		}
-		System.out.println(result);
+		// System.out.println(result);
 		WriteResultsToFile(result);
 	}
 
