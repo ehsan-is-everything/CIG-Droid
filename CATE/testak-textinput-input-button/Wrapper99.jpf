@@ -1,0 +1,28 @@
+target=spawn.WrapperRunner99
+#report.console.property_violation=error
+classpath = ./Wrapper99.jar:testak-testinput_dex2jar.jar:./lib/robolectric-annotations-2.4.jar:./lib/asm-commons-5.0.1.jar:./lib/httpcore-4.0.1.jar:./lib/objenesis-1.3.jar:./lib/robolectric-2.4.jar:./lib/sqlite4java-0.282.jar:./lib/json-20080701.jar:./lib/commons-logging-1.1.1.jar:./lib/opengl-api-gl1.1-android-2.1_r1.jar:./lib/xpp3-1.1.4c.jar:./lib/maven-ant-tasks-2.1.3.jar:./lib/asm-tree-5.0.1.jar:./lib/hamcrest-core-1.3.jar:./lib/javassist-3.18.2-GA.jar:./lib/annotations-2.0.1.jar:./lib/xmlParserAPIs-2.6.2.jar:./lib/ant-launcher-1.8.0.jar:./lib/junit-4.11.jar:./lib/httpclient-4.0.1.jar:./lib/asm-5.0.1.jar:./lib/commons-codec-1.3.jar:./lib/guava-15.0.jar:./lib/reflections-0.9.9.jar:./lib/commons-lang-2.3.jar:./lib/asm-util-5.0.1.jar:./lib/android-4.1.1.4.jar:./lib/asm-analysis-5.0.1.jar:./lib/ant-1.8.0.jar:./lib/jcommander-1.35.jar:./lib/vtd-xml-2.11.jar
+
+symbolic.method=com.example.lab.testak_textinput.MainActivity.onCreate(sym),android.support.v7.app.ActionBarActivity.onCreate(sym),android.support.v7.app.AppCompatActivity.onCreate(sym)
+
+search.class=gov.nasa.jpf.search.Simulation
+#listener = gov.nasa.jpf.symbc.SymbolicListener
+
+symbolic.debug=on
+symbolic.concolic=true
+
+#log.level=finer
+
+search.multiple_errors=true
+
+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
+
+vm.storage.class=
+
+
+symbolic.strings=true
+symbolic.lazy=true
+
+
+jpf.report.console.finished=
+listener=gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener,gov.nasa.jpf.listener.CoverageAnalyzer
+search.depth_limit=10
