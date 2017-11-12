@@ -16,7 +16,7 @@ public class MyRobolectricTestRunner extends RobolectricTestRunner{
 	@Override
     protected AndroidManifest getAppManifest(Config config) {
         final String manifestProperty = "./AndroidManifest.xml";
-        final String resProperty = "./res";
+        final String resProperty = "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Ver 1.0.0/Testak-TextInput-button-sql-vul/app/build/intermediates/res/merged/debug";
         return new AndroidManifest(Fs.fileFromPath(manifestProperty), Fs.fileFromPath(resProperty)) {
             @Override
             public int getTargetSdkVersion() {

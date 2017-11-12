@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/android.support.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/android-4.1.1.4.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/robolectric-3.5.1.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/annotations-3.5.1.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/resources-3.5.1.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/robolectric 3.5.1/sandbox-3.5.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

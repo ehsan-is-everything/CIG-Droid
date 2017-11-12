@@ -26,7 +26,6 @@
 <fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.support.v7.widget.Toolbar"/>
-<fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="android.database.Cursor"/>
 <fullyQualifiedTypeName name="gov.nasa.jpf.ListenerAdapter"/>
@@ -48,7 +47,15 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="gov.nasa.jpf.symbc.SymbolicListener.VulPart"/>
-<fullyQualifiedTypeName name="gov.nasa.jpf.symbc.Debug"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="gov.nasa.jpf.vm.Instruction"/>
+<fullyQualifiedTypeName name="com.example.lab.testak_textinput.DummyMain"/>
+<fullyQualifiedTypeName name="org.robolectric.RobolectricTestRunner"/>
+<fullyQualifiedTypeName name="org.robolectric.AndroidManifest"/>
+<fullyQualifiedTypeName name="android.graphics.Bitmap.Config"/>
+<fullyQualifiedTypeName name="org.robolectric.res.Fs"/>
+<fullyQualifiedTypeName name="gov.nasa.jpf.symbc.Debug"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="com.example.lab.testak_textinput.R"/>
+<fullyQualifiedTypeName name="org.robolectric.annotation.Config"/>
 </qualifiedTypeNameHistroy>

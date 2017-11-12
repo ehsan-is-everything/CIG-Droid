@@ -6,16 +6,20 @@
 	</list>
 	<section name="CleanDialogSettings">
 		<item value="563" key="DIALOG_WIDTH"/>
+		<item value="false" key="BUILD_ALL"/>
 		<item value="true" key="TOGGLE_SELECTED"/>
-		<item value="384" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_HEIGHT"/>
 		<item value="359" key="DIALOG_X_ORIGIN"/>
 		<item value="116" key="DIALOG_Y_ORIGIN"/>
+		<item value="true" key="BUILD_NOW"/>
 	</section>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(android.support-tor)"/>
+			<item value="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc-vul-detection"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc"/>
 			<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-core"/>

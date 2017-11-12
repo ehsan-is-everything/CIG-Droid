@@ -7,7 +7,7 @@ import org.junit.runner.notification.Failure;
 public class MainRunner {
 
 	public static void main(String[] args){
-		System.out.println("Starting up wrapper!");
+		System.out.println("Starting up Robolectric!");
 		JUnitCore junit = new JUnitCore();
 		Result result = junit.run(DummyMain.class);
 		int resultInt = result.getFailureCount();

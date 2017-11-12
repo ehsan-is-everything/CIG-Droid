@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/CIG-DROID"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/build/jpf-symbc-classes.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/xpp3-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/xmlParserAPIs-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/vtd-xml-2.11.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/sqlite4java-0.282.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/robolectric-annotations-2.4.jar"/>
 	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/robolectric-2.4.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/reflections-0.9.9.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/opengl-api-gl1.1-android-2.1_r1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/objenesis-1.3.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/maven-ant-tasks-2.1.3.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/json-20080701.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/jpf-symbc-classes.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/jcommander-1.35.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/javassist-3.18.2-GA.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/httpclient-4.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/asm-util-5.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/asm-tree-5.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/asm-commons-5.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/asm-analysis-5.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/asm-5.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/ant-launcher-1.8.0.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/ant-1.8.0.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/annotations-2.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/android-all-4.3_r2-robolectric-0.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/lib/android-4.1.1.4.jar"/>
+	<classpathentry kind="lib" path="/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(CATE-tor)/android.support.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
