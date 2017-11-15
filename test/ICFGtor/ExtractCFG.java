@@ -1,4 +1,4 @@
-package ICFG;
+package ICFGtor;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -23,10 +23,13 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -35,12 +38,17 @@ import soot.MethodOrMethodContext;
 import soot.Scene;
 import soot.SootClass;
 import soot.SootMethod;
+import soot.Unit;
+import soot.Value;
 import soot.jimple.infoflow.android.SetupApplication;
 import soot.jimple.infoflow.results.InfoflowResults;
+import soot.jimple.infoflow.solver.cfg.InfoflowCFG;
 import soot.jimple.infoflow.taintWrappers.EasyTaintWrapper;
 import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.jimple.toolkits.callgraph.Edge;
 import soot.jimple.toolkits.callgraph.Targets;
+import soot.jimple.toolkits.ide.icfg.BiDiInterproceduralCFG;
+import soot.toolkits.graph.DirectedGraph;
 import soot.util.dot.DotGraph;
 import soot.util.queue.QueueReader;
 
@@ -49,6 +57,7 @@ import soot.util.queue.QueueReader;
  *
  */
 public class ExtractCFG {
+	private static final int ASSERT_ERROR_BASE = 2;
 	private static String dmFolderAddress = null;
 	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
 	private static SetupApplication setupApplication;
@@ -84,7 +93,7 @@ public class ExtractCFG {
 	 * @throws XmlPullParserException
 	 *             Thrown if the Android manifest file could not be read.
 	 */
-	public static CallGraph analyzeAPKFile(String APKAddress, String androidJar)
+	public static InfoflowResults analyzeAPKFile(String APKAddress, String androidJar)
 			throws IOException, XmlPullParserException {
 		return analyzeAPKFile(APKAddress, androidJar, false, true, false);
 	}
@@ -110,7 +119,7 @@ public class ExtractCFG {
 	 * @throws XmlPullParserException
 	 *             Thrown if the Android manifest file could not be read.
 	 */
-	public static CallGraph analyzeAPKFile(String fileName, String androidJars, boolean enableImplicitFlows,
+	public static InfoflowResults analyzeAPKFile(String fileName, String androidJars, boolean enableImplicitFlows,
 			boolean enableStaticFields, boolean flowSensitiveAliasing) throws IOException, XmlPullParserException {
 
 		if (androidJars == null)
@@ -125,38 +134,47 @@ public class ExtractCFG {
 		File taintWrapperFile = new File("EasyTaintWrapperSource.txt");
 		if (!taintWrapperFile.exists())
 			taintWrapperFile = new File("../soot-infoflow/EasyTaintWrapperSource.txt");
-		setupApplication.setTaintWrapper(new EasyTaintWrapper(taintWrapperFile));
+		// setupApplication.setTaintWrapper(new EasyTaintWrapper(taintWrapperFile));
 
 		// Configure the analysis
-		setupApplication.getConfig().setEnableImplicitFlows(enableImplicitFlows);
-		setupApplication.getConfig().setEnableStaticFieldTracking(enableStaticFields);
-		setupApplication.getConfig().setFlowSensitiveAliasing(flowSensitiveAliasing);
-		setupApplication.constructCFG();
-		// InfoflowResults res = setupApplication.runInfoflow("SourcesAndSinks.txt");
+		// setupApplication.getConfig().setEnableImplicitFlows(enableImplicitFlows);
+		// setupApplication.getConfig().setEnableStaticFieldTracking(enableStaticFields);
+		// setupApplication.getConfig().setFlowSensitiveAliasing(flowSensitiveAliasing);
+		setupApplication.getConfig().setTaintAnalysisEnabled(false);
+		// setupApplication.calculateSourcesSinksEntrypoints(Collections.emptySet(),
+		// Collections.emptySet());
+		return setupApplication.runInfoflow("SourcesAndSinks.txt");
+
+		// InfoflowCFG iCFG=new InfoflowCFG();
 		// System.out.println(res.size());
 		// res.printResultsToConsole();
-		return Scene.v().getCallGraph();
+		// return Scene.v().getCallGraph();
 
 	}
 
-	public static void bestPathes(String fileName, String androidJars, String dummyMainFolderAddress)
-			throws IOException, XmlPullParserException {
-		dmFolderAddress = dummyMainFolderAddress;
+	public static CallGraph bestPathes(String fileName, String androidJars) throws IOException, XmlPullParserException {
 
-		CallGraph cfg = analyzeAPKFile(fileName, androidJars);
+		InfoflowResults info = analyzeAPKFile(fileName, androidJars);
+		CallGraph cg = Scene.v().getCallGraph();
 
-		Iterator<Edge> it = cfg.iterator();
+		info.printResultsToConsole();
+		Iterator<Edge> it = cg.iterator();
 
 		ArrayList<SootMethod> listofTargetMethods = new ArrayList<>();
 
 		while (it.hasNext()) {
 			Edge e = it.next();
-			String acvtiveBodyOfCurrentMethod = e.getSrc().method().retrieveActiveBody().toString();
-			if (acvtiveBodyOfCurrentMethod.contains("AssertErrors")) {
-				SootMethod targetMethod = e.getSrc().method();
-				if (!listofTargetMethods.contains(targetMethod))
-				{
-					listofTargetMethods.add(targetMethod);
+			SootMethod sm = e.getSrc().method();
+			// String acvtiveBodyOfCurrentMethod = sm.retrieveActiveBody().toString();
+			String SigOfCurrentMethod = sm.getSignature();
+
+			if (SigOfCurrentMethod.contains("AssertionError")) {
+				if (!listofTargetMethods.contains(sm)) {
+					sm.setweight(1);
+					listofTargetMethods.add(sm);
+
+					// System.out.println("****************************
+					// weight="+targetMethod.getweight()+"\n");
 				}
 			}
 			// System.out.print("KIND::" + e.kind() + " SRC STM:: " +
@@ -165,17 +183,45 @@ public class ExtractCFG {
 		}
 
 		for (SootMethod targetMethod : listofTargetMethods) {
-			Stack<SootMethod> stack = new Stack<>();
-			stack.push(targetMethod);
-			visit(cfg, stack);
-			bestPathes.add(stack);
+
+			// InfoflowCFG icfg=new InfoflowCFG();
+			// DirectedGraph<Unit> ug= icfg.getOrCreateUnitGraph(targetMethod);
+
+			Iterator<Edge> itr = cg.edgesOutOf(targetMethod);
+			while (itr.hasNext()) {
+				Edge ee = itr.next();
+				cg.removeEdge(ee);
+			}
+			visit(cg, targetMethod, 0, ASSERT_ERROR_BASE);
+			// bestPathes.add(stack);
 		}
+		return cg;
 	}
 
-	private static void visit(CallGraph cg, Stack<SootMethod> stack) {
+	private static void visit(CallGraph cg, SootMethod targetMethod, int counter, int base) {
+		if (targetMethod.getName().equals("dummyMainMethod")) {
 
+			InfoflowCFG icfg = new InfoflowCFG();
+			DirectedGraph<Unit> ug = icfg.getOrCreateUnitGraph(targetMethod);
+			Iterator<Unit> uit = ug.iterator();
+			while (uit.hasNext()) {
+				Unit u = uit.next();
+				if (u.branches()) {
+					System.out.println(u);
+					List<Unit> list = icfg.getSuccsOf(u);
+					System.out.println(list);
+				}else if(icfg.isCallStmt(u)) {
+					
+				}else if(icfg.isReturnSite(u)) {
+					
+				}
+			}
+			// targetMethod.push(sm);
+			// makeSPFdummyMainInfo(targetMethod);
+			return;
+		}
 		// iterate over unvisited parents
-		Iterator<Edge> ptargets = cg.edgesInto(stack.peek());
+		Iterator<Edge> ptargets = cg.edgesInto(targetMethod);
 		// String s=stack.peek().getDeclaringClass().getJavaPackageName();
 		// String s=stack.peek().getDeclaringClass().getJavaStyleName();
 
@@ -183,15 +229,13 @@ public class ExtractCFG {
 			while (ptargets.hasNext()) {
 				Edge p = (Edge) (ptargets.next());
 				SootMethod sm = p.getSrc().method();
-				if (sm.getName().equals("dummyMainMethod")) {
-					stack.push(sm);
-					makeSPFdummyMainInfo(stack);
-					return;
-				}
 
 				// if (!stack.peek().getSignature().equals(p.getSignature())) {
-				stack.push(sm);
-				visit(cg, stack);
+				// targetMethod.push(sm);
+
+				targetMethod.setweight((int) Math.pow(base, counter));
+				counter++;
+				visit(cg, sm, counter, base);
 				// }
 			}
 		}
@@ -308,6 +352,8 @@ public class ExtractCFG {
 			Edge next = listener.next();
 
 			MethodOrMethodContext src = next.getSrc();
+			// System.out.println(next.getSrc().method().getName() + "=" +
+			// next.getSrc().method().getweight());
 			MethodOrMethodContext tgt = next.getTgt();
 			canvas.drawNode(src.toString()
 			// src.method().getJavaSourceStartLineNumber()
