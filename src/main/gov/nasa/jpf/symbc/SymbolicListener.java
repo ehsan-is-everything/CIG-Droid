@@ -94,9 +94,9 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	// private HashMap<String, ArrayList<VulPart>> vulResult = new HashMap<>();
 	private VulnerabiltyResult vulResult = new VulnerabiltyResult();
 	private ArrayList<VulPart> vulArrayList = new ArrayList<>();
-	private boolean sinkMethodFound = false;
-	private String resultofLeakage;
-	private int warningCounter = 1;
+//	private boolean sinkMethodFound = false;
+//	private String resultofLeakage;
+//	private int warningCounter = 1;
 	private int dangerCounter = 1;
 
 	public SymbolicListener(Config conf, JPF jpf) {
@@ -257,10 +257,11 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 						// }
 
 						vulResult.putLeakgeMethod(vp, symList);
-						sinkMethodFound = false;
+						//sinkMethodFound = false;
 					}
 
 				}
+				//System.out.println(className+"."+shortName);
 				if (isMethodSink(shortName, longName, className)) {
 					// result += "\n\n-----------------STACK TRACE OF CURRENT APPLICATION RUN";
 					HashMap<String, String> symList = isInputOfMethodSymbolic(sf, shortName);
@@ -289,7 +290,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 						// result += "\n-----------------END OF NAME OF
 						// IDS----------------------------\n\n";
 						vulArrayList.add(vp2);
-						sinkMethodFound = true;
+						//sinkMethodFound = true;
 						vulResult.put("VUL_" + dangerCounter, (ArrayList<VulPart>) vulArrayList.clone());
 						dangerCounter++;
 						vulArrayList.clear();
