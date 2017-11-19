@@ -1,4 +1,10 @@
- protected void onCreate(android.os.Bundle)
+1) "LISTENER" Method :: onClick in MainActivity$2 that declares in onCreate from Class:: com.example.lab.testak_textinput.MainActivity
+
+Find findViewById(#int) method in following code related to MainActivity$2
+
+Active Body of this Method in Jimple is::
+
+    protected void onCreate(android.os.Bundle)
     {
         com.example.lab.testak_textinput.MainActivity $r0;
         android.os.Bundle $r1;
@@ -66,4 +72,6 @@
 
         return;
     }
+
+
 

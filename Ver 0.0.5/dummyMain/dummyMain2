@@ -1,6 +1,6 @@
-1) "LISTENER" Method :: onClick in MainActivity$2 that declares in onCreate from Class:: com.example.lab.testak_textinput.MainActivity
+1) "LISTENER" Method :: onClick in MainActivity$1 that declares in onCreate from Class:: com.example.lab.testak_textinput.MainActivity
 
-Find findViewById(#int) method in following code related to MainActivity$2
+Find findViewById(#int) method in following code related to MainActivity$1
 
 Active Body of this Method in Jimple is::
 
