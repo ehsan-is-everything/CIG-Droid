@@ -48,6 +48,7 @@ import soot.util.queue.QueueReader;
  * @author ehsan
  *
  */
+
 public class ExtractCFG {
 	private static String dmFolderAddress = null;
 	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
@@ -122,10 +123,10 @@ public class ExtractCFG {
 		setupApplication = new SetupApplication(androidJars, fileName);
 
 		// Find the taint wrapper file
-		File taintWrapperFile = new File("EasyTaintWrapperSource.txt");
-		if (!taintWrapperFile.exists())
-			taintWrapperFile = new File("../soot-infoflow/EasyTaintWrapperSource.txt");
-		setupApplication.setTaintWrapper(new EasyTaintWrapper(taintWrapperFile));
+		// File taintWrapperFile = new File("EasyTaintWrapperSource.txt");
+		// if (!taintWrapperFile.exists())
+		// taintWrapperFile = new File("../soot-infoflow/EasyTaintWrapperSource.txt");
+		// setupApplication.setTaintWrapper(new EasyTaintWrapper(taintWrapperFile));
 
 		// Configure the analysis
 		setupApplication.getConfig().setEnableImplicitFlows(enableImplicitFlows);
@@ -152,10 +153,16 @@ public class ExtractCFG {
 		while (it.hasNext()) {
 			Edge e = it.next();
 			String acvtiveBodyOfCurrentMethod = e.getSrc().method().retrieveActiveBody().toString();
-			if (acvtiveBodyOfCurrentMethod.contains("AssertErrors")) {
+			if (acvtiveBodyOfCurrentMethod.contains("rawQuery")
+					|| acvtiveBodyOfCurrentMethod.contains("rawQueryWithFactory")
+					|| acvtiveBodyOfCurrentMethod.contains("query")
+					|| acvtiveBodyOfCurrentMethod.contains("queryWithFactory")
+					|| acvtiveBodyOfCurrentMethod.contains("delete")
+					|| acvtiveBodyOfCurrentMethod.contains("updateWithOnConflict")
+					|| acvtiveBodyOfCurrentMethod.contains("execSQL")
+					|| acvtiveBodyOfCurrentMethod.contains("update")) {
 				SootMethod targetMethod = e.getSrc().method();
-				if (!listofTargetMethods.contains(targetMethod))
-				{
+				if (!listofTargetMethods.contains(targetMethod)) {
 					listofTargetMethods.add(targetMethod);
 				}
 			}
@@ -163,18 +170,17 @@ public class ExtractCFG {
 			// e.getSrc().method().retrieveActiveBody());
 			// System.out.println(" TRG::" + e.tgt().getName() + "\n");
 		}
-
+		Stack<SootMethod> stack = new Stack<>();
 		for (SootMethod targetMethod : listofTargetMethods) {
-			Stack<SootMethod> stack = new Stack<>();
+			stack.clear();
 			stack.push(targetMethod);
 			visit(cfg, stack);
-			bestPathes.add(stack);
+			//bestPathes.add(stack);
 		}
 	}
 
 	private static void visit(CallGraph cg, Stack<SootMethod> stack) {
 
-		// iterate over unvisited parents
 		Iterator<Edge> ptargets = cg.edgesInto(stack.peek());
 		// String s=stack.peek().getDeclaringClass().getJavaPackageName();
 		// String s=stack.peek().getDeclaringClass().getJavaStyleName();
@@ -184,8 +190,9 @@ public class ExtractCFG {
 				Edge p = (Edge) (ptargets.next());
 				SootMethod sm = p.getSrc().method();
 				if (sm.getName().equals("dummyMainMethod")) {
-					stack.push(sm);
+					//stack.push(sm);
 					makeSPFdummyMainInfo(stack);
+					stack.pop();
 					return;
 				}
 
@@ -211,13 +218,13 @@ public class ExtractCFG {
 	}
 
 	private static void makeSPFdummyMainInfo(Stack<SootMethod> stack) {
-		SootMethod SootDummyMain = stack.pop();
+		//SootMethod SootDummyMain = stack.pop();
 
 		String result = "This is Static information for building SPF dummyMain class::\n\n\n";
 		int counter = 1;
 
-		while (!stack.isEmpty()) {
-			SootMethod currentMethod = stack.pop();
+		for (int index = 0; index < stack.size(); index++) {
+			SootMethod currentMethod = stack.get(index);
 			String className = currentMethod.getDeclaringClass().getJavaStyleName();
 			if (className.contains("$")) {
 				String parentClassName = className.substring(0, className.indexOf('$'));
@@ -226,7 +233,7 @@ public class ExtractCFG {
 					List<SootMethod> list = currentClass.getMethods();
 					for (SootMethod sm : list) {
 						if (sm.getActiveBody().toString().contains(className)) {
-							result = +counter + ") \"LISTENER\" Method :: " + currentMethod.getName() + " in "
+							result = result + counter + ") \"LISTENER\" Method :: " + currentMethod.getName() + " in "
 									+ className + " that declares in " + sm.getName() + " from Class:: "
 									+ sm.getDeclaringClass().getJavaPackageName() + "."
 									+ sm.getDeclaringClass().getJavaStyleName() + "\n\n"
@@ -237,13 +244,13 @@ public class ExtractCFG {
 					}
 				}
 			} else {
-				result = +counter + ") \"NORMAL\" Method :: " + currentMethod.getName() + " from Class:: "
+				result = result + counter + ") \"NORMAL\" Method :: " + currentMethod.getName() + " from Class:: "
 						+ currentMethod.getDeclaringClass().getJavaPackageName() + "."
 						+ currentMethod.getDeclaringClass().getJavaStyleName() + "\n\n";
 			}
 			counter++;
 		}
-		// System.out.println(result);
+		System.out.println(result);
 		WriteResultsToFile(result);
 	}
 

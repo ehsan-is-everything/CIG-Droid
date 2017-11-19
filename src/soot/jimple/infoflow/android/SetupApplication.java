@@ -124,7 +124,7 @@ public class SetupApplication {
 	private Set<Stmt> collectedSources = null;
 	private Set<Stmt> collectedSinks = null;
 
-	private String callbackFile = "AndroidCallbacks.txt";
+	private String callbackFile = "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/CIG-Droid/soot-infoflow-android-develop/AndroidCallbacks.txt";
 	private SootClass scView = null;
 	
 	private Set<PreAnalysisHandler> preprocessors = new HashSet<>();
