@@ -1,0 +1,172 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onHandleIntent from Class:: org.emunix.unipatcher.WorkerService
+
+2) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+3) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+4) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+5) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+6) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+7) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+8) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+9) "NORMAL" Method :: e from Class:: org.emunix.unipatcher.WorkerService
+
+10) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+11) "NORMAL" Method :: b from Class:: org.emunix.unipatcher.c
+
+12) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+13) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+14) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+15) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+16) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+17) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+18) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+19) "NORMAL" Method :: e from Class:: org.emunix.unipatcher.WorkerService
+
+20) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+21) "NORMAL" Method :: b from Class:: org.emunix.unipatcher.c
+
+22) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+23) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+24) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+25) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+26) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+27) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+28) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+29) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+30) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+31) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+32) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+33) "NORMAL" Method :: c from Class:: org.emunix.unipatcher.patcher.g
+
+34) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+35) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+36) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+37) "NORMAL" Method :: c from Class:: org.emunix.unipatcher.patcher.g
+
+38) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+39) "NORMAL" Method :: c from Class:: org.a.a.a.a
+
+40) "NORMAL" Method :: d from Class:: org.a.a.a.a
+
+41) "NORMAL" Method :: e from Class:: org.a.a.a.a
+
+42) "NORMAL" Method :: b from Class:: org.a.a.a.a
+
+43) "NORMAL" Method :: b from Class:: org.emunix.unipatcher.WorkerService
+
+44) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+45) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+46) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+47) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+48) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+49) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+50) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+51) "NORMAL" Method :: e from Class:: org.emunix.unipatcher.WorkerService
+
+52) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+53) "NORMAL" Method :: b from Class:: org.emunix.unipatcher.c
+
+54) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+55) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+56) "NORMAL" Method :: d from Class:: org.emunix.unipatcher.WorkerService
+
+57) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+58) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+59) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+60) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+61) "NORMAL" Method :: e from Class:: org.emunix.unipatcher.WorkerService
+
+62) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.a.c
+
+63) "NORMAL" Method :: b from Class:: org.emunix.unipatcher.c
+
+64) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+65) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+66) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+67) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+68) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+69) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+70) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+71) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+72) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+73) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+74) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+75) "NORMAL" Method :: c from Class:: org.emunix.unipatcher.patcher.g
+
+76) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+77) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+78) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.patcher.g
+
+79) "NORMAL" Method :: c from Class:: org.emunix.unipatcher.patcher.g
+
+80) "NORMAL" Method :: a from Class:: org.emunix.unipatcher.WorkerService
+
+81) "NORMAL" Method :: c from Class:: org.a.a.a.a
+
+82) "NORMAL" Method :: d from Class:: org.a.a.a.a
+
+83) "NORMAL" Method :: e from Class:: org.a.a.a.a
+
+84) "NORMAL" Method :: b from Class:: org.a.a.a.a
+
+

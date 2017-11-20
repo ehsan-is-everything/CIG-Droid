@@ -1,0 +1,18 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: clock.socoolby.com.clock.MainActivity
+
+2) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+3) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+4) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+
+5) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+6) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+7) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+
+

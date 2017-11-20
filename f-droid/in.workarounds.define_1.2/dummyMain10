@@ -1,0 +1,466 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onStartCommand from Class:: in.workarounds.portal.w
+
+2) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+3) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+4) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+5) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+6) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+7) "NORMAL" Method :: a from Class:: rx.a
+
+8) "NORMAL" Method :: b from Class:: rx.a
+
+9) "NORMAL" Method :: a from Class:: rx.a
+
+10) "NORMAL" Method :: a from Class:: rx.g.d
+
+11) "NORMAL" Method :: a from Class:: rx.g.d
+
+12) "NORMAL" Method :: a from Class:: rx.g.d
+
+13) "NORMAL" Method :: a from Class:: rx.g.b
+
+14) "NORMAL" Method :: a from Class:: rx.g.b
+
+15) "NORMAL" Method :: b from Class:: rx.g.g
+
+16) "NORMAL" Method :: a from Class:: rx.g.g
+
+17) "NORMAL" Method :: c from Class:: rx.g.g
+
+18) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+19) "NORMAL" Method :: a from Class:: rx.d
+
+20) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+21) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+22) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+23) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+24) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+25) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+26) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+27) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+28) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+29) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+30) "NORMAL" Method :: a from Class:: rx.a
+
+31) "NORMAL" Method :: b from Class:: rx.a
+
+32) "NORMAL" Method :: a from Class:: rx.a
+
+33) "NORMAL" Method :: a from Class:: rx.g.d
+
+34) "NORMAL" Method :: a from Class:: rx.g.d
+
+35) "NORMAL" Method :: a from Class:: rx.g.d
+
+36) "NORMAL" Method :: a from Class:: rx.g.b
+
+37) "NORMAL" Method :: a from Class:: rx.g.b
+
+38) "NORMAL" Method :: b from Class:: rx.g.g
+
+39) "NORMAL" Method :: a from Class:: rx.g.g
+
+40) "NORMAL" Method :: c from Class:: rx.g.g
+
+41) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+42) "NORMAL" Method :: a from Class:: rx.d
+
+43) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+44) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+45) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+46) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+47) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+48) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+49) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+50) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+51) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+52) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+53) "NORMAL" Method :: a from Class:: rx.a
+
+54) "NORMAL" Method :: b from Class:: rx.a
+
+55) "NORMAL" Method :: a from Class:: rx.a
+
+56) "NORMAL" Method :: a from Class:: rx.g.d
+
+57) "NORMAL" Method :: a from Class:: rx.g.d
+
+58) "NORMAL" Method :: a from Class:: rx.g.d
+
+59) "NORMAL" Method :: a from Class:: rx.g.b
+
+60) "NORMAL" Method :: a from Class:: rx.g.b
+
+61) "NORMAL" Method :: b from Class:: rx.g.g
+
+62) "NORMAL" Method :: a from Class:: rx.g.g
+
+63) "NORMAL" Method :: c from Class:: rx.g.g
+
+64) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+65) "NORMAL" Method :: a from Class:: rx.d
+
+66) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+67) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+68) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+69) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+70) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+71) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+72) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+73) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+74) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+75) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+76) "NORMAL" Method :: a from Class:: rx.a
+
+77) "NORMAL" Method :: b from Class:: rx.a
+
+78) "NORMAL" Method :: a from Class:: rx.a
+
+79) "NORMAL" Method :: a from Class:: rx.g.d
+
+80) "NORMAL" Method :: a from Class:: rx.g.d
+
+81) "NORMAL" Method :: a from Class:: rx.g.d
+
+82) "NORMAL" Method :: a from Class:: rx.g.b
+
+83) "NORMAL" Method :: a from Class:: rx.g.b
+
+84) "NORMAL" Method :: b from Class:: rx.g.g
+
+85) "NORMAL" Method :: a from Class:: rx.g.g
+
+86) "NORMAL" Method :: c from Class:: rx.g.g
+
+87) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+88) "NORMAL" Method :: a from Class:: rx.d
+
+89) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+90) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+91) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+92) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+93) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+94) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+95) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+96) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+97) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+98) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+99) "NORMAL" Method :: a from Class:: rx.a
+
+100) "NORMAL" Method :: b from Class:: rx.a
+
+101) "NORMAL" Method :: a from Class:: rx.a
+
+102) "NORMAL" Method :: a from Class:: rx.g.d
+
+103) "NORMAL" Method :: a from Class:: rx.g.d
+
+104) "NORMAL" Method :: a from Class:: rx.g.d
+
+105) "NORMAL" Method :: a from Class:: rx.g.b
+
+106) "NORMAL" Method :: a from Class:: rx.g.b
+
+107) "NORMAL" Method :: b from Class:: rx.g.g
+
+108) "NORMAL" Method :: a from Class:: rx.g.g
+
+109) "NORMAL" Method :: c from Class:: rx.g.g
+
+110) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+111) "NORMAL" Method :: a from Class:: rx.d
+
+112) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+113) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+114) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+115) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+116) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+117) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+118) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+119) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+120) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+121) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+122) "NORMAL" Method :: a from Class:: rx.a
+
+123) "NORMAL" Method :: b from Class:: rx.a
+
+124) "NORMAL" Method :: a from Class:: rx.a
+
+125) "NORMAL" Method :: a from Class:: rx.g.d
+
+126) "NORMAL" Method :: a from Class:: rx.g.d
+
+127) "NORMAL" Method :: a from Class:: rx.g.d
+
+128) "NORMAL" Method :: a from Class:: rx.g.b
+
+129) "NORMAL" Method :: a from Class:: rx.g.b
+
+130) "NORMAL" Method :: b from Class:: rx.g.g
+
+131) "NORMAL" Method :: a from Class:: rx.g.g
+
+132) "NORMAL" Method :: c from Class:: rx.g.g
+
+133) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+134) "NORMAL" Method :: a from Class:: rx.d
+
+135) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+136) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+137) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+138) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+139) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+140) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+141) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+142) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+143) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+144) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+145) "NORMAL" Method :: a from Class:: rx.a
+
+146) "NORMAL" Method :: b from Class:: rx.a
+
+147) "NORMAL" Method :: a from Class:: rx.a
+
+148) "NORMAL" Method :: a from Class:: rx.g.d
+
+149) "NORMAL" Method :: a from Class:: rx.g.d
+
+150) "NORMAL" Method :: a from Class:: rx.g.d
+
+151) "NORMAL" Method :: a from Class:: rx.g.b
+
+152) "NORMAL" Method :: a from Class:: rx.g.b
+
+153) "NORMAL" Method :: b from Class:: rx.g.g
+
+154) "NORMAL" Method :: a from Class:: rx.g.g
+
+155) "NORMAL" Method :: c from Class:: rx.g.g
+
+156) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+157) "NORMAL" Method :: a from Class:: rx.d
+
+158) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+159) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+160) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+161) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+162) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+163) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+164) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+165) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+166) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+167) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+168) "NORMAL" Method :: a from Class:: rx.a
+
+169) "NORMAL" Method :: b from Class:: rx.a
+
+170) "NORMAL" Method :: a from Class:: rx.a
+
+171) "NORMAL" Method :: a from Class:: rx.g.d
+
+172) "NORMAL" Method :: a from Class:: rx.g.d
+
+173) "NORMAL" Method :: a from Class:: rx.g.d
+
+174) "NORMAL" Method :: a from Class:: rx.g.b
+
+175) "NORMAL" Method :: a from Class:: rx.g.b
+
+176) "NORMAL" Method :: b from Class:: rx.g.g
+
+177) "NORMAL" Method :: a from Class:: rx.g.g
+
+178) "NORMAL" Method :: c from Class:: rx.g.g
+
+179) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+180) "NORMAL" Method :: a from Class:: rx.d
+
+181) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+182) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+183) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+184) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+185) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+186) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+187) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+188) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+189) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+190) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+191) "NORMAL" Method :: a from Class:: rx.a
+
+192) "NORMAL" Method :: b from Class:: rx.a
+
+193) "NORMAL" Method :: a from Class:: rx.a
+
+194) "NORMAL" Method :: a from Class:: rx.g.d
+
+195) "NORMAL" Method :: a from Class:: rx.g.d
+
+196) "NORMAL" Method :: a from Class:: rx.g.d
+
+197) "NORMAL" Method :: a from Class:: rx.g.b
+
+198) "NORMAL" Method :: a from Class:: rx.g.b
+
+199) "NORMAL" Method :: b from Class:: rx.g.g
+
+200) "NORMAL" Method :: a from Class:: rx.g.g
+
+201) "NORMAL" Method :: c from Class:: rx.g.g
+
+202) "NORMAL" Method :: a from Class:: rx.d.a.b
+
+203) "NORMAL" Method :: a from Class:: rx.d
+
+204) "NORMAL" Method :: a from Class:: in.workarounds.define.f.w
+
+205) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+206) "NORMAL" Method :: d from Class:: in.workarounds.define.f.v
+
+207) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+208) "NORMAL" Method :: b from Class:: in.workarounds.define.f.v
+
+209) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+210) "NORMAL" Method :: a from Class:: in.workarounds.portal.r
+
+211) "NORMAL" Method :: a from Class:: in.workarounds.portal.q
+
+212) "NORMAL" Method :: c from Class:: in.workarounds.portal.q
+
+213) "NORMAL" Method :: a from Class:: in.workarounds.define.f.v
+
+214) "NORMAL" Method :: a from Class:: rx.a
+
+215) "NORMAL" Method :: b from Class:: rx.a
+
+216) "NORMAL" Method :: a from Class:: rx.a
+
+217) "NORMAL" Method :: a from Class:: rx.c
+
+218) "NORMAL" Method :: a from Class:: rx.c
+
+219) "NORMAL" Method :: a from Class:: rx.d.a.f
+
+220) "NORMAL" Method :: a from Class:: rx.d.a.f
+
+221) "NORMAL" Method :: call from Class:: in.workarounds.define.webviewDicts.livio.b
+
+222) "NORMAL" Method :: a from Class:: in.workarounds.define.webviewDicts.livio.a
+
+223) "NORMAL" Method :: c from Class:: in.workarounds.define.webviewDicts.livio.a
+
+224) "NORMAL" Method :: a from Class:: in.workarounds.define.webviewDicts.livio.a
+
+225) "NORMAL" Method :: a from Class:: in.workarounds.define.webviewDicts.livio.a
+
+226) "NORMAL" Method :: select from Class:: org.jsoup.nodes.Element
+
+227) "NORMAL" Method :: select from Class:: org.jsoup.select.Selector
+
+228) "NORMAL" Method :: <init> from Class:: org.jsoup.select.Selector
+
+229) "NORMAL" Method :: a from Class:: org.jsoup.select.e
+
+230) "NORMAL" Method :: a from Class:: org.jsoup.select.e
+
+231) "NORMAL" Method :: c from Class:: org.jsoup.select.e
+
+

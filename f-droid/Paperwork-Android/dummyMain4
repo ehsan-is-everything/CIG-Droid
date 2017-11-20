@@ -1,0 +1,10 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: rocks.paperwork.android.activities.MainActivity
+
+2) "NORMAL" Method :: updateView from Class:: rocks.paperwork.android.activities.MainActivity
+
+3) "NORMAL" Method :: getAllTags from Class:: rocks.paperwork.android.data.NoteDataSource
+
+

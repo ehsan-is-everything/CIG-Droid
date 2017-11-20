@@ -1,0 +1,22 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onOptionsItemSelected from Class:: com.colorcloud.wifichat.WiFiDirectActivity
+
+2) "NORMAL" Method :: getInstance from Class:: com.colorcloud.wifichat.AnalyticsUtils
+
+3) "NORMAL" Method :: <init> from Class:: com.colorcloud.wifichat.AnalyticsUtils
+
+4) "NORMAL" Method :: startNewSession from Class:: com.google.android.apps.analytics.GoogleAnalyticsTracker
+
+5) "NORMAL" Method :: start from Class:: com.google.android.apps.analytics.GoogleAnalyticsTracker
+
+6) "NORMAL" Method :: <init> from Class:: com.google.android.apps.analytics.PersistentHitStore
+
+7) "NORMAL" Method :: <init> from Class:: com.google.android.apps.analytics.PersistentHitStore
+
+8) "NORMAL" Method :: getVisitorVarBuffer from Class:: com.google.android.apps.analytics.PersistentHitStore
+
+9) "NORMAL" Method :: getVisitorVarBuffer from Class:: com.google.android.apps.analytics.PersistentHitStore
+
+

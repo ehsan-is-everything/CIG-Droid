@@ -1,0 +1,158 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onStartCommand from Class:: org.sorz.lab.tinykeepass.DatabaseSyncingService
+
+2) "NORMAL" Method :: doInBackground from Class:: org.sorz.lab.tinykeepass.z
+
+3) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.z
+
+4) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+5) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+6) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+7) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+8) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+9) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+10) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+11) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+12) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+13) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+14) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+15) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+16) "NORMAL" Method :: accept from Class:: org.sorz.lab.tinykeepass.autofill.i
+
+17) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.autofill.h
+
+18) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+19) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+20) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+21) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+22) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+23) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+24) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+25) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+26) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+27) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+28) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+29) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+30) "NORMAL" Method :: accept from Class:: org.sorz.lab.tinykeepass.aa
+
+31) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+32) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+33) "NORMAL" Method :: doInBackground from Class:: org.sorz.lab.tinykeepass.b.f
+
+34) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.b.f
+
+35) "NORMAL" Method :: a from Class:: a.a.a.a
+
+36) "NORMAL" Method :: a from Class:: a.a.a.a.a
+
+37) "NORMAL" Method :: b from Class:: a.a.a.a.a
+
+38) "NORMAL" Method :: a from Class:: a.a.a.b.c
+
+39) "NORMAL" Method :: a from Class:: a.a.a.b.c
+
+40) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.DatabaseSetupActivity
+
+41) "NORMAL" Method :: m from Class:: org.sorz.lab.tinykeepass.DatabaseSetupActivity
+
+42) "NORMAL" Method :: doInBackground from Class:: org.sorz.lab.tinykeepass.z
+
+43) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.z
+
+44) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+45) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+46) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+47) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+48) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+49) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+50) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+51) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+52) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+53) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+54) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+55) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+56) "NORMAL" Method :: accept from Class:: org.sorz.lab.tinykeepass.autofill.i
+
+57) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.autofill.h
+
+58) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+59) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+60) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+61) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+62) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+63) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+64) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+65) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+66) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+67) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+68) "NORMAL" Method :: n from Class:: org.sorz.lab.tinykeepass.a
+
+69) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.a
+
+70) "NORMAL" Method :: accept from Class:: org.sorz.lab.tinykeepass.aa
+
+71) "NORMAL" Method :: b from Class:: org.sorz.lab.tinykeepass.MainActivity
+
+72) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.a
+
+73) "NORMAL" Method :: doInBackground from Class:: org.sorz.lab.tinykeepass.b.f
+
+74) "NORMAL" Method :: a from Class:: org.sorz.lab.tinykeepass.b.f
+
+75) "NORMAL" Method :: a from Class:: a.a.a.a
+
+76) "NORMAL" Method :: a from Class:: a.a.a.b.f
+
+77) "NORMAL" Method :: a from Class:: a.a.a.b.f
+
+

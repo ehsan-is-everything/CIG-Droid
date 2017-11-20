@@ -1,0 +1,306 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onItemClick from Class:: com.anod.appwatcher.ui.c
+
+2) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+3) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+4) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+5) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+6) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+7) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+8) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+9) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+10) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.e
+
+11) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+12) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+13) "NORMAL" Method :: f from Class:: com.anod.appwatcher.backup.f
+
+14) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+15) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+16) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.c
+
+17) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.gdrive.c
+
+18) "NORMAL" Method :: a from Class:: com.google.android.gms.internal.ar
+
+19) "NORMAL" Method :: <clinit> from Class:: com.google.android.gms.drive.query.b
+
+20) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+21) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+22) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+23) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+24) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+25) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+26) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+27) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+28) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+29) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+30) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.h
+
+31) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+32) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+33) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+34) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+35) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+36) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+37) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+38) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+39) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+40) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+41) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+42) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+43) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.e
+
+44) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+45) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+46) "NORMAL" Method :: f from Class:: com.anod.appwatcher.backup.f
+
+47) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+48) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+49) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.c
+
+50) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.gdrive.c
+
+51) "NORMAL" Method :: a from Class:: com.google.android.gms.internal.ar
+
+52) "NORMAL" Method :: <clinit> from Class:: com.google.android.gms.drive.query.b
+
+53) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+54) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+55) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+56) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+57) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+58) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+59) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+60) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+61) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+62) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+63) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.h
+
+64) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+65) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+66) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+67) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+68) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+69) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+70) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+71) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+72) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+73) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+74) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+75) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+76) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.e
+
+77) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+78) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+79) "NORMAL" Method :: f from Class:: com.anod.appwatcher.backup.f
+
+80) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+81) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+82) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.c
+
+83) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.gdrive.c
+
+84) "NORMAL" Method :: a from Class:: com.google.android.gms.internal.ar
+
+85) "NORMAL" Method :: <clinit> from Class:: com.google.android.gms.drive.query.b
+
+86) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+87) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+88) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+89) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+90) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+91) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+92) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+93) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+94) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+95) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+96) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.h
+
+97) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+98) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+99) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+100) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+101) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+102) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+103) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+104) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+105) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+106) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+107) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+108) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+109) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.e
+
+110) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+111) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+112) "NORMAL" Method :: f from Class:: com.anod.appwatcher.backup.f
+
+113) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+114) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+115) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.c
+
+116) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.gdrive.c
+
+117) "NORMAL" Method :: a from Class:: com.google.android.gms.internal.ar
+
+118) "NORMAL" Method :: <clinit> from Class:: com.google.android.gms.drive.query.b
+
+119) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+120) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+121) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+122) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+123) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+124) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+125) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+126) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+127) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+128) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+129) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.h
+
+130) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+131) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.f
+
+132) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+133) "NORMAL" Method :: d from Class:: com.anod.appwatcher.backup.f
+
+134) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+135) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.f
+
+136) "NORMAL" Method :: d from Class:: com.anod.appwatcher.f.h
+
+137) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.f
+
+138) "NORMAL" Method :: a from Class:: com.anod.appwatcher.SettingsActivity
+
+139) "NORMAL" Method :: e from Class:: com.anod.appwatcher.backup.f
+
+140) "NORMAL" Method :: doInBackground from Class:: com.anod.appwatcher.backup.gdrive.a
+
+141) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.a
+
+142) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.e
+
+143) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+144) "NORMAL" Method :: a from Class:: com.anod.appwatcher.sync.a
+
+145) "NORMAL" Method :: f from Class:: com.anod.appwatcher.backup.f
+
+146) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+147) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.d
+
+148) "NORMAL" Method :: a from Class:: com.anod.appwatcher.backup.gdrive.c
+
+149) "NORMAL" Method :: c from Class:: com.anod.appwatcher.backup.gdrive.c
+
+150) "NORMAL" Method :: a from Class:: com.google.android.gms.internal.ar
+
+151) "NORMAL" Method :: <clinit> from Class:: com.google.android.gms.drive.query.b
+
+

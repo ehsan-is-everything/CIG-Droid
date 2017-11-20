@@ -1,0 +1,8 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onReceive from Class:: com.tomjanson.wifilocationlogger.WifiBroadcastReceiver
+
+2) "NORMAL" Method :: updateUI from Class:: com.tomjanson.wifilocationlogger.MainActivity
+
+

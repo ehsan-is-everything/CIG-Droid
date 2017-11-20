@@ -1,0 +1,116 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onClick from Class:: com.tomclaw.mandarin.main.i
+
+2) "NORMAL" Method :: b from Class:: com.tomclaw.mandarin.main.BuddyInfoActivity
+
+3) "NORMAL" Method :: eK from Class:: com.tomclaw.mandarin.main.BuddyInfoActivity
+
+4) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+5) "NORMAL" Method :: eN from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+6) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.core.aj
+
+7) "NORMAL" Method :: execute from Class:: com.tomclaw.mandarin.core.p
+
+8) "NORMAL" Method :: post from Class:: android.os.Handler
+
+9) "NORMAL" Method :: ca from Class:: com.tomclaw.mandarin.core.h
+
+10) "NORMAL" Method :: onChange from Class:: com.tomclaw.mandarin.core.h
+
+11) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.main.o
+
+12) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+13) "NORMAL" Method :: gj from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+14) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.IcqAccountRoot
+
+15) "NORMAL" Method :: run from Class:: com.tomclaw.mandarin.im.icq.b
+
+16) "NORMAL" Method :: dJ from Class:: com.tomclaw.mandarin.main.icq.t
+
+17) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+18) "NORMAL" Method :: gj from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+19) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.IcqAccountRoot
+
+20) "NORMAL" Method :: run from Class:: com.tomclaw.mandarin.im.icq.b
+
+21) "NORMAL" Method :: dI from Class:: com.tomclaw.mandarin.main.icq.t
+
+22) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+23) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+24) "NORMAL" Method :: eU from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+25) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+26) "NORMAL" Method :: onCreate from Class:: com.tomclaw.mandarin.main.c
+
+27) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.core.a
+
+28) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.i
+
+29) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.icq.SmsCodeActivity
+
+30) "NORMAL" Method :: gn from Class:: com.tomclaw.mandarin.main.icq.SmsCodeActivity
+
+31) "NORMAL" Method :: b from Class:: com.tomclaw.mandarin.main.icq.SmsCodeActivity
+
+32) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.i
+
+33) "NORMAL" Method :: aq from Class:: com.tomclaw.mandarin.main.SearchResultActivity
+
+34) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.icq.PhoneLoginActivity
+
+35) "NORMAL" Method :: ge from Class:: com.tomclaw.mandarin.main.icq.PhoneLoginActivity
+
+36) "NORMAL" Method :: h from Class:: com.tomclaw.mandarin.main.icq.PhoneLoginActivity
+
+37) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.i
+
+38) "NORMAL" Method :: fK from Class:: com.tomclaw.mandarin.main.PhotoViewerActivity
+
+39) "NORMAL" Method :: cl from Class:: com.tomclaw.mandarin.core.l
+
+40) "NORMAL" Method :: onChange from Class:: com.tomclaw.mandarin.core.o
+
+41) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.main.BuddyInfoActivity
+
+42) "NORMAL" Method :: eJ from Class:: com.tomclaw.mandarin.main.BuddyInfoActivity
+
+43) "NORMAL" Method :: b from Class:: com.tomclaw.mandarin.main.BuddyInfoActivity
+
+44) "NORMAL" Method :: eK from Class:: com.tomclaw.mandarin.main.BuddyInfoActivity
+
+45) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+46) "NORMAL" Method :: eN from Class:: com.tomclaw.mandarin.main.ChatActivity
+
+47) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.core.aj
+
+48) "NORMAL" Method :: execute from Class:: com.tomclaw.mandarin.core.p
+
+49) "NORMAL" Method :: run from Class:: com.tomclaw.mandarin.main.icq.u
+
+50) "NORMAL" Method :: d from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+51) "NORMAL" Method :: gk from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+52) "NORMAL" Method :: b from Class:: com.tomclaw.mandarin.core.u
+
+53) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.core.u
+
+54) "NORMAL" Method :: b from Class:: com.tomclaw.mandarin.main.ae
+
+55) "NORMAL" Method :: b from Class:: com.tomclaw.mandarin.core.u
+
+56) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.util.r
+
+

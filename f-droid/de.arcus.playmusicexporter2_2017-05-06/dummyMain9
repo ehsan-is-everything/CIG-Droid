@@ -1,0 +1,28 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onHandleIntent from Class:: de.arcus.playmusicexporter2.services.ExportService
+
+2) "NORMAL" Method :: getById from Class:: de.arcus.playmusiclib.datasources.MusicTrackDataSource
+
+3) "NORMAL" Method :: deserialize from Class:: de.arcus.playmusiclib.items.MusicTrackList
+
+4) "NORMAL" Method :: getById from Class:: de.arcus.playmusiclib.datasources.PlaylistDataSource
+
+5) "NORMAL" Method :: getItem from Class:: de.arcus.playmusiclib.datasources.DataSource
+
+6) "NORMAL" Method :: getItem from Class:: de.arcus.playmusiclib.datasources.DataSource
+
+7) "NORMAL" Method :: getItem from Class:: de.arcus.playmusiclib.datasources.DataSource
+
+8) "NORMAL" Method :: loadPlayMusicExporter from Class:: de.arcus.playmusicexporter2.activities.MusicContainerListActivity
+
+9) "NORMAL" Method :: loadList from Class:: de.arcus.playmusicexporter2.activities.MusicContainerListActivity
+
+10) "NORMAL" Method :: getAll from Class:: de.arcus.playmusiclib.datasources.PlaylistDataSource
+
+11) "NORMAL" Method :: getItems from Class:: de.arcus.playmusiclib.datasources.DataSource
+
+12) "NORMAL" Method :: getItems from Class:: de.arcus.playmusiclib.datasources.DataSource
+
+

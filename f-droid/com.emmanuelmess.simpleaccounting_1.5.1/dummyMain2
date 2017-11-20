@@ -1,0 +1,8 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onHandleIntent from Class:: org.acra.sender.SenderService
+
+2) "NORMAL" Method :: distribute from Class:: org.acra.sender.ReportDistributor
+
+

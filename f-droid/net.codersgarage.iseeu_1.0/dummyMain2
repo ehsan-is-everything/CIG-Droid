@@ -1,0 +1,187 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: net.codersgarage.iseeu.views.MainActivity
+
+2) "LISTENER" Method :: doInBackground in MainActivity$ISeeUAsyncTask that declares in onCreate from Class:: net.codersgarage.iseeu.views.MainActivity
+
+Find findViewById(#int) method in following code related to MainActivity$ISeeUAsyncTask
+
+Active Body of this Method in Jimple is::
+
+    protected void onCreate(android.os.Bundle)
+    {
+        net.codersgarage.iseeu.views.MainActivity $r0;
+        android.os.Bundle $r1;
+        java.lang.Exception $r2, $r20;
+        android.app.ActionBar $r3;
+        net.codersgarage.iseeu.settings.SettingsProvider $r4;
+        net.codersgarage.iseeu.models.Settings $r5;
+        org.greenrobot.eventbus.EventBus $r6;
+        android.view.View $r7;
+        android.widget.FrameLayout $r8;
+        android.widget.TextView $r9;
+        android.widget.Button $r10;
+        java.lang.StringBuilder $r11;
+        java.lang.String $r12;
+        int $i0;
+        android.hardware.Camera $r13;
+        net.codersgarage.iseeu.networks.ISeeUClient $r14;
+        net.codersgarage.iseeu.views.MainActivity$ISeeUAsyncTask $r15;
+        java.lang.Object[] $r16;
+        android.content.Intent $r17;
+        boolean $z0;
+        net.codersgarage.iseeu.models.BusAction $r18;
+        android.support.v7.app.ActionBar $r19;
+
+        $r0 := @this: net.codersgarage.iseeu.views.MainActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: void setContentView(int)>(2130968602);
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("onCreated", "Called");
+
+     label1:
+        $r3 = virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: android.app.ActionBar getActionBar()>();
+
+        virtualinvoke $r3.<android.app.ActionBar: void hide()>();
+
+     label2:
+        $r4 = new net.codersgarage.iseeu.settings.SettingsProvider;
+
+        specialinvoke $r4.<net.codersgarage.iseeu.settings.SettingsProvider: void <init>(android.content.Context)>($r0);
+
+        $r5 = virtualinvoke $r4.<net.codersgarage.iseeu.settings.SettingsProvider: net.codersgarage.iseeu.models.Settings getSettings()>();
+
+        $r0.<net.codersgarage.iseeu.views.MainActivity: net.codersgarage.iseeu.models.Settings settings> = $r5;
+
+        $r6 = staticinvoke <org.greenrobot.eventbus.EventBus: org.greenrobot.eventbus.EventBus getDefault()>();
+
+        virtualinvoke $r6.<org.greenrobot.eventbus.EventBus: void register(java.lang.Object)>($r0);
+
+        $r7 = virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: android.view.View findViewById(int)>(2131492951);
+
+        $r8 = (android.widget.FrameLayout) $r7;
+
+        $r0.<net.codersgarage.iseeu.views.MainActivity: android.widget.FrameLayout cameraPreview> = $r8;
+
+        $r7 = virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: android.view.View findViewById(int)>(2131492952);
+
+        $r9 = (android.widget.TextView) $r7;
+
+        $r0.<net.codersgarage.iseeu.views.MainActivity: android.widget.TextView serverInfo> = $r9;
+
+        $r7 = virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: android.view.View findViewById(int)>(2131492953);
+
+        $r10 = (android.widget.Button) $r7;
+
+        $r0.<net.codersgarage.iseeu.views.MainActivity: android.widget.Button stopBtn> = $r10;
+
+        $r9 = $r0.<net.codersgarage.iseeu.views.MainActivity: android.widget.TextView serverInfo>;
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Connected\n");
+
+        $r5 = $r0.<net.codersgarage.iseeu.views.MainActivity: net.codersgarage.iseeu.models.Settings settings>;
+
+        $r12 = virtualinvoke $r5.<net.codersgarage.iseeu.models.Settings: java.lang.String getHost()>();
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(":");
+
+        $r5 = $r0.<net.codersgarage.iseeu.views.MainActivity: net.codersgarage.iseeu.models.Settings settings>;
+
+        $i0 = virtualinvoke $r5.<net.codersgarage.iseeu.models.Settings: int getPort()>();
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r9.<android.widget.TextView: void setText(java.lang.CharSequence)>($r12);
+
+        $r10 = $r0.<net.codersgarage.iseeu.views.MainActivity: android.widget.Button stopBtn>;
+
+        virtualinvoke $r10.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r0);
+
+        $r13 = <net.codersgarage.iseeu.views.MainActivity: android.hardware.Camera camera>;
+
+        if $r13 != null goto label3;
+
+        $r13 = staticinvoke <android.hardware.Camera: android.hardware.Camera open()>();
+
+        <net.codersgarage.iseeu.views.MainActivity: android.hardware.Camera camera> = $r13;
+
+        $r13 = <net.codersgarage.iseeu.views.MainActivity: android.hardware.Camera camera>;
+
+        virtualinvoke $r13.<android.hardware.Camera: void setDisplayOrientation(int)>(90);
+
+     label3:
+        $r14 = <net.codersgarage.iseeu.views.MainActivity: net.codersgarage.iseeu.networks.ISeeUClient iSeeUClient>;
+
+        if $r14 != null goto label4;
+
+        $r15 = new net.codersgarage.iseeu.views.MainActivity$ISeeUAsyncTask;
+
+        specialinvoke $r15.<net.codersgarage.iseeu.views.MainActivity$ISeeUAsyncTask: void <init>(net.codersgarage.iseeu.views.MainActivity)>($r0);
+
+        $r16 = newarray (java.lang.Object)[0];
+
+        virtualinvoke $r15.<net.codersgarage.iseeu.views.MainActivity$ISeeUAsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r16);
+
+     label4:
+        $r17 = virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: android.content.Intent getIntent()>();
+
+        $r1 = virtualinvoke $r17.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r1 == null goto label9;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("isBegin");
+
+        if $z0 == 0 goto label9;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("haveExtra", "Yes");
+
+        $r18 = new net.codersgarage.iseeu.models.BusAction;
+
+        specialinvoke $r18.<net.codersgarage.iseeu.models.BusAction: void <init>(boolean)>(1);
+
+        virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: void onBusAction(net.codersgarage.iseeu.models.BusAction)>($r18);
+
+        return;
+
+     label5:
+        $r2 := @caughtexception;
+
+     label6:
+        $r19 = virtualinvoke $r0.<net.codersgarage.iseeu.views.MainActivity: android.support.v7.app.ActionBar getSupportActionBar()>();
+
+        virtualinvoke $r19.<android.support.v7.app.ActionBar: void hide()>();
+
+     label7:
+        goto label2;
+
+     label8:
+        $r20 := @caughtexception;
+
+        goto label2;
+
+     label9:
+        return;
+
+        catch java.lang.Exception from label1 to label2 with label5;
+        catch java.lang.Exception from label6 to label7 with label8;
+    }
+
+
+3) "NORMAL" Method :: <init> from Class:: net.codersgarage.iseeu.networks.ISeeUClient
+
+4) "NORMAL" Method :: getSettings from Class:: net.codersgarage.iseeu.settings.SettingsProvider
+
+

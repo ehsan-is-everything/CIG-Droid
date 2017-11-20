@@ -1,0 +1,12 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onStartCommand from Class:: com.kos.ktodo.widget.WidgetUpdateService
+
+2) "NORMAL" Method :: run from Class:: java.lang.Thread
+
+3) "NORMAL" Method :: run from Class:: com.kos.ktodo.widget.WidgetUpdateService
+
+4) "NORMAL" Method :: b from Class:: com.kos.ktodo.widget.n
+
+

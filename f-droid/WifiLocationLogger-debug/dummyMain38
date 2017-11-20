@@ -1,0 +1,326 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: com.tomjanson.wifilocationlogger.MainActivity
+
+2) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+3) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+4) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+5) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+6) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+7) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+8) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+9) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+10) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+11) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+12) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+13) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+14) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+15) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+16) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+17) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+18) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+19) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+20) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+21) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+22) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+23) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+24) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+25) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+26) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+27) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+28) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+29) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+30) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+31) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+32) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+33) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+34) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+35) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+36) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+37) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+38) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+39) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+40) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+41) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+42) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+43) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+44) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+45) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+46) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+47) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+48) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+49) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+50) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+51) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+52) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+53) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+54) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+55) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+56) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+57) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+58) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+59) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+60) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+61) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+62) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+63) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+64) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+65) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+66) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+67) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+68) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+69) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+70) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+71) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+72) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+73) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+74) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+75) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+76) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+77) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+78) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+79) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+80) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+81) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+82) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+83) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+84) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+85) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+86) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+87) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+88) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+89) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+90) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+91) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+92) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+93) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+94) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+95) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+96) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+97) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+98) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+99) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+100) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+101) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+102) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+103) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+104) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+105) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+106) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+107) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+108) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+109) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+110) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+111) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+112) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+113) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+114) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+115) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+116) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+117) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+118) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+119) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+120) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+121) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+122) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+123) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+124) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+125) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+126) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+127) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+128) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+129) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+130) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+131) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+132) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+133) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+134) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+135) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+136) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+137) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+138) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+139) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+140) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+141) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+142) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+143) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+144) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+145) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+146) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+147) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+148) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+149) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+150) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+151) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+152) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+153) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+154) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+155) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+156) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+157) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+158) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+159) "NORMAL" Method :: <clinit> from Class:: org.slf4j.impl.StaticLoggerBinder
+
+160) "NORMAL" Method :: <init> from Class:: org.slf4j.impl.StaticLoggerBinder
+
+161) "NORMAL" Method :: setName from Class:: ch.qos.logback.classic.LoggerContext
+
+

@@ -1,0 +1,10 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onLocationChanged from Class:: com.sylwke3100.freetrackgps.GPSListener
+
+2) "NORMAL" Method :: addPoint from Class:: com.sylwke3100.freetrackgps.RouteManager
+
+3) "NORMAL" Method :: addPoint from Class:: com.sylwke3100.freetrackgps.DatabaseManager
+
+

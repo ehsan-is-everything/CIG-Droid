@@ -1,0 +1,18 @@
+target=com.example.lab.testak_textinput.DummyMain
+sourcepath=/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(android.support-tor)/src
+classpath=/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(android.support-tor)/bin:/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(android.support-tor)/android.support.jar:/home/ehsan/eclipse-java-workspace/Testak-TextInput-button-newActivity-sql-vul(android.support-tor)/android-all-8.1.0-robolectric-4402310.jar
+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
+vm.classpath=.
+vm.storage.class=
+symbolic.concolic=true
+symbolic.debug=on
+symbolic.lazy=on
+symbolic.lazy.subtypes = true
+symbolic.strings=true
+symbolic.string_dp=z3str
+symbolic.arrays=true
+symbolic.method=com.example.lab.testak_textinput.onCreate(sym)
+search.multiple_errors=true
+jpf.report.console.finished=
+listener=gov.nasa.jpf.symbc.SymbolicListener,gov.nasa.jpf.listener.CoverageAnalyzer
+#.symbc.concolic.ConcreteExecutionListener,gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener

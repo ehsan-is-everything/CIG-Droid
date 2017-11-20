@@ -1,0 +1,903 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+2) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+3) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+4) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+5) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+6) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+7) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+8) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+9) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+10) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+11) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+12) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+13) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+14) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+15) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+16) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+17) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+18) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+19) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+20) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+21) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+22) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+23) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+24) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+25) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+26) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+27) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+28) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+29) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+30) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+31) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+32) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+33) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+34) "LISTENER" Method :: run in BabyService$1 that declares in onStartCommand from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$1
+
+Active Body of this Method in Jimple is::
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        com.hollandhaptics.babyapp.BabyService$1 $r3;
+        android.os.Handler $r4;
+        java.lang.Runnable $r5;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.String TAG>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r2, "BabyService onStartCommand");
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void FlashLED()>();
+
+        specialinvoke $r0.<com.hollandhaptics.babyapp.BabyService: void start_new_recording()>();
+
+        $r3 = new com.hollandhaptics.babyapp.BabyService$1;
+
+        specialinvoke $r3.<com.hollandhaptics.babyapp.BabyService$1: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable> = $r3;
+
+        $r4 = $r0.<com.hollandhaptics.babyapp.BabyService: android.os.Handler mhandler>;
+
+        $r5 = $r0.<com.hollandhaptics.babyapp.BabyService: java.lang.Runnable mrunnable>;
+
+        virtualinvoke $r4.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 1000L);
+
+        return 1;
+    }
+
+
+35) "NORMAL" Method :: uploadAudioFiles from Class:: com.hollandhaptics.babyapp.BabyService
+
+36) "NORMAL" Method :: run from Class:: java.lang.Thread
+
+37) "LISTENER" Method :: run in BabyService$2 that declares in uploadAudioFiles from Class:: com.hollandhaptics.babyapp.BabyService
+
+Find findViewById(#int) method in following code related to BabyService$2
+
+Active Body of this Method in Jimple is::
+
+    public void uploadAudioFiles()
+    {
+        com.hollandhaptics.babyapp.BabyService $r0;
+        java.io.File $r1, $r2;
+        java.lang.String $r3;
+        java.io.File[] $r4;
+        java.lang.Thread $r5;
+        com.hollandhaptics.babyapp.BabyService$2 $r6;
+
+        $r0 := @this: com.hollandhaptics.babyapp.BabyService;
+
+        $r1 = new java.io.File;
+
+        $r2 = staticinvoke <android.os.Environment: java.io.File getExternalStorageDirectory()>();
+
+        $r3 = virtualinvoke $r2.<java.io.File: java.lang.String getAbsolutePath()>();
+
+        specialinvoke $r1.<java.io.File: void <init>(java.lang.String,java.lang.String)>($r3, "BabyApp");
+
+        $r4 = virtualinvoke $r1.<java.io.File: java.io.File[] listFiles()>();
+
+        $r0.<com.hollandhaptics.babyapp.BabyService: java.io.File[] uploadFiles> = $r4;
+
+        $r5 = new java.lang.Thread;
+
+        $r6 = new com.hollandhaptics.babyapp.BabyService$2;
+
+        specialinvoke $r6.<com.hollandhaptics.babyapp.BabyService$2: void <init>(com.hollandhaptics.babyapp.BabyService)>($r0);
+
+        specialinvoke $r5.<java.lang.Thread: void <init>(java.lang.Runnable)>($r6);
+
+        virtualinvoke $r5.<java.lang.Thread: void start()>();
+
+        return;
+    }
+
+
+38) "NORMAL" Method :: uploadFile from Class:: com.hollandhaptics.babyapp.BabyService
+
+

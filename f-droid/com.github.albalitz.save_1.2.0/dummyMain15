@@ -1,0 +1,182 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onResume from Class:: com.github.albalitz.save.activities.MainActivity
+
+2) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+3) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+4) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+5) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+6) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+7) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+8) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+9) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+10) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+11) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+12) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+13) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+14) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+15) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+16) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+17) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+18) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+19) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+20) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+21) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+22) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+23) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+24) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+25) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+26) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+27) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+28) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+29) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+30) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+31) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+32) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+33) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+34) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+35) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+36) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+37) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+38) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+39) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+40) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+41) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+42) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+43) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+44) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+45) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+46) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+47) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+48) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+49) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+50) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+51) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+52) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+53) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+54) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+55) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+56) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+57) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+58) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+59) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+60) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+61) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+62) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+63) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+64) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+65) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+66) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+67) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+68) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+69) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+70) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+71) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+72) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+73) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+74) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+75) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+76) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+77) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+78) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+79) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+80) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+81) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+82) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+83) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+84) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+85) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+86) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+87) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+88) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+89) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+

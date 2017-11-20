@@ -1,0 +1,128 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: jp.hazuki.yuzubrowser.BrowserActivity
+
+2) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+3) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+4) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.webencode.d
+
+5) "NORMAL" Method :: writeValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+6) "NORMAL" Method :: _configAndWriteValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+7) "NORMAL" Method :: _configAndWriteCloseable from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+8) "NORMAL" Method :: serializeValue from Class:: com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+
+9) "NORMAL" Method :: serialize from Class:: com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer
+
+10) "NORMAL" Method :: serialize from Class:: com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer
+
+11) "NORMAL" Method :: serializeContents from Class:: com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer
+
+12) "NORMAL" Method :: serializeContentsUsing from Class:: com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer
+
+13) "NORMAL" Method :: serializeWithType from Class:: com.fasterxml.jackson.databind.ser.impl.BeanAsArraySerializer
+
+14) "NORMAL" Method :: _serializeWithObjectId from Class:: com.fasterxml.jackson.databind.ser.std.BeanSerializerBase
+
+15) "NORMAL" Method :: _serializeObjectId from Class:: com.fasterxml.jackson.databind.ser.std.BeanSerializerBase
+
+16) "NORMAL" Method :: serializeFields from Class:: com.fasterxml.jackson.databind.ser.std.BeanSerializerBase
+
+17) "NORMAL" Method :: getAndSerialize from Class:: com.fasterxml.jackson.databind.ser.AnyGetterWriter
+
+18) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+19) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+20) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.useragent.e
+
+21) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+22) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+23) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.webencode.d
+
+24) "NORMAL" Method :: writeValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+25) "NORMAL" Method :: _configAndWriteValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+26) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+27) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+28) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.useragent.e
+
+29) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+30) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+31) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.webencode.d
+
+32) "NORMAL" Method :: writeValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+33) "NORMAL" Method :: _configAndWriteValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+34) "NORMAL" Method :: _configAndWriteCloseable from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+35) "NORMAL" Method :: serializeValue from Class:: com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+
+36) "NORMAL" Method :: serialize from Class:: com.fasterxml.jackson.databind.ser.std.JsonValueSerializer
+
+37) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+38) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+39) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.useragent.e
+
+40) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+41) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+42) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.webencode.d
+
+43) "NORMAL" Method :: writeValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+44) "NORMAL" Method :: _configAndWriteValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+45) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+46) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+47) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.useragent.e
+
+48) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+49) "NORMAL" Method :: a from Class:: jp.hazuki.yuzubrowser.settings.b.a
+
+50) "NORMAL" Method :: b from Class:: jp.hazuki.yuzubrowser.webencode.d
+
+51) "NORMAL" Method :: writeValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+52) "NORMAL" Method :: _configAndWriteValue from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+53) "NORMAL" Method :: _configAndWriteCloseable from Class:: com.fasterxml.jackson.databind.ObjectMapper
+
+54) "NORMAL" Method :: serializeValue from Class:: com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+
+55) "NORMAL" Method :: findTypedValueSerializer from Class:: com.fasterxml.jackson.databind.SerializerProvider
+
+56) "NORMAL" Method :: findValueSerializer from Class:: com.fasterxml.jackson.databind.SerializerProvider
+
+57) "NORMAL" Method :: _createAndCacheUntypedSerializer from Class:: com.fasterxml.jackson.databind.SerializerProvider
+
+58) "NORMAL" Method :: _createUntypedSerializer from Class:: com.fasterxml.jackson.databind.SerializerProvider
+
+59) "NORMAL" Method :: createSerializer from Class:: com.fasterxml.jackson.databind.ser.BeanSerializerFactory
+
+60) "NORMAL" Method :: _createSerializer2 from Class:: com.fasterxml.jackson.databind.ser.BeanSerializerFactory
+
+61) "NORMAL" Method :: findBeanSerializer from Class:: com.fasterxml.jackson.databind.ser.BeanSerializerFactory
+
+62) "NORMAL" Method :: constructBeanSerializer from Class:: com.fasterxml.jackson.databind.ser.BeanSerializerFactory
+
+

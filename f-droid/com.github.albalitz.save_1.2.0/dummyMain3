@@ -1,0 +1,38 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onResume from Class:: com.github.albalitz.save.activities.MainActivity
+
+2) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+3) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+4) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+5) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+6) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+7) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+8) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+9) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+10) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+11) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+12) "NORMAL" Method :: saveQueuedLinks from Class:: com.github.albalitz.save.persistence.offline_queue.OfflineQueue
+
+13) "NORMAL" Method :: saveLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+14) "NORMAL" Method :: updateSavedLinks from Class:: com.github.albalitz.save.persistence.database.Database
+
+15) "NORMAL" Method :: onSavedLinksUpdate from Class:: com.github.albalitz.save.activities.MainActivity
+
+16) "NORMAL" Method :: handleTempPrefs from Class:: com.github.albalitz.save.activities.MainActivity
+
+17) "NORMAL" Method :: deleteLink from Class:: com.github.albalitz.save.persistence.database.Database
+
+
