@@ -175,7 +175,7 @@ public class ExtractCFG {
 			stack.clear();
 			stack.push(targetMethod);
 			visit(cfg, stack);
-			//bestPathes.add(stack);
+			// bestPathes.add(stack);
 		}
 	}
 
@@ -190,7 +190,7 @@ public class ExtractCFG {
 				Edge p = (Edge) (ptargets.next());
 				SootMethod sm = p.getSrc().method();
 				if (sm.getName().equals("dummyMainMethod")) {
-					//stack.push(sm);
+					// stack.push(sm);
 					makeSPFdummyMainInfo(stack);
 					stack.pop();
 					return;
@@ -218,12 +218,25 @@ public class ExtractCFG {
 	}
 
 	private static void makeSPFdummyMainInfo(Stack<SootMethod> stack) {
-		//SootMethod SootDummyMain = stack.pop();
+		// SootMethod SootDummyMain = stack.pop();
 
 		String result = "This is Static information for building SPF dummyMain class::\n\n\n";
 		int counter = 1;
+		boolean hasInputMethod = false;
 
-		for (int index = 0; index < stack.size(); index++) {
+		for (int index = stack.size() - 1; index >= 0; index--) {
+			SootMethod currentMethod = stack.get(index);
+			if (currentMethod.getActiveBody().toString().contains("EditText")
+					|| currentMethod.getActiveBody().toString().contains("Intent")) {
+				hasInputMethod = true;
+				break;
+			}
+		}
+
+		if (!hasInputMethod)
+			return;
+
+		for (int index = stack.size() - 1; index >= 0; index--) {
 			SootMethod currentMethod = stack.get(index);
 			String className = currentMethod.getDeclaringClass().getJavaStyleName();
 			if (className.contains("$")) {
