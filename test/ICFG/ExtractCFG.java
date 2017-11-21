@@ -50,11 +50,12 @@ import soot.util.queue.QueueReader;
  */
 
 public class ExtractCFG {
+	private static final int MAX_NUMBER_OF_DUMMYMAINS = 50;
 	private static String dmFolderAddress = null;
-	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
+	//private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
 	private static SetupApplication setupApplication;
 
-	private static HashMap<Integer, String> listofInputEntries = new HashMap<>();
+	//private static HashMap<Integer, String> listofInputEntries = new HashMap<>();
 	private static int counter = 1;
 
 	private static void WriteResultsToFile(String result) {
@@ -142,12 +143,13 @@ public class ExtractCFG {
 
 	public static void bestPathes(String fileName, String androidJars, String dummyMainFolderAddress)
 			throws IOException, XmlPullParserException {
+		counter = 1;
 		dmFolderAddress = dummyMainFolderAddress;
 
 		CallGraph cfg = analyzeAPKFile(fileName, androidJars);
 
 		Iterator<Edge> it = cfg.iterator();
-
+		System.err.println(fileName);
 		ArrayList<SootMethod> listofTargetMethods = new ArrayList<>();
 
 		while (it.hasNext()) {
@@ -175,7 +177,8 @@ public class ExtractCFG {
 			stack.clear();
 			stack.push(targetMethod);
 			visit(cfg, stack);
-			// bestPathes.add(stack);
+			if (counter > MAX_NUMBER_OF_DUMMYMAINS)
+				return;
 		}
 	}
 
@@ -187,6 +190,8 @@ public class ExtractCFG {
 
 		if (ptargets != null) {
 			while (ptargets.hasNext()) {
+				if (counter > MAX_NUMBER_OF_DUMMYMAINS)
+					return;
 				Edge p = (Edge) (ptargets.next());
 				SootMethod sm = p.getSrc().method();
 				if (sm.getName().equals("dummyMainMethod")) {
@@ -218,7 +223,6 @@ public class ExtractCFG {
 	}
 
 	private static void makeSPFdummyMainInfo(Stack<SootMethod> stack) {
-		// SootMethod SootDummyMain = stack.pop();
 
 		String result = "This is Static information for building SPF dummyMain class::\n\n\n";
 		int counter = 1;
@@ -263,7 +267,7 @@ public class ExtractCFG {
 			}
 			counter++;
 		}
-		System.out.println(result);
+		// System.out.println(result);
 		WriteResultsToFile(result);
 	}
 
