@@ -1,0 +1,133 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "LISTENER" Method :: onClick in TimeAheadActivity$2 that declares in onCreate from Class:: org.zephyrsoft.trackworktime.TimeAheadActivity
+
+Find findViewById(#int) method in following code related to TimeAheadActivity$2
+
+Active Body of this Method in Jimple is::
+
+    protected void onCreate(android.os.Bundle)
+    {
+        org.zephyrsoft.trackworktime.TimeAheadActivity $r0;
+        android.os.Bundle $r1;
+        android.view.View $r2;
+        android.widget.TextView $r3;
+        android.widget.EditText $r4;
+        android.widget.Button $r5;
+        org.zephyrsoft.trackworktime.TimeAheadActivity$1 $r6;
+        org.zephyrsoft.trackworktime.TimeAheadActivity$2 $r7;
+
+        $r0 := @this: org.zephyrsoft.trackworktime.TimeAheadActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: void setContentView(int)>(2130903090);
+
+        $r2 = virtualinvoke $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.view.View findViewById(int)>(2131493014);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.widget.TextView type> = $r3;
+
+        $r2 = virtualinvoke $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.view.View findViewById(int)>(2131493016);
+
+        $r4 = (android.widget.EditText) $r2;
+
+        $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.widget.EditText minutes> = $r4;
+
+        $r2 = virtualinvoke $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.view.View findViewById(int)>(2131492951);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.widget.Button cancel> = $r5;
+
+        $r2 = virtualinvoke $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.view.View findViewById(int)>(2131493018);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.widget.Button ok> = $r5;
+
+        $r5 = $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.widget.Button cancel>;
+
+        $r6 = new org.zephyrsoft.trackworktime.TimeAheadActivity$1;
+
+        specialinvoke $r6.<org.zephyrsoft.trackworktime.TimeAheadActivity$1: void <init>(org.zephyrsoft.trackworktime.TimeAheadActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r6);
+
+        $r5 = $r0.<org.zephyrsoft.trackworktime.TimeAheadActivity: android.widget.Button ok>;
+
+        $r7 = new org.zephyrsoft.trackworktime.TimeAheadActivity$2;
+
+        specialinvoke $r7.<org.zephyrsoft.trackworktime.TimeAheadActivity$2: void <init>(org.zephyrsoft.trackworktime.TimeAheadActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+        return;
+    }
+
+
+2) "NORMAL" Method :: clockInAction from Class:: org.zephyrsoft.trackworktime.WorkTimeTrackerActivity
+
+3) "NORMAL" Method :: startTracking from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+4) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+5) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+6) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+7) "NORMAL" Method :: clockInWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+8) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+9) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+10) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+11) "NORMAL" Method :: clockOutWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+12) "NORMAL" Method :: setTrackingMethodClockInState from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+13) "NORMAL" Method :: createEventIfNecessary from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+14) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+15) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+16) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+17) "NORMAL" Method :: clockInWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+18) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+19) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+20) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+21) "NORMAL" Method :: clockOutWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+22) "NORMAL" Method :: setTrackingMethodClockInStateForcibly from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+23) "NORMAL" Method :: createEventForcibly from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+24) "NORMAL" Method :: clockOutAction from Class:: org.zephyrsoft.trackworktime.WorkTimeTrackerActivity
+
+25) "NORMAL" Method :: stopTracking from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+26) "NORMAL" Method :: createEvent from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+27) "NORMAL" Method :: insertDefaultWorkTimes from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+28) "NORMAL" Method :: insertDefaultWorkTimes from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+29) "NORMAL" Method :: createEvent from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+30) "NORMAL" Method :: createEvent from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+31) "NORMAL" Method :: updateWeekSum from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+

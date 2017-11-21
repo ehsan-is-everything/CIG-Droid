@@ -1,0 +1,10 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onHandleIntent from Class:: com.QuarkLabs.BTCeClient.services.CheckTickersService
+
+2) "NORMAL" Method :: watcherPairs from Class:: com.QuarkLabs.BTCeClient.services.CheckTickersService
+
+3) "NORMAL" Method :: getNotifiers from Class:: com.QuarkLabs.BTCeClient.data.DBWorker
+
+

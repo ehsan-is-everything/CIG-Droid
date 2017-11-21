@@ -1,0 +1,10 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onHandleIntent from Class:: com.example.kyle.reminder.AlarmService
+
+2) "NORMAL" Method :: execute from Class:: com.example.kyle.reminder.AlarmService
+
+3) "NORMAL" Method :: deleteItem from Class:: com.example.kyle.reminder.reminderDatabase
+
+

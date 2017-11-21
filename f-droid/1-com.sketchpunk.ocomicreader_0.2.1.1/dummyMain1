@@ -1,0 +1,14 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: com.sketchpunk.ocomicreader.ViewActivity
+
+2) "NORMAL" Method :: gotoPage from Class:: com.sketchpunk.ocomicreader.lib.ComicLoader
+
+3) "NORMAL" Method :: prevPage from Class:: com.sketchpunk.ocomicreader.lib.ComicLoader
+
+4) "NORMAL" Method :: onPageLoaded from Class:: com.sketchpunk.ocomicreader.ViewActivity
+
+5) "NORMAL" Method :: execSql from Class:: sage.data.Sqlite
+
+

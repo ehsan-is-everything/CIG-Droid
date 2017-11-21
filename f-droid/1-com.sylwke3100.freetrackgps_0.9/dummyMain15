@@ -1,0 +1,73 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "LISTENER" Method :: onClick in IgnorePointsListActivity$2 that declares in onAddIgnorePointsAlertDialogShow from Class:: com.sylwke3100.freetrackgps.IgnorePointsListActivity
+
+Find findViewById(#int) method in following code related to IgnorePointsListActivity$2
+
+Active Body of this Method in Jimple is::
+
+    public void onAddIgnorePointsAlertDialogShow()
+    {
+        com.sylwke3100.freetrackgps.IgnorePointsListActivity $r0;
+        android.app.AlertDialog$Builder $r1, $r8;
+        android.view.LayoutInflater $r2;
+        android.view.View $r3, $r4;
+        android.widget.EditText $r5, $r6, $r7;
+        com.sylwke3100.freetrackgps.IgnorePointsListActivity$2 $r9;
+        com.sylwke3100.freetrackgps.IgnorePointsListActivity$1 $r10;
+        android.app.AlertDialog $r11;
+
+        $r0 := @this: com.sylwke3100.freetrackgps.IgnorePointsListActivity;
+
+        $r2 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r0);
+
+        $r3 = virtualinvoke $r2.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup)>(2130903051, null);
+
+        $r1 = new android.app.AlertDialog$Builder;
+
+        specialinvoke $r1.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        virtualinvoke $r1.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setView(android.view.View)>($r3);
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>(2131361838);
+
+        $r5 = (android.widget.EditText) $r4;
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>(2131361841);
+
+        $r6 = (android.widget.EditText) $r4;
+
+        $r3 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>(2131361843);
+
+        $r7 = (android.widget.EditText) $r3;
+
+        $r8 = virtualinvoke $r1.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setCancelable(boolean)>(0);
+
+        $r9 = new com.sylwke3100.freetrackgps.IgnorePointsListActivity$2;
+
+        specialinvoke $r9.<com.sylwke3100.freetrackgps.IgnorePointsListActivity$2: void <init>(com.sylwke3100.freetrackgps.IgnorePointsListActivity,android.widget.EditText,android.widget.EditText,android.widget.EditText)>($r0, $r6, $r7, $r5);
+
+        $r8 = virtualinvoke $r8.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setPositiveButton(int,android.content.DialogInterface$OnClickListener)>(2131165217, $r9);
+
+        $r10 = new com.sylwke3100.freetrackgps.IgnorePointsListActivity$1;
+
+        specialinvoke $r10.<com.sylwke3100.freetrackgps.IgnorePointsListActivity$1: void <init>(com.sylwke3100.freetrackgps.IgnorePointsListActivity)>($r0);
+
+        virtualinvoke $r8.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setNegativeButton(int,android.content.DialogInterface$OnClickListener)>(2131165218, $r10);
+
+        $r11 = virtualinvoke $r1.<android.app.AlertDialog$Builder: android.app.AlertDialog create()>();
+
+        virtualinvoke $r11.<android.app.AlertDialog: void show()>();
+
+        return;
+    }
+
+
+2) "NORMAL" Method :: addIgnorePointsFromAlertDialog from Class:: com.sylwke3100.freetrackgps.IgnorePointsListActivity
+
+3) "NORMAL" Method :: addIgnorePoint from Class:: com.sylwke3100.freetrackgps.IgnorePointsManager
+
+4) "NORMAL" Method :: addIgnorePoint from Class:: com.sylwke3100.freetrackgps.DatabaseManager
+
+

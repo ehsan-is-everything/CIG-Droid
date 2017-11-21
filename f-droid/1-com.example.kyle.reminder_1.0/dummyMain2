@@ -1,0 +1,59 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "LISTENER" Method :: onClick in createOrEditAlert$5 that declares in saveDialog from Class:: com.example.kyle.reminder.createOrEditAlert
+
+Find findViewById(#int) method in following code related to createOrEditAlert$5
+
+Active Body of this Method in Jimple is::
+
+    private android.support.v7.app.AlertDialog saveDialog(int, java.lang.String, java.lang.String, long)
+    {
+        com.example.kyle.reminder.createOrEditAlert $r0;
+        int $i0;
+        java.lang.String $r1, $r2;
+        long $l1;
+        android.support.v7.app.AlertDialog$Builder $r3;
+        com.example.kyle.reminder.createOrEditAlert$5 $r4;
+        com.example.kyle.reminder.createOrEditAlert$4 $r5;
+        android.support.v7.app.AlertDialog $r6;
+
+        $r0 := @this: com.example.kyle.reminder.createOrEditAlert;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $l1 := @parameter3: long;
+
+        $r3 = new android.support.v7.app.AlertDialog$Builder;
+
+        specialinvoke $r3.<android.support.v7.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        $r3 = virtualinvoke $r3.<android.support.v7.app.AlertDialog$Builder: android.support.v7.app.AlertDialog$Builder setTitle(java.lang.CharSequence)>("Confirm");
+
+        $r3 = virtualinvoke $r3.<android.support.v7.app.AlertDialog$Builder: android.support.v7.app.AlertDialog$Builder setMessage(java.lang.CharSequence)>("Do you want to save?");
+
+        $r4 = new com.example.kyle.reminder.createOrEditAlert$5;
+
+        specialinvoke $r4.<com.example.kyle.reminder.createOrEditAlert$5: void <init>(com.example.kyle.reminder.createOrEditAlert,int,java.lang.String,java.lang.String,long)>($r0, $i0, $r1, $r2, $l1);
+
+        $r3 = virtualinvoke $r3.<android.support.v7.app.AlertDialog$Builder: android.support.v7.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("Yes", $r4);
+
+        $r5 = new com.example.kyle.reminder.createOrEditAlert$4;
+
+        specialinvoke $r5.<com.example.kyle.reminder.createOrEditAlert$4: void <init>(com.example.kyle.reminder.createOrEditAlert)>($r0);
+
+        $r3 = virtualinvoke $r3.<android.support.v7.app.AlertDialog$Builder: android.support.v7.app.AlertDialog$Builder setNegativeButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("No", $r5);
+
+        $r6 = virtualinvoke $r3.<android.support.v7.app.AlertDialog$Builder: android.support.v7.app.AlertDialog create()>();
+
+        return $r6;
+    }
+
+
+2) "NORMAL" Method :: updateAlert from Class:: com.example.kyle.reminder.reminderDatabase
+
+

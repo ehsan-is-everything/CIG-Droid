@@ -1,0 +1,62 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onStartCommand from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+2) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+3) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+4) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+5) "NORMAL" Method :: clockInWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+6) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+7) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+8) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+9) "NORMAL" Method :: clockOutWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+10) "NORMAL" Method :: setTrackingMethodClockInState from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+11) "NORMAL" Method :: createEventIfNecessary from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+12) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+13) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+14) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+15) "NORMAL" Method :: clockInWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+16) "NORMAL" Method :: checkWifiIfEnabled from Class:: org.zephyrsoft.trackworktime.location.WifiTrackerService
+
+17) "NORMAL" Method :: checkWifi from Class:: org.zephyrsoft.trackworktime.location.WifiTracker
+
+18) "NORMAL" Method :: checkLocation from Class:: org.zephyrsoft.trackworktime.location.LocationTracker
+
+19) "NORMAL" Method :: clockOutWithTrackingMethod from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+20) "NORMAL" Method :: setTrackingMethodClockInStateForcibly from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+21) "NORMAL" Method :: createEventForcibly from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+22) "NORMAL" Method :: clockOutAction from Class:: org.zephyrsoft.trackworktime.WorkTimeTrackerActivity
+
+23) "NORMAL" Method :: stopTracking from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+24) "NORMAL" Method :: createEvent from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+25) "NORMAL" Method :: insertDefaultWorkTimes from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+26) "NORMAL" Method :: insertDefaultWorkTimes from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+27) "NORMAL" Method :: createEvent from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+28) "NORMAL" Method :: createEvent from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+29) "NORMAL" Method :: updateWeekSum from Class:: org.zephyrsoft.trackworktime.timer.TimerManager
+
+

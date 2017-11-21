@@ -1,8 +1,0 @@
-This is Static information for building SPF dummyMain class::
-
-
-1) "NORMAL" Method :: onReceive from Class:: at.huber.youtubeDownloader.DownloadFinishedReceiver
-
-2) "NORMAL" Method :: removeTempOnFailure from Class:: at.huber.youtubeDownloader.DownloadFinishedReceiver
-
-

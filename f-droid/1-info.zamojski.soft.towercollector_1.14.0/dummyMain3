@@ -1,0 +1,51 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onStartCommand from Class:: info.zamojski.soft.towercollector.CollectorService
+
+2) "NORMAL" Method :: k from Class:: info.zamojski.soft.towercollector.CollectorService
+
+3) "NORMAL" Method :: a from Class:: info.zamojski.soft.towercollector.SplashActivity
+
+4) "NORMAL" Method :: postDelayed from Class:: android.os.Handler
+
+5) "NORMAL" Method :: a from Class:: info.zamojski.soft.towercollector.SplashActivity
+
+6) "LISTENER" Method :: run in SplashActivity$1 that declares in a from Class:: info.zamojski.soft.towercollector.SplashActivity
+
+Find findViewById(#int) method in following code related to SplashActivity$1
+
+Active Body of this Method in Jimple is::
+
+    private void a()
+    {
+        info.zamojski.soft.towercollector.SplashActivity $r0;
+        android.os.Handler $r1;
+        java.lang.Object[] $r2;
+        info.zamojski.soft.towercollector.SplashActivity$1 $r3;
+
+        $r0 := @this: info.zamojski.soft.towercollector.SplashActivity;
+
+        $r2 = newarray (java.lang.Object)[0];
+
+        staticinvoke <b.a.a: b.a.a a(java.lang.Object,java.lang.Object[])>("startAsync(): Creating handler", $r2);
+
+        $r1 = specialinvoke $r0.<info.zamojski.soft.towercollector.SplashActivity: android.os.Handler g()>();
+
+        $r3 = new info.zamojski.soft.towercollector.SplashActivity$1;
+
+        specialinvoke $r3.<info.zamojski.soft.towercollector.SplashActivity$1: void <init>(info.zamojski.soft.towercollector.SplashActivity)>($r0);
+
+        virtualinvoke $r1.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r3, 0L);
+
+        return;
+    }
+
+
+7) "NORMAL" Method :: a from Class:: info.zamojski.soft.towercollector.SplashActivity
+
+8) "NORMAL" Method :: b from Class:: info.zamojski.soft.towercollector.SplashActivity
+
+9) "NORMAL" Method :: e from Class:: info.zamojski.soft.towercollector.d.f
+
+

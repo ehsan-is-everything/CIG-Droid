@@ -1,0 +1,10 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: com.sylwke3100.freetrackgps.WorkoutMapViewActivity
+
+2) "NORMAL" Method :: getStartEndMarkers from Class:: com.sylwke3100.freetrackgps.WorkoutMapViewActivity
+
+3) "NORMAL" Method :: getPointsInRoute from Class:: com.sylwke3100.freetrackgps.DatabaseManager
+
+

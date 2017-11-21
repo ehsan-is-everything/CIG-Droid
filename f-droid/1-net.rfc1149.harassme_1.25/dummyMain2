@@ -1,0 +1,548 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onReceive from Class:: net.rfc1149.harassme.HarassMeListener
+
+2) "NORMAL" Method :: exists from Class:: scala.Option
+
+3) "LISTENER" Method :: apply in HarassMeListener$$anonfun$onReceive$1 that declares in onReceive from Class:: net.rfc1149.harassme.HarassMeListener
+
+Find findViewById(#int) method in following code related to HarassMeListener$$anonfun$onReceive$1
+
+Active Body of this Method in Jimple is::
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        net.rfc1149.harassme.HarassMeListener $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        android.os.Bundle $r3;
+        java.lang.String $r4, $r5;
+        org.scaloid.common.SIntent$ $r6;
+        scala.reflect.ClassTag$ $r7;
+        scala.reflect.ClassTag $r8;
+        scala.runtime.BoxedUnit $r9;
+        boolean $z0;
+        scala.Option$ $r10;
+        scala.Option $r11;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$1 $r12;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1 $r13;
+        net.rfc1149.harassme.HarassMeListener$ $r14;
+
+        $r0 := @this: net.rfc1149.harassme.HarassMeListener;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("state");
+
+        $r5 = <android.telephony.TelephonyManager: java.lang.String EXTRA_STATE_RINGING>;
+
+        if $r5 != null goto label2;
+
+        if $r4 == null goto label3;
+
+     label1:
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: boolean stopService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r5.<java.lang.Object: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label1;
+
+     label3:
+        $r10 = <scala.Option$: scala.Option$ MODULE$>;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("incoming_number");
+
+        $r11 = virtualinvoke $r10.<scala.Option$: scala.Option apply(java.lang.Object)>($r4);
+
+        $r12 = new net.rfc1149.harassme.HarassMeListener$$anonfun$1;
+
+        specialinvoke $r12.<net.rfc1149.harassme.HarassMeListener$$anonfun$1: void <init>(net.rfc1149.harassme.HarassMeListener)>($r0);
+
+        $r11 = virtualinvoke $r11.<scala.Option: scala.Option filterNot(scala.Function1)>($r12);
+
+        $r13 = new net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1;
+
+        specialinvoke $r13.<net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1: void <init>(net.rfc1149.harassme.HarassMeListener,android.content.Context)>($r0, $r1);
+
+        $z0 = virtualinvoke $r11.<scala.Option: boolean exists(scala.Function1)>($r13);
+
+        if $z0 == 0 goto label4;
+
+        $r14 = <net.rfc1149.harassme.HarassMeListener$: net.rfc1149.harassme.HarassMeListener$ MODULE$>;
+
+        $z0 = virtualinvoke $r14.<net.rfc1149.harassme.HarassMeListener$: boolean net$rfc1149$harassme$HarassMeListener$$isSilent(android.content.Context)>($r1);
+
+        if $z0 == 0 goto label4;
+
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label4:
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+    }
+
+
+4) "LISTENER" Method :: apply in HarassMeListener$$anonfun$onReceive$1 that declares in onReceive from Class:: net.rfc1149.harassme.HarassMeListener
+
+Find findViewById(#int) method in following code related to HarassMeListener$$anonfun$onReceive$1
+
+Active Body of this Method in Jimple is::
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        net.rfc1149.harassme.HarassMeListener $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        android.os.Bundle $r3;
+        java.lang.String $r4, $r5;
+        org.scaloid.common.SIntent$ $r6;
+        scala.reflect.ClassTag$ $r7;
+        scala.reflect.ClassTag $r8;
+        scala.runtime.BoxedUnit $r9;
+        boolean $z0;
+        scala.Option$ $r10;
+        scala.Option $r11;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$1 $r12;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1 $r13;
+        net.rfc1149.harassme.HarassMeListener$ $r14;
+
+        $r0 := @this: net.rfc1149.harassme.HarassMeListener;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("state");
+
+        $r5 = <android.telephony.TelephonyManager: java.lang.String EXTRA_STATE_RINGING>;
+
+        if $r5 != null goto label2;
+
+        if $r4 == null goto label3;
+
+     label1:
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: boolean stopService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r5.<java.lang.Object: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label1;
+
+     label3:
+        $r10 = <scala.Option$: scala.Option$ MODULE$>;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("incoming_number");
+
+        $r11 = virtualinvoke $r10.<scala.Option$: scala.Option apply(java.lang.Object)>($r4);
+
+        $r12 = new net.rfc1149.harassme.HarassMeListener$$anonfun$1;
+
+        specialinvoke $r12.<net.rfc1149.harassme.HarassMeListener$$anonfun$1: void <init>(net.rfc1149.harassme.HarassMeListener)>($r0);
+
+        $r11 = virtualinvoke $r11.<scala.Option: scala.Option filterNot(scala.Function1)>($r12);
+
+        $r13 = new net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1;
+
+        specialinvoke $r13.<net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1: void <init>(net.rfc1149.harassme.HarassMeListener,android.content.Context)>($r0, $r1);
+
+        $z0 = virtualinvoke $r11.<scala.Option: boolean exists(scala.Function1)>($r13);
+
+        if $z0 == 0 goto label4;
+
+        $r14 = <net.rfc1149.harassme.HarassMeListener$: net.rfc1149.harassme.HarassMeListener$ MODULE$>;
+
+        $z0 = virtualinvoke $r14.<net.rfc1149.harassme.HarassMeListener$: boolean net$rfc1149$harassme$HarassMeListener$$isSilent(android.content.Context)>($r1);
+
+        if $z0 == 0 goto label4;
+
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label4:
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+    }
+
+
+5) "LISTENER" Method :: net$rfc1149$harassme$HarassMeListener$$shouldBeSignaled in HarassMeListener$ that declares in onReceive from Class:: net.rfc1149.harassme.HarassMeListener
+
+Find findViewById(#int) method in following code related to HarassMeListener$
+
+Active Body of this Method in Jimple is::
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        net.rfc1149.harassme.HarassMeListener $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        android.os.Bundle $r3;
+        java.lang.String $r4, $r5;
+        org.scaloid.common.SIntent$ $r6;
+        scala.reflect.ClassTag$ $r7;
+        scala.reflect.ClassTag $r8;
+        scala.runtime.BoxedUnit $r9;
+        boolean $z0;
+        scala.Option$ $r10;
+        scala.Option $r11;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$1 $r12;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1 $r13;
+        net.rfc1149.harassme.HarassMeListener$ $r14;
+
+        $r0 := @this: net.rfc1149.harassme.HarassMeListener;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("state");
+
+        $r5 = <android.telephony.TelephonyManager: java.lang.String EXTRA_STATE_RINGING>;
+
+        if $r5 != null goto label2;
+
+        if $r4 == null goto label3;
+
+     label1:
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: boolean stopService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r5.<java.lang.Object: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label1;
+
+     label3:
+        $r10 = <scala.Option$: scala.Option$ MODULE$>;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("incoming_number");
+
+        $r11 = virtualinvoke $r10.<scala.Option$: scala.Option apply(java.lang.Object)>($r4);
+
+        $r12 = new net.rfc1149.harassme.HarassMeListener$$anonfun$1;
+
+        specialinvoke $r12.<net.rfc1149.harassme.HarassMeListener$$anonfun$1: void <init>(net.rfc1149.harassme.HarassMeListener)>($r0);
+
+        $r11 = virtualinvoke $r11.<scala.Option: scala.Option filterNot(scala.Function1)>($r12);
+
+        $r13 = new net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1;
+
+        specialinvoke $r13.<net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1: void <init>(net.rfc1149.harassme.HarassMeListener,android.content.Context)>($r0, $r1);
+
+        $z0 = virtualinvoke $r11.<scala.Option: boolean exists(scala.Function1)>($r13);
+
+        if $z0 == 0 goto label4;
+
+        $r14 = <net.rfc1149.harassme.HarassMeListener$: net.rfc1149.harassme.HarassMeListener$ MODULE$>;
+
+        $z0 = virtualinvoke $r14.<net.rfc1149.harassme.HarassMeListener$: boolean net$rfc1149$harassme$HarassMeListener$$isSilent(android.content.Context)>($r1);
+
+        if $z0 == 0 goto label4;
+
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label4:
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+    }
+
+
+6) "LISTENER" Method :: missedCalls in HarassMeListener$ that declares in onReceive from Class:: net.rfc1149.harassme.HarassMeListener
+
+Find findViewById(#int) method in following code related to HarassMeListener$
+
+Active Body of this Method in Jimple is::
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        net.rfc1149.harassme.HarassMeListener $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        android.os.Bundle $r3;
+        java.lang.String $r4, $r5;
+        org.scaloid.common.SIntent$ $r6;
+        scala.reflect.ClassTag$ $r7;
+        scala.reflect.ClassTag $r8;
+        scala.runtime.BoxedUnit $r9;
+        boolean $z0;
+        scala.Option$ $r10;
+        scala.Option $r11;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$1 $r12;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1 $r13;
+        net.rfc1149.harassme.HarassMeListener$ $r14;
+
+        $r0 := @this: net.rfc1149.harassme.HarassMeListener;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("state");
+
+        $r5 = <android.telephony.TelephonyManager: java.lang.String EXTRA_STATE_RINGING>;
+
+        if $r5 != null goto label2;
+
+        if $r4 == null goto label3;
+
+     label1:
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: boolean stopService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r5.<java.lang.Object: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label1;
+
+     label3:
+        $r10 = <scala.Option$: scala.Option$ MODULE$>;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("incoming_number");
+
+        $r11 = virtualinvoke $r10.<scala.Option$: scala.Option apply(java.lang.Object)>($r4);
+
+        $r12 = new net.rfc1149.harassme.HarassMeListener$$anonfun$1;
+
+        specialinvoke $r12.<net.rfc1149.harassme.HarassMeListener$$anonfun$1: void <init>(net.rfc1149.harassme.HarassMeListener)>($r0);
+
+        $r11 = virtualinvoke $r11.<scala.Option: scala.Option filterNot(scala.Function1)>($r12);
+
+        $r13 = new net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1;
+
+        specialinvoke $r13.<net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1: void <init>(net.rfc1149.harassme.HarassMeListener,android.content.Context)>($r0, $r1);
+
+        $z0 = virtualinvoke $r11.<scala.Option: boolean exists(scala.Function1)>($r13);
+
+        if $z0 == 0 goto label4;
+
+        $r14 = <net.rfc1149.harassme.HarassMeListener$: net.rfc1149.harassme.HarassMeListener$ MODULE$>;
+
+        $z0 = virtualinvoke $r14.<net.rfc1149.harassme.HarassMeListener$: boolean net$rfc1149$harassme$HarassMeListener$$isSilent(android.content.Context)>($r1);
+
+        if $z0 == 0 goto label4;
+
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label4:
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+    }
+
+
+7) "LISTENER" Method :: lastAnsweredCallFrom in HarassMeListener$ that declares in onReceive from Class:: net.rfc1149.harassme.HarassMeListener
+
+Find findViewById(#int) method in following code related to HarassMeListener$
+
+Active Body of this Method in Jimple is::
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        net.rfc1149.harassme.HarassMeListener $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        android.os.Bundle $r3;
+        java.lang.String $r4, $r5;
+        org.scaloid.common.SIntent$ $r6;
+        scala.reflect.ClassTag$ $r7;
+        scala.reflect.ClassTag $r8;
+        scala.runtime.BoxedUnit $r9;
+        boolean $z0;
+        scala.Option$ $r10;
+        scala.Option $r11;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$1 $r12;
+        net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1 $r13;
+        net.rfc1149.harassme.HarassMeListener$ $r14;
+
+        $r0 := @this: net.rfc1149.harassme.HarassMeListener;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("state");
+
+        $r5 = <android.telephony.TelephonyManager: java.lang.String EXTRA_STATE_RINGING>;
+
+        if $r5 != null goto label2;
+
+        if $r4 == null goto label3;
+
+     label1:
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: boolean stopService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r5.<java.lang.Object: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label1;
+
+     label3:
+        $r10 = <scala.Option$: scala.Option$ MODULE$>;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("incoming_number");
+
+        $r11 = virtualinvoke $r10.<scala.Option$: scala.Option apply(java.lang.Object)>($r4);
+
+        $r12 = new net.rfc1149.harassme.HarassMeListener$$anonfun$1;
+
+        specialinvoke $r12.<net.rfc1149.harassme.HarassMeListener$$anonfun$1: void <init>(net.rfc1149.harassme.HarassMeListener)>($r0);
+
+        $r11 = virtualinvoke $r11.<scala.Option: scala.Option filterNot(scala.Function1)>($r12);
+
+        $r13 = new net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1;
+
+        specialinvoke $r13.<net.rfc1149.harassme.HarassMeListener$$anonfun$onReceive$1: void <init>(net.rfc1149.harassme.HarassMeListener,android.content.Context)>($r0, $r1);
+
+        $z0 = virtualinvoke $r11.<scala.Option: boolean exists(scala.Function1)>($r13);
+
+        if $z0 == 0 goto label4;
+
+        $r14 = <net.rfc1149.harassme.HarassMeListener$: net.rfc1149.harassme.HarassMeListener$ MODULE$>;
+
+        $z0 = virtualinvoke $r14.<net.rfc1149.harassme.HarassMeListener$: boolean net$rfc1149$harassme$HarassMeListener$$isSilent(android.content.Context)>($r1);
+
+        if $z0 == 0 goto label4;
+
+        $r6 = <org.scaloid.common.SIntent$: org.scaloid.common.SIntent$ MODULE$>;
+
+        $r7 = <scala.reflect.ClassTag$: scala.reflect.ClassTag$ MODULE$>;
+
+        $r8 = virtualinvoke $r7.<scala.reflect.ClassTag$: scala.reflect.ClassTag apply(java.lang.Class)>(class "Lnet/rfc1149/harassme/RingerService;");
+
+        $r2 = virtualinvoke $r6.<org.scaloid.common.SIntent$: android.content.Intent apply(android.content.Context,scala.reflect.ClassTag)>($r1, $r8);
+
+        virtualinvoke $r1.<android.content.Context: android.content.ComponentName startService(android.content.Intent)>($r2);
+
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+
+     label4:
+        $r9 = <scala.runtime.BoxedUnit: scala.runtime.BoxedUnit UNIT>;
+
+        return;
+    }
+
+
+

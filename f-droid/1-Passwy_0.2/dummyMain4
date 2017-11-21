@@ -1,0 +1,470 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "LISTENER" Method :: onClick in Passwy$6 that declares in onCreate from Class:: jlelse.passwy.Passwy
+
+Find findViewById(#int) method in following code related to Passwy$6
+
+Active Body of this Method in Jimple is::
+
+    protected void onCreate(android.os.Bundle)
+    {
+        jlelse.passwy.Passwy $r0;
+        android.os.Bundle $r1;
+        jlelse.passwy.Passwy$1 $r2;
+        android.view.View $r3;
+        android.widget.EditText $r4;
+        jlelse.passwy.Passwy$2 $r5;
+        jlelse.passwy.Passwy$3 $r6;
+        jlelse.passwy.Passwy$4 $r7;
+        android.widget.CheckBox $r8;
+        com.wang.avi.AVLoadingIndicatorView $r9;
+        android.widget.Button $r10;
+        jlelse.passwy.Passwy$5 $r11;
+        jlelse.passwy.Passwy$6 $r12;
+
+        $r0 := @this: jlelse.passwy.Passwy;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<jlelse.simpleui.SimpleActivity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<jlelse.passwy.Passwy: void setContentView(int)>(2130903085);
+
+        virtualinvoke $r0.<jlelse.passwy.Passwy: void setToolbarEnabled(boolean)>(1);
+
+        $r2 = new jlelse.passwy.Passwy$1;
+
+        specialinvoke $r2.<jlelse.passwy.Passwy$1: void <init>(jlelse.passwy.Passwy)>($r0);
+
+        virtualinvoke $r0.<jlelse.passwy.Passwy: void initDrawer(boolean,int,android.support.design.widget.NavigationView$OnNavigationItemSelectedListener,android.view.View)>(1, 2131558400, $r2, null);
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493021);
+
+        $r4 = (android.widget.EditText) $r3;
+
+        $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1> = $r4;
+
+        $r4 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        $r5 = new jlelse.passwy.Passwy$2;
+
+        specialinvoke $r5.<jlelse.passwy.Passwy$2: void <init>(jlelse.passwy.Passwy)>($r0);
+
+        virtualinvoke $r4.<android.widget.EditText: void setOnTouchListener(android.view.View$OnTouchListener)>($r5);
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493022);
+
+        $r4 = (android.widget.EditText) $r3;
+
+        $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2> = $r4;
+
+        $r4 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        $r6 = new jlelse.passwy.Passwy$3;
+
+        specialinvoke $r6.<jlelse.passwy.Passwy$3: void <init>(jlelse.passwy.Passwy)>($r0);
+
+        virtualinvoke $r4.<android.widget.EditText: void setOnTouchListener(android.view.View$OnTouchListener)>($r6);
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493023);
+
+        $r4 = (android.widget.EditText) $r3;
+
+        $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength> = $r4;
+
+        $r4 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r7 = new jlelse.passwy.Passwy$4;
+
+        specialinvoke $r7.<jlelse.passwy.Passwy$4: void <init>(jlelse.passwy.Passwy)>($r0);
+
+        virtualinvoke $r4.<android.widget.EditText: void setOnTouchListener(android.view.View$OnTouchListener)>($r7);
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493024);
+
+        $r8 = (android.widget.CheckBox) $r3;
+
+        $r0.<jlelse.passwy.Passwy: android.widget.CheckBox specChars> = $r8;
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493027);
+
+        $r9 = (com.wang.avi.AVLoadingIndicatorView) $r3;
+
+        $r0.<jlelse.passwy.Passwy: com.wang.avi.AVLoadingIndicatorView loadingIndicator> = $r9;
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493025);
+
+        $r10 = (android.widget.Button) $r3;
+
+        $r0.<jlelse.passwy.Passwy: android.widget.Button btnGenerate> = $r10;
+
+        $r10 = $r0.<jlelse.passwy.Passwy: android.widget.Button btnGenerate>;
+
+        $r11 = new jlelse.passwy.Passwy$5;
+
+        specialinvoke $r11.<jlelse.passwy.Passwy$5: void <init>(jlelse.passwy.Passwy)>($r0);
+
+        virtualinvoke $r10.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r11);
+
+        $r3 = virtualinvoke $r0.<jlelse.passwy.Passwy: android.view.View findViewById(int)>(2131493026);
+
+        $r10 = (android.widget.Button) $r3;
+
+        $r0.<jlelse.passwy.Passwy: android.widget.Button btnCopy> = $r10;
+
+        $r10 = $r0.<jlelse.passwy.Passwy: android.widget.Button btnCopy>;
+
+        $r12 = new jlelse.passwy.Passwy$6;
+
+        specialinvoke $r12.<jlelse.passwy.Passwy$6: void <init>(jlelse.passwy.Passwy)>($r0);
+
+        virtualinvoke $r10.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r12);
+
+        return;
+    }
+
+
+2) "NORMAL" Method :: generate from Class:: jlelse.passwy.Passwy
+
+3) "NORMAL" Method :: run from Class:: java.lang.Thread
+
+4) "LISTENER" Method :: run in Passwy$7 that declares in generate from Class:: jlelse.passwy.Passwy
+
+Find findViewById(#int) method in following code related to Passwy$7
+
+Active Body of this Method in Jimple is::
+
+    public void generate(android.view.View, boolean)
+    {
+        jlelse.passwy.Passwy $r0;
+        android.view.View $r1;
+        boolean $z0, $z1, $z2;
+        java.lang.Thread $r2;
+        android.widget.EditText $r3;
+        android.text.Editable $r4;
+        java.lang.String $r5, $r6, $r8;
+        android.widget.CheckBox $r7;
+        int $i0, $i1;
+        com.wang.avi.AVLoadingIndicatorView $r9;
+        android.widget.Button $r10;
+        jlelse.passwy.Passwy$7 $r11;
+        android.support.design.widget.Snackbar $r12;
+
+        $r0 := @this: jlelse.passwy.Passwy;
+
+        $r1 := @parameter0: android.view.View;
+
+        $z0 := @parameter1: boolean;
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r5 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r6 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $r7 = $r0.<jlelse.passwy.Passwy: android.widget.CheckBox specChars>;
+
+        $z1 = virtualinvoke $r7.<android.widget.CheckBox: boolean isChecked()>();
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r8 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $z2 = virtualinvoke $r8.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z2 != 0 goto label5;
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r8);
+
+        $i1 = $i0;
+
+        if $i0 <= 64 goto label3;
+
+        $i1 = 64;
+
+     label1:
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i1);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>($r8);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r8 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r8);
+
+        $z2 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z2 != 0 goto label2;
+
+        $z2 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z2 == 0 goto label4;
+
+     label2:
+        $r9 = $r0.<jlelse.passwy.Passwy: com.wang.avi.AVLoadingIndicatorView loadingIndicator>;
+
+        virtualinvoke $r9.<com.wang.avi.AVLoadingIndicatorView: void setVisibility(int)>(0);
+
+        $r10 = $r0.<jlelse.passwy.Passwy: android.widget.Button btnGenerate>;
+
+        virtualinvoke $r10.<android.widget.Button: void setEnabled(boolean)>(0);
+
+        $r10 = $r0.<jlelse.passwy.Passwy: android.widget.Button btnCopy>;
+
+        virtualinvoke $r10.<android.widget.Button: void setEnabled(boolean)>(0);
+
+        $r7 = $r0.<jlelse.passwy.Passwy: android.widget.CheckBox specChars>;
+
+        virtualinvoke $r7.<android.widget.CheckBox: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setFocusable(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setFocusable(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setFocusable(boolean)>(0);
+
+        $r2 = new java.lang.Thread;
+
+        $r11 = new jlelse.passwy.Passwy$7;
+
+        specialinvoke $r11.<jlelse.passwy.Passwy$7: void <init>(jlelse.passwy.Passwy,java.lang.String,int,boolean,boolean,android.view.View)>($r0, $r5, $i0, $z1, $z0, $r1);
+
+        specialinvoke $r2.<java.lang.Thread: void <init>(java.lang.Runnable)>($r11);
+
+        virtualinvoke $r2.<java.lang.Thread: void start()>();
+
+        return;
+
+     label3:
+        if $i0 >= 4 goto label1;
+
+        $i1 = 4;
+
+        goto label1;
+
+     label4:
+        $r12 = staticinvoke <android.support.design.widget.Snackbar: android.support.design.widget.Snackbar make(android.view.View,int,int)>($r1, 2131099685, -1);
+
+        virtualinvoke $r12.<android.support.design.widget.Snackbar: void show()>();
+
+        return;
+
+     label5:
+        $r12 = staticinvoke <android.support.design.widget.Snackbar: android.support.design.widget.Snackbar make(android.view.View,int,int)>($r1, 2131099680, -1);
+
+        virtualinvoke $r12.<android.support.design.widget.Snackbar: void show()>();
+
+        return;
+    }
+
+
+5) "NORMAL" Method :: access$000 from Class:: jlelse.passwy.Passwy
+
+6) "NORMAL" Method :: hash from Class:: jlelse.passwy.Passwy
+
+7) "NORMAL" Method :: password from Class:: jlelse.passwy.Passwy
+
+8) "NORMAL" Method :: generate from Class:: jlelse.passwy.Passwy
+
+9) "NORMAL" Method :: run from Class:: java.lang.Thread
+
+10) "LISTENER" Method :: run in Passwy$7 that declares in generate from Class:: jlelse.passwy.Passwy
+
+Find findViewById(#int) method in following code related to Passwy$7
+
+Active Body of this Method in Jimple is::
+
+    public void generate(android.view.View, boolean)
+    {
+        jlelse.passwy.Passwy $r0;
+        android.view.View $r1;
+        boolean $z0, $z1, $z2;
+        java.lang.Thread $r2;
+        android.widget.EditText $r3;
+        android.text.Editable $r4;
+        java.lang.String $r5, $r6, $r8;
+        android.widget.CheckBox $r7;
+        int $i0, $i1;
+        com.wang.avi.AVLoadingIndicatorView $r9;
+        android.widget.Button $r10;
+        jlelse.passwy.Passwy$7 $r11;
+        android.support.design.widget.Snackbar $r12;
+
+        $r0 := @this: jlelse.passwy.Passwy;
+
+        $r1 := @parameter0: android.view.View;
+
+        $z0 := @parameter1: boolean;
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r5 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r6 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $r7 = $r0.<jlelse.passwy.Passwy: android.widget.CheckBox specChars>;
+
+        $z1 = virtualinvoke $r7.<android.widget.CheckBox: boolean isChecked()>();
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r8 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $z2 = virtualinvoke $r8.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z2 != 0 goto label5;
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r8);
+
+        $i1 = $i0;
+
+        if $i0 <= 64 goto label3;
+
+        $i1 = 64;
+
+     label1:
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i1);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>($r8);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        $r4 = virtualinvoke $r3.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r8 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r8);
+
+        $z2 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z2 != 0 goto label2;
+
+        $z2 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z2 == 0 goto label4;
+
+     label2:
+        $r9 = $r0.<jlelse.passwy.Passwy: com.wang.avi.AVLoadingIndicatorView loadingIndicator>;
+
+        virtualinvoke $r9.<com.wang.avi.AVLoadingIndicatorView: void setVisibility(int)>(0);
+
+        $r10 = $r0.<jlelse.passwy.Passwy: android.widget.Button btnGenerate>;
+
+        virtualinvoke $r10.<android.widget.Button: void setEnabled(boolean)>(0);
+
+        $r10 = $r0.<jlelse.passwy.Passwy: android.widget.Button btnCopy>;
+
+        virtualinvoke $r10.<android.widget.Button: void setEnabled(boolean)>(0);
+
+        $r7 = $r0.<jlelse.passwy.Passwy: android.widget.CheckBox specChars>;
+
+        virtualinvoke $r7.<android.widget.CheckBox: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase1>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setFocusable(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText phrase2>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setFocusable(boolean)>(0);
+
+        $r3 = $r0.<jlelse.passwy.Passwy: android.widget.EditText pwLength>;
+
+        virtualinvoke $r3.<android.widget.EditText: void setFocusable(boolean)>(0);
+
+        $r2 = new java.lang.Thread;
+
+        $r11 = new jlelse.passwy.Passwy$7;
+
+        specialinvoke $r11.<jlelse.passwy.Passwy$7: void <init>(jlelse.passwy.Passwy,java.lang.String,int,boolean,boolean,android.view.View)>($r0, $r5, $i0, $z1, $z0, $r1);
+
+        specialinvoke $r2.<java.lang.Thread: void <init>(java.lang.Runnable)>($r11);
+
+        virtualinvoke $r2.<java.lang.Thread: void start()>();
+
+        return;
+
+     label3:
+        if $i0 >= 4 goto label1;
+
+        $i1 = 4;
+
+        goto label1;
+
+     label4:
+        $r12 = staticinvoke <android.support.design.widget.Snackbar: android.support.design.widget.Snackbar make(android.view.View,int,int)>($r1, 2131099685, -1);
+
+        virtualinvoke $r12.<android.support.design.widget.Snackbar: void show()>();
+
+        return;
+
+     label5:
+        $r12 = staticinvoke <android.support.design.widget.Snackbar: android.support.design.widget.Snackbar make(android.view.View,int,int)>($r1, 2131099680, -1);
+
+        virtualinvoke $r12.<android.support.design.widget.Snackbar: void show()>();
+
+        return;
+    }
+
+
+11) "NORMAL" Method :: access$000 from Class:: jlelse.passwy.Passwy
+
+12) "NORMAL" Method :: hash from Class:: jlelse.passwy.Passwy
+
+13) "NORMAL" Method :: encrypt from Class:: jlelse.passwy.Passwy
+
+
