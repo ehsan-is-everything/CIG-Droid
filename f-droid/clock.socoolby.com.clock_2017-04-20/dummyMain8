@@ -1,24 +1,52 @@
 This is Static information for building SPF dummyMain class::
 
 
-1) "NORMAL" Method :: onActivityResult from Class:: clock.socoolby.com.clock.MainActivity
+1) "NORMAL" Method :: onCreate from Class:: clock.socoolby.com.clock.SettingActivity
 
-2) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+2) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
 
-3) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+3) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
 
-4) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+4) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
 
-5) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+5) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
 
-6) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+6) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
 
-7) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+7) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
 
-8) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+8) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
 
-9) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+9) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
 
-10) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+10) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+11) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+12) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+
+13) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+14) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+15) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+
+16) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+17) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+18) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+
+19) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+20) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+21) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
+
+22) "NORMAL" Method :: init from Class:: clock.socoolby.com.clock.MainActivity
+
+23) "NORMAL" Method :: read from Class:: clock.socoolby.com.clock.utils.SharePerferenceModel
+
+24) "NORMAL" Method :: readObject from Class:: clock.socoolby.com.clock.utils.FileUtils
 
 

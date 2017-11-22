@@ -1,10 +1,26 @@
 This is Static information for building SPF dummyMain class::
 
 
-1) "NORMAL" Method :: onActivityResult from Class:: com.tomclaw.mandarin.main.ChatActivity
+1) "NORMAL" Method :: onEditorAction from Class:: com.tomclaw.mandarin.main.icq.r
 
-2) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.ChatActivity
+2) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
 
-3) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.core.UriFile
+3) "NORMAL" Method :: gj from Class:: com.tomclaw.mandarin.main.icq.PlainLoginActivity
+
+4) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.IcqAccountRoot
+
+5) "NORMAL" Method :: run from Class:: com.tomclaw.mandarin.im.icq.b
+
+6) "NORMAL" Method :: ep from Class:: com.tomclaw.mandarin.im.icq.f
+
+7) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.im.icq.IcqAccountRoot
+
+8) "NORMAL" Method :: ds from Class:: com.tomclaw.mandarin.im.AccountRoot
+
+9) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.core.u
+
+10) "NORMAL" Method :: c from Class:: com.tomclaw.mandarin.core.u
+
+11) "NORMAL" Method :: a from Class:: com.tomclaw.mandarin.util.r
 
 

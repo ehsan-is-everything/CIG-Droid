@@ -107,10 +107,40 @@ This is Static information for building SPF dummyMain class::
 
 53) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
 
-54) "NORMAL" Method :: <clinit> from Class:: org.slf4j.impl.StaticLoggerBinder
+54) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
 
-55) "NORMAL" Method :: <init> from Class:: org.slf4j.impl.StaticLoggerBinder
+55) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
 
-56) "NORMAL" Method :: setName from Class:: ch.qos.logback.classic.LoggerContext
+56) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+57) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+58) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+59) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+60) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+61) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+62) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+63) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+64) "NORMAL" Method :: performInitialization from Class:: org.slf4j.LoggerFactory
+
+65) "NORMAL" Method :: bind from Class:: org.slf4j.LoggerFactory
+
+66) "NORMAL" Method :: fixSubstitutedLoggers from Class:: org.slf4j.LoggerFactory
+
+67) "NORMAL" Method :: getLogger from Class:: org.slf4j.LoggerFactory
+
+68) "NORMAL" Method :: getILoggerFactory from Class:: org.slf4j.LoggerFactory
+
+69) "NORMAL" Method :: <clinit> from Class:: org.slf4j.impl.StaticLoggerBinder
+
+70) "NORMAL" Method :: <init> from Class:: org.slf4j.impl.StaticLoggerBinder
+
+71) "NORMAL" Method :: setName from Class:: ch.qos.logback.classic.LoggerContext
 
 

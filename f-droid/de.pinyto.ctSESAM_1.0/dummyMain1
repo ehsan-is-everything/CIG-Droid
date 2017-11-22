@@ -3,4 +3,6 @@ This is Static information for building SPF dummyMain class::
 
 1) "NORMAL" Method :: onCreate from Class:: de.pinyto.ctSESAM.MainActivity
 
+2) "NORMAL" Method :: updateView from Class:: de.pinyto.ctSESAM.MainActivity
+
 
