@@ -1,0 +1,2 @@
+true for dummyMain1
+not using of parametric methods!
