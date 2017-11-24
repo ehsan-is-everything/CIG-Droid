@@ -1,0 +1,2 @@
+true
+no use of parametric methods! and then use in Adapter!
