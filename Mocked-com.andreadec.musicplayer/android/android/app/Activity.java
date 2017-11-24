@@ -19,6 +19,7 @@ package android.app;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -100,4 +101,7 @@ public class Activity {
 	public final void setResult(int resultCode, Intent intent) {
 		this.mIntent=intent;
 	}
+	public LayoutInflater getLayoutInflater() {
+        return new LayoutInflater();
+    }
 }

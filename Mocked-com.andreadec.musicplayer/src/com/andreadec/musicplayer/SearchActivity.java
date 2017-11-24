@@ -54,7 +54,7 @@ public class SearchActivity extends ActionBarActivity implements OnClickListener
         
         //setContentView(R.layout.activity_search);
         
-        editTextSearch = (EditText)findViewById(R.id.editTextSearch);
+        editTextSearch = new EditText();//(EditText)findViewById(R.id.editTextSearch);
         editTextSearch.setOnKeyListener(this);
 		editTextSearch.setOnFocusChangeListener(new OnFocusChangeListener() {
 			@Override
@@ -64,9 +64,9 @@ public class SearchActivity extends ActionBarActivity implements OnClickListener
 				}
 			}
 		});
-        buttonSearch = (ImageButton)findViewById(R.id.buttonSearch);
+        buttonSearch = new ImageButton();//(ImageButton)findViewById(R.id.buttonSearch);
         buttonSearch.setOnClickListener(this);
-        recyclerViewSearch = (RecyclerView)findViewById(R.id.recyclerViewSearch);
+        recyclerViewSearch = new RecyclerView();//(RecyclerView)findViewById(R.id.recyclerViewSearch);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerViewSearch.setLayoutManager(llm);

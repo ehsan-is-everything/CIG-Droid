@@ -8,9 +8,9 @@ public class dummyMain {
 	public static void main(String[] args) {
 		SearchActivity sa=new SearchActivity();
 		sa.onCreate(new Bundle());
-		View v=new View(sa);
+		View v=new View();
 		int keyCode = 0;
-		KeyEvent event = null;
+		KeyEvent event = new KeyEvent();
 		sa.onKey(v, keyCode, event);
 	}
 }

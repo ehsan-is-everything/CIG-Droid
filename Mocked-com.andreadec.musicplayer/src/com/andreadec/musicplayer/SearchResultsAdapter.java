@@ -38,7 +38,7 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
     public SearchResultsAdapter(SearchActivity activity, ArrayList<BrowserSong> songs) {
         this.activity = activity;
         this.songs = songs;
-     //   inflater = activity.getLayoutInflater();
+        inflater = activity.getLayoutInflater();
     //    imagesCache = ((MusicPlayerApplication)activity.getApplication()).imagesCache;
     }
 
@@ -53,8 +53,8 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
     public void onBindViewHolder(SearchResultsViewHolder holder, int position) {
         final BrowserSong song = songs.get(position);
         holder.song = song;
-        holder.title.setText(song.getTitle());
-        holder.artist.setText(song.getArtist());
+        holder.title.setText((String) song.getTitle());
+        holder.artist.setText((String) song.getArtist());
  //       holder.image.setImageResource(R.drawable.audio);
    //     imagesCache.getImageAsync(song, holder.image);
     }
@@ -73,13 +73,13 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
 
         public SearchResultsViewHolder(View view) {
             super(view);
-//            title = (TextView)view.findViewById(R.id.textViewSongItemTitle);
-//            artist = (TextView)view.findViewById(R.id.textViewSongItemArtist);
-//            image = (ImageView)view.findViewById(R.id.imageViewItemImage);
-//            menu = (ImageButton)view.findViewById(R.id.buttonMenu);
-//            view.setOnClickListener(this);
-//            menu.setOnClickListener(this);
-//            menu.setFocusable(false);
+            title = new TextView();//(TextView)view.findViewById(R.id.textViewSongItemTitle);
+            artist = new TextView();//(TextView)view.findViewById(R.id.textViewSongItemArtist);
+            image = new ImageView();//(ImageView)view.findViewById(R.id.imageViewItemImage);
+            menu = new ImageButton();//(ImageButton)view.findViewById(R.id.buttonMenu);
+            view.setOnClickListener(this);
+            menu.setOnClickListener(this);
+            menu.setFocusable(false);
         }
 
         @Override
