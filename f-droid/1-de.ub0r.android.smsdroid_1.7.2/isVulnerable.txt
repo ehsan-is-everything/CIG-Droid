@@ -1,0 +1,2 @@
+false
+contentResolver-> SMS db. not local db-> ? exist in queries.
