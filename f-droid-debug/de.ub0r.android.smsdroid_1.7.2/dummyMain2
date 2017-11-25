@@ -1,0 +1,30 @@
+This is Static information for building SPF dummyMain class::
+
+
+1) "NORMAL" Method :: onCreate from Class:: de.ub0r.android.smsdroid.MessageListActivity
+
+2) "NORMAL" Method :: parseIntent from Class:: de.ub0r.android.smsdroid.MessageListActivity
+
+3) "NORMAL" Method :: setRead from Class:: de.ub0r.android.smsdroid.MessageListActivity
+
+4) "NORMAL" Method :: markRead from Class:: de.ub0r.android.smsdroid.ConversationListActivity
+
+5) "NORMAL" Method :: handleOnReceive from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+6) "NORMAL" Method :: handleOnReceive from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+7) "NORMAL" Method :: updateNotificationsWithNewText from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+8) "NORMAL" Method :: handleOnReceive from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+9) "NORMAL" Method :: handleOnReceive from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+10) "NORMAL" Method :: updateNotificationsWithNewText from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+11) "NORMAL" Method :: updateNewMessageNotification from Class:: de.ub0r.android.smsdroid.SmsReceiver
+
+12) "NORMAL" Method :: getConversation from Class:: de.ub0r.android.smsdroid.Conversation
+
+13) "NORMAL" Method :: getConversation from Class:: de.ub0r.android.smsdroid.Conversation
+
+

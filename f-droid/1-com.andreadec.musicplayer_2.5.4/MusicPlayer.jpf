@@ -1,0 +1,16 @@
+target=com.andreadec.musicplayer.dummyMain
+sourcepath=/home/ehsan/eclipse-java-workspace/Mocked-com.andreadec.musicplayer/src
+classpath=/home/ehsan/eclipse-java-workspace/Mocked-com.andreadec.musicplayer/bin
+#vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
+#vm.classpath=.
+#vm.storage.class=
+symbolic.concolic=true
+symbolic.debug=on
+symbolic.strings=true
+symbolic.lazy=true
+symbolic.method=com.andreadec.musicplayer.SearchActivity.onKey(conc#sym#sym)
+search.multiple_errors=true
+jpf.report.console.finished=
+listener=gov.nasa.jpf.symbc.SymbolicListener,.symbc.concolic.ConcreteExecutionListener,gov.nasa.jpf.listener.CoverageAnalyzer
+search.depth_limit=10
+

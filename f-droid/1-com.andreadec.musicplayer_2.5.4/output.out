@@ -1,0 +1,1339 @@
+Running Symbolic PathFinder ...
+symbolic.dp=choco
+symbolic.string_dp_timeout_ms=0
+symbolic.string_dp=none
+symbolic.concolic=true
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=32
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 32+) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+com.andreadec.musicplayer.dummyMain.main()
+
+====================================================== search started: 11/25/17 11:42 AM
+New sym int R.id.editTextSearch.length min=-2147483648, max=2147483647
+New sym int keyCode min=-2147483648, max=2147483647
+New sym int event min=-2147483648, max=2147483647
+ALOAD pcHeap: constraint # = 1
+event = -1
+Property Violated: PC is constraint # = 0
+Property Violated: result is  "java.lang.NullPointerException: Calling 'getAction()I' on null object..."
+****************************
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.NullPointerException: Calling 'getAction()I' on null object
+	at com.andreadec.musicplayer.SearchActivity.onKey(SearchActivity.java:169)
+	at com.andreadec.musicplayer.dummyMain.main(dummyMain.java:17)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at com.andreadec.musicplayer.SearchActivity.onKey(SearchActivity.java:169)
+	at com.andreadec.musicplayer.dummyMain.main(dummyMain.java:17)
+
+New sym int event min=-2147483648, max=2147483647
+New sym int android.view.KeyEvent.ACTION_DOWN min=-2147483648, max=2147483647
+New sym int android.view.KeyEvent.KEYCODE_ENTER min=-2147483648, max=2147483647
+ALOAD pcHeap: constraint # = 2
+event = 0 &&
+event != -1
+--------original PC------------0
+original pc constraint # = 1
+keyCode != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 1
+keyCode != 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+keyCode != 0
+--------end after splitting------------
+numeric PC: constraint # = 1
+keyCode != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+keyCode != 0
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+keyCode != 0
+--------original PC------------0
+original pc constraint # = 1
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 1
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+keyCode = 0
+--------end after splitting------------
+numeric PC: constraint # = 1
+keyCode = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+keyCode = 0
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+keyCode = 0
+New sym int dbCursor.getColumnIndex() min=-2147483648, max=2147483647
+New sym int dbCursor.getColumnIndex() min=-2147483648, max=2147483647
+New sym int dbCursor.getColumnIndex() min=-2147483648, max=2147483647
+New sym int dbCursor.getColumnIndex() min=-2147483648, max=2147483647
+New sym int dbCursor.moveToFirst() min=0, max=1
+--------original PC------------0
+original pc constraint # = 2
+dbCursor.moveToFirst() = 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToFirst() = 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() = 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() = 0
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToFirst() = 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 2
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:5 sat:5 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:6 sat:6 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+[com.andreadec.musicplayer.BrowserSong@43399]
+Rooted Heap: 
+VALUE OF adapter in ADAPTER method!!![614]{activity:[380]{editTextSearch:[451]{content:*}buttonSearch:[472]{}recyclerViewSearch:[479]{}lastSearch:[null]inputMethodManager:[null]mediaResolver:[430]{sql:[447]{mCursorFactory:[null]mErrorHandler:[null]}
+ STATICS:{CREATE_IF_NECESSARY:0 CONFLICT_VALUES:[434]{}}}}
+ STATICS:{projection:[371]{}}songs:[521]{elementData:[590]{}size:1 }
+ STATICS:{serialVersionUID:8683452581122892189 DEFAULT_CAPACITY:10 EMPTY_ELEMENTDATA:[416]{}DEFAULTCAPACITY_EMPTY_ELEMENTDATA:[417]{}MAX_ARRAY_SIZE:2147483639 }inflater:[618]{}}
+
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() = 0
+*************Summary***************
+PC is:constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+Return is:  1
+***********************************
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:7 sat:7 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:8 sat:8 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+[com.andreadec.musicplayer.BrowserSong@43399, com.andreadec.musicplayer.BrowserSong@43448]
+Rooted Heap: 
+VALUE OF adapter in ADAPTER method!!![614]{activity:[380]{editTextSearch:[451]{content:*}buttonSearch:[472]{}recyclerViewSearch:[479]{}lastSearch:[null]inputMethodManager:[null]mediaResolver:[430]{sql:[447]{mCursorFactory:[null]mErrorHandler:[null]}
+ STATICS:{CREATE_IF_NECESSARY:0 CONFLICT_VALUES:[434]{}}}}
+ STATICS:{projection:[371]{}}songs:[521]{elementData:[590]{}size:2 }
+ STATICS:{serialVersionUID:8683452581122892189 DEFAULT_CAPACITY:10 EMPTY_ELEMENTDATA:[416]{}DEFAULTCAPACITY_EMPTY_ELEMENTDATA:[417]{}MAX_ARRAY_SIZE:2147483639 }inflater:[618]{}}
+
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+*************Summary***************
+PC is:constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+Return is:  1
+***********************************
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:9 sat:9 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:10 sat:10 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+[com.andreadec.musicplayer.BrowserSong@43399, com.andreadec.musicplayer.BrowserSong@43448, com.andreadec.musicplayer.BrowserSong@43343]
+Rooted Heap: 
+VALUE OF adapter in ADAPTER method!!![614]{activity:[380]{editTextSearch:[451]{content:*}buttonSearch:[472]{}recyclerViewSearch:[479]{}lastSearch:[null]inputMethodManager:[null]mediaResolver:[430]{sql:[447]{mCursorFactory:[null]mErrorHandler:[null]}
+ STATICS:{CREATE_IF_NECESSARY:0 CONFLICT_VALUES:[434]{}}}}
+ STATICS:{projection:[371]{}}songs:[521]{elementData:[590]{}size:3 }
+ STATICS:{serialVersionUID:8683452581122892189 DEFAULT_CAPACITY:10 EMPTY_ELEMENTDATA:[416]{}DEFAULTCAPACITY_EMPTY_ELEMENTDATA:[417]{}MAX_ARRAY_SIZE:2147483639 }inflater:[618]{}}
+
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+*************Summary***************
+PC is:constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+Return is:  1
+***********************************
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:11 sat:11 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:12 sat:12 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+[com.andreadec.musicplayer.BrowserSong@43399, com.andreadec.musicplayer.BrowserSong@43448, com.andreadec.musicplayer.BrowserSong@43343, com.andreadec.musicplayer.BrowserSong@43331]
+Rooted Heap: 
+VALUE OF adapter in ADAPTER method!!![614]{activity:[380]{editTextSearch:[451]{content:*}buttonSearch:[472]{}recyclerViewSearch:[479]{}lastSearch:[null]inputMethodManager:[null]mediaResolver:[430]{sql:[447]{mCursorFactory:[null]mErrorHandler:[null]}
+ STATICS:{CREATE_IF_NECESSARY:0 CONFLICT_VALUES:[434]{}}}}
+ STATICS:{projection:[371]{}}songs:[521]{elementData:[590]{}size:4 }
+ STATICS:{serialVersionUID:8683452581122892189 DEFAULT_CAPACITY:10 EMPTY_ELEMENTDATA:[416]{}DEFAULTCAPACITY_EMPTY_ELEMENTDATA:[417]{}MAX_ARRAY_SIZE:2147483639 }inflater:[618]{}}
+
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+*************Summary***************
+PC is:constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+Return is:  1
+***********************************
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 7
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 7
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:13 sat:13 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 7
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 7
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:14 sat:14 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+[com.andreadec.musicplayer.BrowserSong@43399, com.andreadec.musicplayer.BrowserSong@43448, com.andreadec.musicplayer.BrowserSong@43343, com.andreadec.musicplayer.BrowserSong@43331, com.andreadec.musicplayer.BrowserSong@43351]
+Rooted Heap: 
+VALUE OF adapter in ADAPTER method!!![614]{activity:[380]{editTextSearch:[451]{content:*}buttonSearch:[472]{}recyclerViewSearch:[479]{}lastSearch:[null]inputMethodManager:[null]mediaResolver:[430]{sql:[447]{mCursorFactory:[null]mErrorHandler:[null]}
+ STATICS:{CREATE_IF_NECESSARY:0 CONFLICT_VALUES:[434]{}}}}
+ STATICS:{projection:[371]{}}songs:[521]{elementData:[590]{}size:5 }
+ STATICS:{serialVersionUID:8683452581122892189 DEFAULT_CAPACITY:10 EMPTY_ELEMENTDATA:[416]{}DEFAULTCAPACITY_EMPTY_ELEMENTDATA:[417]{}MAX_ARRAY_SIZE:2147483639 }inflater:[618]{}}
+
+--------begin after splitting------------
+originalPC constraint # = 7
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+*************Summary***************
+PC is:constraint # = 7
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+Return is:  1
+***********************************
+
+====================================================== search constraint
+depth limit reached: 10
+
+====================================================== snapshot 
+no live threads
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 8
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 8
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 8
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 8
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 8
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:15 sat:15 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 8
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--------original PC------------0
+original pc constraint # = 8
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 8
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 8
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 8
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 8
+keyCode = 0 &&
+dbCursor.moveToFirst() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:16 sat:16 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 8
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToFirst() != 0 &&
+keyCode = 0
+
+====================================================== search constraint
+depth limit reached: 10
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at com.andreadec.musicplayer.SearchActivity.search(SearchActivity.java:146)
+	at com.andreadec.musicplayer.SearchActivity.search(SearchActivity.java:122)
+	at com.andreadec.musicplayer.SearchActivity.onKey(SearchActivity.java:170)
+	at com.andreadec.musicplayer.dummyMain.main(dummyMain.java:17)
+
+[]
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToFirst() = 0 &&
+keyCode = 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() = 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+keyCode = 0 &&
+dbCursor.moveToFirst() = 0
+*************Summary***************
+PC is:constraint # = 2
+dbCursor.moveToFirst() = 0 &&
+keyCode = 0
+Return is:  1
+***********************************
+--------begin after splitting------------
+originalPC constraint # = 1
+keyCode != 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+keyCode != 0
+--------end after splitting------------
+numeric PC: constraint # = 1
+keyCode != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+keyCode != 0
+*************Summary***************
+PC is:constraint # = 1
+keyCode != 0
+Return is:  0
+***********************************
+
+====================================================== Method Summaries
+Inputs: v_CONCRETE,,keyCode,event
+
+com.andreadec.musicplayer.SearchActivity.onKey(android.view.View@1e9,0(don't care),0(don't care))  --> "java.lang.NullPointerException: Calling 'getAction()I' on null object..."
+
+====================================================== Method Summaries (HTML)
+<h1>Test Cases Generated by Symbolic JavaPath Finder for com.andreadec.musicplayer.SearchActivity.onKey (Path Coverage) </h1>
+<table border=1>
+<tr><td>v_CONCRETE</td><td>keyCode</td><td>event</td><td>RETURN</td></tr>
+<tr><td>android.view.View@1e9</td><td>0(don't care)</td><td>0(don't care)</td><td>"java.lang.NullPointerException: Calling 'getAction()I' on null object..."</td></tr>
+</table>
+
+====================================================== Vulnerability Detection Result
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.rawQueryWithFactory(SQLiteDatabase$CursorFactory,String,String[],String,CancellationSignal)
+2) android.database.sqlite.SQLiteDatabase.queryWithFactory(SQLiteDatabase$CursorFactory,boolean,String,String[],String,String[],String,String,String,String,CancellationSignal)
+3) android.database.sqlite.SQLiteDatabase.query(boolean,String,String[],String,String[],String,String,String,String)
+4) android.database.sqlite.SQLiteDatabase.query(String,String[],String,String[],String,String,String)
+5) android.content.ContentResolver.query(String,String[],String,String[],String)
+6) com.andreadec.musicplayer.SearchActivity.search(String)
+7) com.andreadec.musicplayer.SearchActivity.search()
+8) com.andreadec.musicplayer.SearchActivity.onKey(View,int,KeyEvent)
+9) com.andreadec.musicplayer.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editTextSearch developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.support.v7.widget.RecyclerView.setAdapter()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.queryWithFactory(SQLiteDatabase$CursorFactory,boolean,String,String[],String,String[],String,String,String,String,CancellationSignal)
+2) android.database.sqlite.SQLiteDatabase.query(boolean,String,String[],String,String[],String,String,String,String)
+3) android.database.sqlite.SQLiteDatabase.query(String,String[],String,String[],String,String,String)
+4) android.content.ContentResolver.query(String,String[],String,String[],String)
+5) com.andreadec.musicplayer.SearchActivity.search(String)
+6) com.andreadec.musicplayer.SearchActivity.search()
+7) com.andreadec.musicplayer.SearchActivity.onKey(View,int,KeyEvent)
+8) com.andreadec.musicplayer.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editTextSearch developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.support.v7.widget.RecyclerView.setAdapter()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.query(boolean,String,String[],String,String[],String,String,String,String)
+2) android.database.sqlite.SQLiteDatabase.query(String,String[],String,String[],String,String,String)
+3) android.content.ContentResolver.query(String,String[],String,String[],String)
+4) com.andreadec.musicplayer.SearchActivity.search(String)
+5) com.andreadec.musicplayer.SearchActivity.search()
+6) com.andreadec.musicplayer.SearchActivity.onKey(View,int,KeyEvent)
+7) com.andreadec.musicplayer.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editTextSearch developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.support.v7.widget.RecyclerView.setAdapter()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.query(String,String[],String,String[],String,String,String)
+2) android.content.ContentResolver.query(String,String[],String,String[],String)
+3) com.andreadec.musicplayer.SearchActivity.search(String)
+4) com.andreadec.musicplayer.SearchActivity.search()
+5) com.andreadec.musicplayer.SearchActivity.onKey(View,int,KeyEvent)
+6) com.andreadec.musicplayer.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editTextSearch developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.support.v7.widget.RecyclerView.setAdapter()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
+====================================================== coverage statistics
+
+-------------------------------------------- class coverage ------------------------------------------------
+bytecode            line                basic-block         branch              methods             location
+------------------------------------------------------------------------------------------------------------
+ -                   -                   -                   -                   -                  [B
+ -                   -                   -                   -                   -                  [C
+ -                   -                   -                   -                   -                  [D
+ -                   -                   -                   -                   -                  [F
+ -                   -                   -                   -                   -                  [I
+ -                   -                   -                   -                   -                  [J
+ -                   -                   -                   -                   -                  [Ljava.io.ObjectStreamField;
+ -                   -                   -                   -                   -                  [Ljava.lang.Object;
+ -                   -                   -                   -                   -                  [Ljava.lang.String;
+ -                   -                   -                   -                   -                  [Ljava.lang.Thread$State;
+ -                   -                   -                   -                   -                  [Ljava.lang.Thread;
+ -                   -                   -                   -                   -                  [Ljava.util.Hashtable$Entry;
+ -                   -                   -                   -                   -                  [S
+ -                   -                   -                   -                   -                  [Z
+0.13 (16/124)       0.12 (4/33)         0.13 (4/31)         0.00 (0/1)          0.08 (1/12)         android.Util.ArrayMap
+0.36 (26/73)        0.33 (9/27)         0.34 (11/32)         -                  0.41 (7/17)         android.app.Activity
+1.00 (23/23)        1.00 (4/4)          1.00 (5/5)           -                  1.00 (2/2)          android.content.ContentResolver
+0.63 (5/8)          0.67 (2/3)          0.33 (1/3)           -                  0.50 (1/2)          android.content.Context
+ -                   -                   -                   -                   -                  android.database.Cursor
+0.60 (194/326)      0.52 (38/73)        0.56 (50/90)        0.17 (2/12)         0.26 (6/23)         android.database.sqlite.SQLiteDatabase
+0.16 (19/119)       0.19 (7/37)         0.15 (11/72)         -                  0.17 (6/35)         android.database.sqlite.SQLiteDatabase$1
+0.03 (26/1026)      0.01 (5/337)        0.03 (10/363)       0.00 (0/27)         0.03 (2/76)         android.os.BaseBundle
+0.02 (3/154)        0.02 (1/48)         0.03 (2/68)          -                  0.03 (1/34)         android.os.Bundle
+1.00 (7/7)          1.00 (3/3)          1.00 (4/4)           -                  1.00 (2/2)          android.support.v4.app.BaseFragmentActivityDonut
+0.88 (7/8)          0.75 (3/4)          0.80 (4/5)           -                  0.67 (2/3)          android.support.v4.app.FragmentActivity
+1.00 (3/3)          1.00 (1/1)          1.00 (2/2)           -                  1.00 (1/1)          android.support.v7.app.ActionBarActivity
+0.78 (7/9)          0.60 (3/5)          0.67 (4/6)           -                  0.50 (2/4)          android.support.v7.app.AppCompatActivity
+1.00 (4/4)          1.00 (3/3)          1.00 (3/3)           -                  1.00 (2/2)          android.support.v7.widget.LinearLayoutManager
+1.00 (8/8)          1.00 (4/4)          1.00 (5/5)           -                  1.00 (3/3)          android.support.v7.widget.RecyclerView
+0.08 (3/37)         0.04 (1/26)         0.07 (2/27)          -                  0.04 (1/25)         android.support.v7.widget.RecyclerView$Adapter
+1.00 (3/3)          1.00 (1/1)          1.00 (2/2)           -                  1.00 (1/1)          android.support.v7.widget.RecyclerView$LayoutManager
+1.00 (5/5)          1.00 (2/2)          1.00 (3/3)           -                  1.00 (2/2)          android.view.KeyEvent
+0.43 (3/7)          0.50 (1/2)          0.50 (2/4)           -                  0.50 (1/2)          android.view.LayoutInflater
+0.54 (7/13)         0.50 (3/6)          0.50 (3/6)          0.00 (0/1)          0.67 (2/3)          android.view.View
+ -                   -                   -                   -                   -                  android.view.View$OnClickListener
+ -                   -                   -                   -                   -                  android.view.View$OnFocusChangeListener
+ -                   -                   -                   -                   -                  android.view.View$OnKeyListener
+1.00 (3/3)          1.00 (1/1)          1.00 (2/2)           -                  1.00 (1/1)          android.view.ViewGroup
+0.69 (18/26)        0.62 (8/13)         0.60 (6/10)          -                  0.50 (4/8)          android.widget.EditText
+0.75 (3/4)          0.50 (1/2)          0.67 (2/3)           -                  0.50 (1/2)          android.widget.ImageButton
+1.00 (3/3)          1.00 (1/1)          1.00 (2/2)           -                  1.00 (1/1)          android.widget.ImageView
+ -                   -                   -                   -                   -                  boolean
+ -                   -                   -                   -                   -                  byte
+ -                   -                   -                   -                   -                  char
+0.43 (3/7)          0.50 (2/4)          0.50 (2/4)           -                  0.33 (1/3)          com.andreadec.musicplayer.BrowserSong
+0.76 (221/292)      0.67 (48/72)        0.71 (66/93)        0.40 (4/10)         0.46 (6/13)         com.andreadec.musicplayer.SearchActivity
+0.33 (6/18)         0.40 (2/5)          0.25 (2/8)          0.00 (0/1)          0.50 (1/2)          com.andreadec.musicplayer.SearchActivity$1
+0.20 (13/64)        0.33 (5/15)         0.16 (3/19)          -                  0.17 (1/6)          com.andreadec.musicplayer.SearchResultsAdapter
+0.90 (26/29)        0.88 (7/8)          0.78 (7/9)           -                  0.50 (1/2)          com.andreadec.musicplayer.dummyMain
+ -                   -                   -                   -                   -                  double
+ -                   -                   -                   -                   -                  float
+0.00 (0/3)          0.00 (0/1)          0.00 (0/2)           -                  0.00 (0/1)          gov.nasa.jpf.BoxObjectCaches
+0.23 (7/31)         0.27 (3/11)         0.24 (4/17)         0.00 (0/2)          0.17 (1/6)          gov.nasa.jpf.ConsoleOutputStream
+0.00 (0/36)         0.00 (0/13)         0.00 (0/19)         0.00 (0/3)          0.00 (0/5)          gov.nasa.jpf.FinalizerThread
+0.10 (6/59)         0.00 (0/11)         0.14 (4/29)         0.00 (0/5)          0.20 (1/5)          gov.nasa.jpf.symbc.Debug
+ -                   -                   -                   -                   -                  int
+ -                   -                   -                   -                   -                  java.io.Closeable
+0.00 (0/101)        0.00 (0/18)         0.00 (0/35)         0.00 (0/6)          0.00 (0/6)          java.io.FilterOutputStream
+ -                   -                   -                   -                   -                  java.io.Flushable
+0.00 (0/126)        0.00 (0/37)         0.00 (0/43)         0.00 (0/11)         0.00 (0/9)          java.io.InputStream
+0.00 (0/58)         0.00 (0/14)         0.00 (0/23)         0.00 (0/8)          0.00 (0/5)          java.io.OutputStream
+0.00 (0/815)        0.00 (0/245)        0.00 (0/277)        0.00 (0/22)         0.00 (0/52)         java.io.PrintStream
+ -                   -                   -                   -                   -                  java.io.Serializable
+0.00 (0/1518)       0.00 (0/295)        0.00 (0/389)        0.00 (0/86)         0.00 (0/61)         java.lang.AbstractStringBuilder
+ -                   -                   -                   -                   -                  java.lang.Appendable
+ -                   -                   -                   -                   -                  java.lang.AutoCloseable
+0.15 (20/137)       0.21 (6/29)         0.09 (6/69)         0.00 (0/14)         0.11 (2/19)         java.lang.Boolean
+0.02 (4/167)        0.03 (1/36)         0.03 (2/68)         0.00 (0/6)          0.04 (1/25)         java.lang.Byte
+0.00 (0/29)         0.00 (0/5)          0.00 (0/11)          -                  0.00 (0/4)          java.lang.CharSequence
+0.00 (0/976)        0.00 (0/187)        0.00 (0/427)        0.00 (0/107)        0.00 (0/96)         java.lang.Character
+0.01 (3/266)        0.02 (1/55)         0.01 (1/107)        0.00 (0/12)         0.03 (1/33)         java.lang.Class
+0.00 (0/228)        0.00 (0/58)         0.00 (0/93)         0.00 (0/8)          0.00 (0/25)         java.lang.ClassLoader
+ -                   -                   -                   -                   -                  java.lang.Cloneable
+ -                   -                   -                   -                   -                  java.lang.Comparable
+0.02 (4/265)        0.02 (1/57)         0.02 (2/104)        0.00 (0/14)         0.03 (1/30)         java.lang.Double
+0.08 (9/119)        0.13 (4/30)         0.04 (2/51)         0.00 (0/6)          0.07 (1/14)         java.lang.Enum
+0.00 (0/23)         0.00 (0/10)         0.00 (0/10)          -                  0.00 (0/5)          java.lang.Exception
+0.02 (4/192)        0.02 (1/44)         0.03 (2/79)         0.00 (0/9)          0.03 (1/31)         java.lang.Float
+0.54 (1000/1846)    0.03 (5/167)        0.01 (2/209)        0.00 (0/42)         0.02 (1/55)         java.lang.Integer
+0.00 (0/22)         0.00 (0/6)          0.00 (0/12)         0.00 (0/1)          0.00 (0/2)          java.lang.Iterable
+0.00 (4/1125)       0.00 (1/209)        0.01 (2/269)        0.00 (0/55)         0.02 (1/55)         java.lang.Long
+0.11 (19/175)       0.00 (0/29)         0.14 (9/64)         0.00 (0/16)         0.16 (3/19)         java.lang.Math
+0.00 (0/7)          0.00 (0/4)          0.00 (0/4)           -                  0.00 (0/2)          java.lang.NullPointerException
+0.00 (0/11)         0.00 (0/3)          0.00 (0/6)           -                  0.00 (0/3)          java.lang.Number
+0.07 (1/15)         0.33 (1/3)          0.11 (1/9)          0.00 (0/1)          0.17 (1/6)          java.lang.Object
+ -                   -                   -                   -                   -                  java.lang.Runnable
+0.00 (0/23)         0.00 (0/10)         0.00 (0/10)          -                  0.00 (0/5)          java.lang.RuntimeException
+0.03 (4/147)        0.03 (1/31)         0.04 (2/56)         0.00 (0/4)          0.04 (1/26)         java.lang.Short
+0.03 (14/468)       0.02 (2/108)        0.03 (5/143)        0.00 (0/14)         0.05 (2/43)         java.lang.String
+0.35 (6/17)         0.00 (0/2)          0.50 (4/8)           -                  0.50 (2/4)          java.lang.String$CaseInsensitiveComparator
+0.01 (5/455)        0.02 (1/61)         0.02 (3/174)         -                  0.01 (1/89)         java.lang.StringBuilder
+0.38 (50/130)       0.27 (11/41)        0.33 (16/49)        0.25 (1/4)          0.11 (2/19)         java.lang.System
+0.07 (3/42)         0.10 (1/10)         0.11 (2/18)          -                  0.11 (1/9)          java.lang.System$1
+0.00 (0/339)        0.00 (0/102)        0.00 (0/107)        0.00 (0/14)         0.00 (0/36)         java.lang.Thread
+0.00 (0/6)          0.00 (0/2)          0.00 (0/2)           -                  0.00 (0/1)          java.lang.Thread$Permit
+0.88 (69/78)        0.00 (0/1)          0.69 (9/13)          -                  0.50 (2/4)          java.lang.Thread$State
+ -                   -                   -                   -                   -                  java.lang.Thread$UncaughtExceptionHandler
+0.00 (0/840)        0.00 (0/194)        0.00 (0/240)        0.00 (0/69)         0.00 (0/35)         java.lang.ThreadGroup
+0.00 (0/118)        0.00 (0/43)         0.00 (0/40)         0.00 (0/5)          0.00 (0/13)         java.lang.Throwable
+0.00 (0/25)         0.00 (0/12)         0.00 (0/8)           -                  0.00 (0/6)          java.lang.ref.Reference
+0.00 (0/9)          0.00 (0/4)          0.00 (0/4)           -                  0.00 (0/2)          java.lang.ref.WeakReference
+0.00 (0/84)         0.00 (0/19)         0.00 (0/36)         0.00 (0/7)          0.00 (0/5)          java.lang.reflect.AnnotatedElement
+ -                   -                   -                   -                   -                  java.lang.reflect.GenericDeclaration
+0.00 (0/3)          0.00 (0/1)          0.00 (0/2)           -                  0.00 (0/1)          java.lang.reflect.Type
+0.11 (44/385)       0.12 (12/102)       0.12 (21/176)       0.05 (2/39)         0.13 (2/15)         java.util.AbstractCollection
+0.02 (6/272)        0.05 (3/66)         0.02 (2/127)        0.00 (0/26)         0.06 (1/18)         java.util.AbstractList
+0.08 (99/1285)      0.10 (25/257)       0.06 (22/341)       0.03 (2/77)         0.18 (9/49)         java.util.ArrayList
+0.16 (26/164)       0.07 (3/41)         0.18 (8/44)         0.00 (0/9)          0.43 (3/7)          java.util.ArrayList$Itr
+0.01 (32/4936)      0.00 (4/1058)       0.01 (12/1397)      0.00 (0/319)        0.02 (3/180)        java.util.Arrays
+0.00 (0/37)         0.00 (0/11)         0.00 (0/19)         0.00 (0/2)          0.00 (0/4)          java.util.Collection
+0.00 (0/428)        0.00 (0/32)         0.00 (0/190)        0.00 (0/43)         0.00 (0/23)         java.util.Comparator
+1.00 (3/3)          1.00 (2/2)          1.00 (2/2)           -                  1.00 (1/1)          java.util.Dictionary
+0.11 (199/1740)     0.11 (43/383)       0.07 (33/453)       0.04 (4/110)        0.11 (5/47)         java.util.Hashtable
+0.13 (15/114)       0.27 (6/22)         0.05 (2/43)         0.00 (0/9)          0.13 (1/8)          java.util.Hashtable$Entry
+0.00 (0/17)         0.00 (0/5)          0.00 (0/10)         0.00 (0/1)          0.00 (0/2)          java.util.Iterator
+0.00 (0/53)         0.00 (0/13)         0.00 (0/21)         0.00 (0/2)          0.00 (0/3)          java.util.List
+0.00 (0/290)        0.00 (0/78)         0.00 (0/113)        0.00 (0/22)         0.00 (0/11)         java.util.Map
+0.00 (0/226)        0.00 (0/11)         0.00 (0/106)        0.00 (0/28)         0.00 (0/9)          java.util.Map$Entry
+0.07 (78/1054)      0.03 (6/227)        0.02 (5/315)        0.00 (0/68)         0.12 (3/26)         java.util.Properties
+ -                   -                   -                   -                   -                  java.util.RandomAccess
+ -                   -                   -                   -                   -                  long
+ -                   -                   -                   -                   -                  short
+ -                   -                   -                   -                   -                  sun.misc.JavaLangAccess
+0.05 (6/110)        0.06 (3/49)         0.07 (3/46)         0.00 (0/7)          0.09 (2/22)         sun.misc.SharedSecrets
+0.06 (8/127)        0.07 (2/29)         0.10 (4/41)          -                  0.10 (2/21)         sun.misc.Unsafe
+ -                   -                   -                   -                   -                  void
+
+------------------------------------------------------------------------------------------------------------
+0.10 (2413/23589)   0.06 (319/5163)     0.06 (412/7141)     0.01 (15/1259)      0.08 (120/1541)     1.00 (100/100)     total
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Calling 'getAction..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=18,visited=0,backtracked=18,end=7
+search:             maxDepth=10,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=9
+heap:               new=816,released=386,maxLive=564,gcCycles=16
+instructions:       6607
+max memory:         183MB
+loaded code:        classes=108,methods=2150
+
+====================================================== search finished: 11/25/17 11:42 AM
