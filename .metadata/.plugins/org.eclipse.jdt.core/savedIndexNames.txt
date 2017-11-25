@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.130+/home/ehsan/eclipse-java-workspace/.metadata/.plugins/org.eclipse.jdt.core
 2017871071.index
 4057457799.index
@@ -42,3 +43,25 @@ INDEX VERSION 1.130+/home/ehsan/eclipse-java-workspace/.metadata/.plugins/org.ec
 212181519.index
 3068750209.index
 642491082.index
+=======
+INDEX VERSION 1.130+F:\JAVA\Mocked-Projects\.metadata\.plugins\org.eclipse.jdt.core
+3449055620.index
+134360950.index
+1961903077.index
+1924480154.index
+543409727.index
+3627084181.index
+3982276604.index
+3608585563.index
+4005617011.index
+1686655237.index
+4062329064.index
+1056031855.index
+189530877.index
+2816613229.index
+2075892729.index
+3145607036.index
+1654674800.index
+2725125150.index
+197789008.index
+>>>>>>> ae7c451601287d6a9c7c6cd0c669cfbfb64c77ce
