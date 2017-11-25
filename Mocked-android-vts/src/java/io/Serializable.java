@@ -1,0 +1,9 @@
+package java.io;
+
+public abstract interface Serializable {}
+
+
+/* Location:              C:\Users\Mahmoud\Desktop\android.jar!\java\io\Serializable.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */

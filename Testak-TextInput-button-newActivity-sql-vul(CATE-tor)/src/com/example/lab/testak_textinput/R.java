@@ -2673,7 +2673,6 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f02004f;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020050;
         public static final int abc_textfield_search_material=0x7f020051;
-        public static final int abc_vector_test=0x7f020052;
         public static final int avd_hide_password=0x7f020053;
         public static final int avd_hide_password_1=0x7f020068;
         public static final int avd_hide_password_2=0x7f020069;
@@ -2701,6 +2700,7 @@ containing a value of this type.
         public static final int notification_template_icon_low_bg=0x7f020067;
         public static final int notification_tile_bg=0x7f020064;
         public static final int notify_panel_notification_icon_bg=0x7f020065;
+        public static final int abc_vector_test=0x7f020052;
     }
     public static final class id {
         public static final int action0=0x7f0d0089;

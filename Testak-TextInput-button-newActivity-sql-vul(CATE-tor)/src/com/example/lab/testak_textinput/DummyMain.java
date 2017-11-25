@@ -11,18 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 
 
 @RunWith(MyRobolectricTestRunner.class)
-//@Config(emulateSdk = 18, reportSdk = 18)
-//@Config(emulateSdk=18, manifest = "./AndroidManifest.xml")
-//@Config(emulateSdk=18)
-//@Config(constants = BuildConfig.class);
+//@Config(manifest=Config.NONE)
 public class DummyMain {
 
 	@Test
 	public void theGreatTest(){
-		System.out.println("Starting function calls");
+		System.out.println("Starting dummyMain");
 		MainActivity ma=Robolectric.setupActivity(MainActivity.class);
 		ma.findViewById(R.id.button).performClick();
-        System.out.println("Finished with function calls");
+        System.out.println("Finished with dummyMain");
 	}
 }
 
