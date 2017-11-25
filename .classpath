@@ -6,7 +6,6 @@
 	<classpathentry kind="src" output="build/peers" path="src/peers"/>
 	<classpathentry kind="src" output="build/tests" path="src/tests"/>
 	<classpathentry kind="src" output="build/classes" path="src/classes"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/grappa.jar"/>
 	<classpathentry kind="lib" path="lib/aima-core.jar"/>
@@ -36,12 +35,6 @@
 	<classpathentry kind="lib" path="lib/yicesapijava.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/proteus.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/soot-infoflow-android"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/soot-infoflow"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/heros"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/jasmin"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/soot"/>
-	<classpathentry kind="lib" path="/soot-infoflow-android/lib"/>
-	<classpathentry kind="lib" path="/soot-infoflow-android/lib/AXMLPrinter2.jar" sourcepath="/soot-infoflow-android/D:/Tools/AXMLPrinter2.source"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>

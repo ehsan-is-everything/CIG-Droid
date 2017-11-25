@@ -94,9 +94,9 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	// private HashMap<String, ArrayList<VulPart>> vulResult = new HashMap<>();
 	private VulnerabiltyResult vulResult = new VulnerabiltyResult();
 	private ArrayList<VulPart> vulArrayList = new ArrayList<>();
-//	private boolean sinkMethodFound = false;
-//	private String resultofLeakage;
-//	private int warningCounter = 1;
+	// private boolean sinkMethodFound = false;
+	// private String resultofLeakage;
+	// private int warningCounter = 1;
 	private int dangerCounter = 1;
 
 	public SymbolicListener(Config conf, JPF jpf) {
@@ -142,18 +142,18 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	// می ره آخرین نقطه انتخاب که بر اساس پی سی هست رو پیدا می کنه
 	// خطا رو بر میداره همراه با پی سی کنار هم چاپ می کنه و داخل خلاصه متد نگهداری
 	// می کنه
-	@Override
-	public void stateAdvanced(Search search) {
-
-		VM vm = search.getVM();
-		ThreadInfo ti = vm.getCurrentThread();
-		StackFrame sf = ti.getTopFrame();
-		if (sf != null) {
-			MethodInfo mi = sf.getMethodInfo();
-			String methodName = mi.getBaseName();
-			System.err.println(methodName);
-		}
-	}
+	// @Override
+	// public void stateAdvanced(Search search) {
+	//
+	// VM vm = search.getVM();
+	// ThreadInfo ti = vm.getCurrentThread();
+	// StackFrame sf = ti.getTopFrame();
+	// if (sf != null) {
+	// MethodInfo mi = sf.getMethodInfo();
+	// String methodName = mi.getBaseName();
+	// System.err.println(methodName);
+	// }
+	// }
 
 	@Override
 	public void propertyViolated(Search search) {
@@ -257,11 +257,11 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 						// }
 
 						vulResult.putLeakgeMethod(vp, symList);
-						//sinkMethodFound = false;
+						// sinkMethodFound = false;
 					}
 
 				}
-				//System.out.println(className+"."+shortName);
+				// System.out.println(className+"."+shortName);
 				if (isMethodSink(shortName, longName, className)) {
 					// result += "\n\n-----------------STACK TRACE OF CURRENT APPLICATION RUN";
 					HashMap<String, String> symList = isInputOfMethodSymbolic(sf, shortName);
@@ -290,7 +290,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 						// result += "\n-----------------END OF NAME OF
 						// IDS----------------------------\n\n";
 						vulArrayList.add(vp2);
-						//sinkMethodFound = true;
+						// sinkMethodFound = true;
 						vulResult.put("VUL_" + dangerCounter, (ArrayList<VulPart>) vulArrayList.clone());
 						dangerCounter++;
 						vulArrayList.clear();
@@ -523,6 +523,8 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 
 	private String[] isInputOfLeakageMethodSymbolic(StackFrame sf, String shortName) {
 		Object[] obj = sf.getSlotAttrs();
+		if (obj == null && shortName.equals("setAdapter"))
+			obj = sf.getPrevious().getSlotAttrs();
 		if (obj != null) {
 			for (Object object : obj) {
 				if (object != null) {
@@ -717,7 +719,8 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	}
 
 	private boolean isLeakageMethod(String shortName, String longName, String className) {
-		if (shortName.equals("setText") && className.equals("android.widget.TextView")) {
+		if ((shortName.equals("setText") && className.equals("android.widget.TextView"))
+				|| (shortName.equals("setAdapter") && className.equals("android.support.v7.widget.RecyclerView"))) {
 			return true;
 		} else
 			return false;

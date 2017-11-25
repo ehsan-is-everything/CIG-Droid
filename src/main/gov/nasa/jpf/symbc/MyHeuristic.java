@@ -17,11 +17,19 @@
  */
 package gov.nasa.jpf.symbc;
 
+import java.util.Iterator;
+import java.util.List;
+
+import com.sun.javafx.scene.traversal.Hueristic2D;
+
 import gov.nasa.jpf.Config;
+import gov.nasa.jpf.search.heuristic.HeuristicState;
 import gov.nasa.jpf.search.heuristic.SimplePriorityHeuristic;
 import gov.nasa.jpf.symbc.numeric.PCChoiceGenerator;
 import gov.nasa.jpf.symbc.numeric.PathCondition;
 import gov.nasa.jpf.vm.ChoiceGenerator;
+import gov.nasa.jpf.vm.Instruction;
+import gov.nasa.jpf.vm.MethodInfo;
 import gov.nasa.jpf.vm.VM;
 
 /**
@@ -36,11 +44,23 @@ public class MyHeuristic extends SimplePriorityHeuristic {
 	@Override
 	protected int computeHeuristicValue() {
 		ChoiceGenerator<?> cg = vm.getChoiceGenerator();
-		if(cg instanceof PCChoiceGenerator) {
+		ChoiceGenerator<?>[]cgall=vm.getChoiceGenerators();
+		if (cg instanceof PCChoiceGenerator) {
 			PathCondition pc = ((PCChoiceGenerator) cg).getCurrentPC();
+			PCChoiceGenerator pccg = ((PCChoiceGenerator) cg);
+			System.out.println(pccg.getNextChoice());
+			Instruction inst = vm.getInstruction();
+			MethodInfo mi = inst.getMethodInfo();
+			generateChildren();
+			Iterator<HeuristicState> cit = getChildStates().iterator();
 			
+			while (cit.hasNext()) {
+				HeuristicState hs=cit.next();				
+				
+				System.out.println();
+			}
 		}
-		
+
 		return Integer.MAX_VALUE - vm.getPathLength();
 	}
 
