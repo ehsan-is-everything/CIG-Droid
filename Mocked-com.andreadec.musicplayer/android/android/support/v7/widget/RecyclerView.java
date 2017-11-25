@@ -6,6 +6,7 @@ import com.andreadec.musicplayer.SearchResultsAdapter;
 
 import android.view.View;
 import android.view.ViewGroup;
+import gov.nasa.jpf.symbc.Debug;
 
 public class RecyclerView extends ViewGroup {
 
@@ -14,6 +15,7 @@ public class RecyclerView extends ViewGroup {
 		// setLayoutFrozen(false);
 		// setAdapterInternal(adapter, false, true);
 		// requestLayout();
+		Debug.printSymbolicRef(adapter,"VALUE OF adapter in ADAPTER method!!!");
 	}
 
 	public static abstract class ViewHolder {

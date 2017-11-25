@@ -16,24 +16,25 @@
 
 package android.widget;
 
-import com.andreadec.musicplayer.OnFocusChangeListener;
+//import com.andreadec.musicplayer.OnFocusChangeListener;
 import com.andreadec.musicplayer.SearchActivity;
 
 import android.view.View;
+import gov.nasa.jpf.symbc.Debug;
 //import gov.nasa.jpf.symbc.Debug;
 
 public class EditText extends View {
 	String content;
 
-	public EditText() {
+	public EditText(String id) {
 		// TODO Auto-generated constructor stub
-		this.content = new String("97");
+		this.content = Debug.makeSymbolicString(id);
 	}
 
 	public Object getText() {
 		// Debug.makeFieldsSymbolic("content", content);
 		// Debug.makeSymbolicString("content");
-		// Debug.printSymbolicRef(content, "CONTENT_VALUE!!!:::>>");
+		 //Debug.printSymbolicRef(content, "CONTENT_VALUE!!!:::>>");
 		return content;
 	}
 

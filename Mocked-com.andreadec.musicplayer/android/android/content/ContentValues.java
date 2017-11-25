@@ -16,8 +16,8 @@
 
 package android.content;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+//import android.os.Parcel;
+//import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +28,7 @@ import java.util.Set;
  * This class is used to store a set of values that the {@link ContentResolver}
  * can process.
  */
-public final class ContentValues implements Parcelable {
+public final class ContentValues /*implements Parcelable*/ {
     public static final String TAG = "ContentValues";
 
     /** Holds the actual values */
@@ -456,28 +456,28 @@ public final class ContentValues implements Parcelable {
         return mValues.keySet();
     }
 
-    public static final Parcelable.Creator<ContentValues> CREATOR =
-            new Parcelable.Creator<ContentValues>() {
-        @SuppressWarnings({"deprecation", "unchecked"})
-        public ContentValues createFromParcel(Parcel in) {
-            // TODO - what ClassLoader should be passed to readHashMap?
-            HashMap<String, Object> values = in.readHashMap(null);
-            return new ContentValues(values);
-        }
-
-        public ContentValues[] newArray(int size) {
-            return new ContentValues[size];
-        }
-    };
+//    public static final Parcelable.Creator<ContentValues> CREATOR =
+//            new Parcelable.Creator<ContentValues>() {
+//        @SuppressWarnings({"deprecation", "unchecked"})
+//        public ContentValues createFromParcel(Parcel in) {
+//            // TODO - what ClassLoader should be passed to readHashMap?
+//            HashMap<String, Object> values = in.readHashMap(null);
+//            return new ContentValues(values);
+//        }
+//
+//        public ContentValues[] newArray(int size) {
+//            return new ContentValues[size];
+//        }
+//    };
 
     public int describeContents() {
         return 0;
     }
 
-    @SuppressWarnings("deprecation")
-    public void writeToParcel(Parcel parcel, int flags) {
-        parcel.writeMap(mValues);
-    }
+//    @SuppressWarnings("deprecation")
+//    public void writeToParcel(Parcel parcel, int flags) {
+//        parcel.writeMap(mValues);
+//    }
 
     /**
      * Unsupported, here until we get proper bulk insert APIs.

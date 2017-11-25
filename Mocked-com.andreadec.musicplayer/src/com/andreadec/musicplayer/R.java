@@ -1,6 +1,6 @@
 package com.andreadec.musicplayer;
 
-import org.xmlpull.v1.XmlPullParser;
+//import org.xmlpull.v1.XmlPullParser;
 
 public class R {
 

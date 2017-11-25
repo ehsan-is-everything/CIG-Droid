@@ -9,6 +9,7 @@ import android.database.DatabaseErrorHandler;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.os.CancellationSignal;
+import gov.nasa.jpf.symbc.Concrete;
 import gov.nasa.jpf.symbc.Debug;
 
 public class SQLiteDatabase {
@@ -151,18 +152,37 @@ public class SQLiteDatabase {
 			} else {
 				query.append("* ");
 			}
+			if (table == null)
+				table = "";
+			if (selection == null)
+				selection = "";
+			if (groupBy == null)
+				groupBy = "";
+			if (having == null)
+				having = "";
+			if (orderBy == null)
+				orderBy = "";
+			if (limit == null)
+				limit = "";
+
 			query.append("FROM ");
 			query.append(table);
+
 			query.append(" WHERE ");
 			query.append(selection);
+
 			query.append(" GROUP BY ");
 			query.append(groupBy);
+
 			query.append(" HAVING ");
 			query.append(having);
+
 			query.append(" ORDER BY ");
 			query.append(orderBy);
+
 			query.append(" LIMIT ");
 			query.append(limit);
+
 			String sql = query.toString();
 
 			return rawQueryWithFactory(cursorFactory, sql, selectionArgs, table, cancellationSignal);
