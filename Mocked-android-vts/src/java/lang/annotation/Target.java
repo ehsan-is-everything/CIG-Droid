@@ -1,0 +1,15 @@
+package java.lang.annotation;
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.ANNOTATION_TYPE})
+public @interface Target
+{
+  ElementType[] value();
+}
+
+
+/* Location:              C:\Users\Mahmoud\Desktop\android.jar!\java\lang\annotation\Target.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       0.7.1
+ */
