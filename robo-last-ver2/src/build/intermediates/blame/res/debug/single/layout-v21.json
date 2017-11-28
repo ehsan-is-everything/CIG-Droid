@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

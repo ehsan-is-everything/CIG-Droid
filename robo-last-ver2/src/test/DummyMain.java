@@ -10,12 +10,12 @@ import com.example.lab.testak_textinput.BuildConfig;
 import com.example.lab.testak_textinput.MainActivity;
 import com.example.lab.testak_textinput.R;
 
+import android.Manifest;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 
-
 @RunWith(MyRobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
+@Config(sdk=26)
 public class DummyMain {
 
 	@Test

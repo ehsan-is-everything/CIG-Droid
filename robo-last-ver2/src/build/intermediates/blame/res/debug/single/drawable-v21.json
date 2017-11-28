@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/home/ehsan/.android/build-cache/3dfabedd4bbdb82ba20535408ad7d24ad67c2c54/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/home/ehsan/.android/build-cache/41c69663c1a65eddd92f64b4e707716ed5217da3/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/home/ehsan/.android/build-cache/41c69663c1a65eddd92f64b4e707716ed5217da3/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/home/ehsan/.android/build-cache/41c69663c1a65eddd92f64b4e707716ed5217da3/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/home/ehsan/.android/build-cache/41c69663c1a65eddd92f64b4e707716ed5217da3/output/res/drawable-v21/design_password_eye.xml"
+    }
+]

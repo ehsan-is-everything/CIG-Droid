@@ -1,0 +1,7 @@
+#Tue Nov 21 10:33:34 IRST 2017
+base.0=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c74b8aeb2771bce4d33cce406bdc7bf8d0fe7ea2
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bceb8995ccabe84c83551d8de7b91a88b6edfca2/classes.dex
+base.1=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bceb8995ccabe84c83551d8de7b91a88b6edfca2
+file.0=/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/SPF-Android/Aknoon0.0/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c74b8aeb2771bce4d33cce406bdc7bf8d0fe7ea2/classes.dex
