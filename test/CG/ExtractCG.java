@@ -1,4 +1,4 @@
-package ICFG;
+package CG;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -49,7 +49,7 @@ import soot.util.queue.QueueReader;
  *
  */
 
-public class ExtractCFG {
+public class ExtractCG {
 	private static final int MAX_NUMBER_OF_DUMMYMAINS = 50;
 	private static String dmFolderAddress = null;
 	//private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
@@ -172,6 +172,7 @@ public class ExtractCFG {
 			// e.getSrc().method().retrieveActiveBody());
 			// System.out.println(" TRG::" + e.tgt().getName() + "\n");
 		}
+		System.out.println(listofTargetMethods);
 		Stack<SootMethod> stack = new Stack<>();
 		for (SootMethod targetMethod : listofTargetMethods) {
 			stack.clear();
@@ -231,7 +232,7 @@ public class ExtractCFG {
 		for (int index = stack.size() - 1; index >= 0; index--) {
 			SootMethod currentMethod = stack.get(index);
 			if (currentMethod.getActiveBody().toString().contains("EditText")
-					|| currentMethod.getActiveBody().toString().contains("Intent")) {
+					/*|| currentMethod.getActiveBody().toString().contains("Intent")*/) {
 				hasInputMethod = true;
 				break;
 			}

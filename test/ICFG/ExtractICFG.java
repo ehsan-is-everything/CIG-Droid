@@ -1,4 +1,4 @@
-package ICFGtor;
+package ICFG;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -56,7 +56,7 @@ import soot.util.queue.QueueReader;
  * @author ehsan
  *
  */
-public class ExtractCFG {
+public class ExtractICFG {
 	private static final int ASSERT_ERROR_BASE = 2;
 	private static String dmFolderAddress = null;
 	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
