@@ -18,28 +18,27 @@ import soot.jimple.toolkits.callgraph.Targets;
  *
  */
 public class Test {
-	
+	private static String androidJar = "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android/android-sdk-linux/platforms/android-26/android.jar";
+
 	/**
 	 * @param args
-	 *            args[0]::APKAddress. args[1]::AndroidJar file in SDK. args[2]::address
-	 *            to result folder for dummy main.
+	 *            args[0]::APKAddress. args[1]::AndroidJar file in SDK.
+	 *            args[2]::address to result folder for dummy main.
 	 * @throws IOException
 	 * @throws XmlPullParserException
 	 */
 	public static void main(String[] args) throws IOException, XmlPullParserException {
-		//CallGraph cfg = ExtractCFG.analyzeAPKFile(args[0], args[1]);
-		CallGraph cfg= ExtractICFG.bestPathes(args[0], args[1]);
-		ExtractICFG.serializeCallGraph(cfg, 0, args[2]);
-		
-		//Iterator<Edge> it= cfg.
-		//visit(cfg,cfg.)
-		
-		//ExtractCFG.printDummyMain();
-		//ExtractCFG.serializeDummyMain(args[3]);
+		// CallGraph cfg = ExtractCFG.analyzeAPKFile(args[0], args[1]);
+		CallGraph cfg = ExtractICFG.bestPathes(args[0], androidJar);
+		// ExtractICFG.serializeCallGraph(cfg, 0, args[2]);
+
+		// Iterator<Edge> it= cfg.
+		// visit(cfg,cfg.)
+
+		// ExtractCFG.printDummyMain();
+		// ExtractCFG.serializeDummyMain(args[3]);
 		System.out.println();
 
 	}
-	
-	
 
 }

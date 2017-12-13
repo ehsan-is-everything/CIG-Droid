@@ -57,13 +57,11 @@ import soot.util.queue.QueueReader;
  *
  */
 public class ExtractICFG {
-	private static final int ASSERT_ERROR_BASE = 2;
+	// private static final int ASSERT_ERROR_BASE = 2;
 	private static String dmFolderAddress = null;
-	private static LinkedList<Stack<SootMethod>> bestPathes = new LinkedList<>();
 	private static SetupApplication setupApplication;
-
-	private static HashMap<Integer, String> listofInputEntries = new HashMap<>();
 	private static int counter = 1;
+	public static ArrayList<PathInfo> AllTrgtInfoPathes = new ArrayList<>();
 
 	private static void WriteResultsToFile(String result) {
 		// The name of the file to open.
@@ -93,7 +91,7 @@ public class ExtractICFG {
 	 * @throws XmlPullParserException
 	 *             Thrown if the Android manifest file could not be read.
 	 */
-	public static InfoflowResults analyzeAPKFile(String APKAddress, String androidJar)
+	public static CallGraph analyzeAPKFile(String APKAddress, String androidJar)
 			throws IOException, XmlPullParserException {
 		return analyzeAPKFile(APKAddress, androidJar, false, true, false);
 	}
@@ -119,7 +117,7 @@ public class ExtractICFG {
 	 * @throws XmlPullParserException
 	 *             Thrown if the Android manifest file could not be read.
 	 */
-	public static InfoflowResults analyzeAPKFile(String fileName, String androidJars, boolean enableImplicitFlows,
+	public static CallGraph analyzeAPKFile(String fileName, String androidJars, boolean enableImplicitFlows,
 			boolean enableStaticFields, boolean flowSensitiveAliasing) throws IOException, XmlPullParserException {
 
 		if (androidJars == null)
@@ -137,13 +135,13 @@ public class ExtractICFG {
 		// setupApplication.setTaintWrapper(new EasyTaintWrapper(taintWrapperFile));
 
 		// Configure the analysis
-		// setupApplication.getConfig().setEnableImplicitFlows(enableImplicitFlows);
-		// setupApplication.getConfig().setEnableStaticFieldTracking(enableStaticFields);
-		// setupApplication.getConfig().setFlowSensitiveAliasing(flowSensitiveAliasing);
-		setupApplication.getConfig().setTaintAnalysisEnabled(false);
+		setupApplication.getConfig().setEnableImplicitFlows(enableImplicitFlows);
+		setupApplication.getConfig().setEnableStaticFieldTracking(enableStaticFields);
+		setupApplication.getConfig().setFlowSensitiveAliasing(flowSensitiveAliasing);
+		setupApplication.constructCFG();
 		// setupApplication.calculateSourcesSinksEntrypoints(Collections.emptySet(),
 		// Collections.emptySet());
-		return setupApplication.runInfoflow("SourcesAndSinks.txt");
+		return Scene.v().getCallGraph();
 
 		// InfoflowCFG iCFG=new InfoflowCFG();
 		// System.out.println(res.size());
@@ -154,10 +152,8 @@ public class ExtractICFG {
 
 	public static CallGraph bestPathes(String fileName, String androidJars) throws IOException, XmlPullParserException {
 
-		InfoflowResults info = analyzeAPKFile(fileName, androidJars);
-		CallGraph cg = Scene.v().getCallGraph();
+		CallGraph cg = analyzeAPKFile(fileName, androidJars);
 
-		info.printResultsToConsole();
 		Iterator<Edge> it = cg.iterator();
 
 		ArrayList<SootMethod> listofTargetMethods = new ArrayList<>();
@@ -170,88 +166,66 @@ public class ExtractICFG {
 
 			if (SigOfCurrentMethod.contains("AssertionError")) {
 				if (!listofTargetMethods.contains(sm)) {
-					sm.setweight(1);
+					// sm.setweight(1);
 					listofTargetMethods.add(sm);
-
-					// System.out.println("****************************
-					// weight="+targetMethod.getweight()+"\n");
 				}
 			}
-			// System.out.print("KIND::" + e.kind() + " SRC STM:: " +
-			// e.getSrc().method().retrieveActiveBody());
-			// System.out.println(" TRG::" + e.tgt().getName() + "\n");
 		}
 
 		for (SootMethod targetMethod : listofTargetMethods) {
-
-			// InfoflowCFG icfg=new InfoflowCFG();
-			// DirectedGraph<Unit> ug= icfg.getOrCreateUnitGraph(targetMethod);
-
-			Iterator<Edge> itr = cg.edgesOutOf(targetMethod);
-			while (itr.hasNext()) {
-				Edge ee = itr.next();
-				cg.removeEdge(ee);
-			}
-			visit(cg, targetMethod, 0, ASSERT_ERROR_BASE);
-			// bestPathes.add(stack);
+			PathInfo tmp = new PathInfo();
+			visitCallGraph(targetMethod, tmp);
+			AllTrgtInfoPathes.add(tmp);
 		}
 		return cg;
 	}
 
-	private static void visit(CallGraph cg, SootMethod targetMethod, int counter, int base) {
-		if (targetMethod.getName().equals("dummyMainMethod")) {
+	private static void visitCallGraph(SootMethod targetMethod, PathInfo tmp) {
+		InfoflowCFG icfg = new InfoflowCFG();
+		Collection<Unit> uc = icfg.getCallersOf(targetMethod);
+		Iterator<Unit> uit = uc.iterator();
+		while (uit.hasNext()) {
+			Unit u = uit.next();
+			visitCFG(u, icfg, tmp);
+		}
+	}
 
-			InfoflowCFG icfg = new InfoflowCFG();
-			DirectedGraph<Unit> ug = icfg.getOrCreateUnitGraph(targetMethod);
-			Iterator<Unit> uit = ug.iterator();
-			while (uit.hasNext()) {
-				Unit u = uit.next();
-				if (u.branches()) {
-					System.out.println(u);
-					List<Unit> list = icfg.getSuccsOf(u);
-					System.out.println(list);
-				}else if(icfg.isCallStmt(u)) {
-					
-				}else if(icfg.isReturnSite(u)) {
-					
-				}
-			}
-			// targetMethod.push(sm);
-			// makeSPFdummyMainInfo(targetMethod);
+	private static void visitCFG(Unit u, InfoflowCFG icfg, PathInfo tmp) {
+		if (icfg.getMethodOf(u).getName().equals("dummyMainMethod")) {
 			return;
 		}
-		// iterate over unvisited parents
-		Iterator<Edge> ptargets = cg.edgesInto(targetMethod);
-		// String s=stack.peek().getDeclaringClass().getJavaPackageName();
-		// String s=stack.peek().getDeclaringClass().getJavaStyleName();
-
-		if (ptargets != null) {
-			while (ptargets.hasNext()) {
-				Edge p = (Edge) (ptargets.next());
-				SootMethod sm = p.getSrc().method();
-
-				// if (!stack.peek().getSignature().equals(p.getSignature())) {
-				// targetMethod.push(sm);
-
-				targetMethod.setweight((int) Math.pow(base, counter));
-				counter++;
-				visit(cg, sm, counter, base);
-				// }
+		List<Unit> lu = icfg.getPredsOf(u);// list of units
+		Iterator<Unit> puitr = lu.iterator();
+		while (puitr.hasNext()) {// There is two state 1-call stmt=>ignore 2-retun=> not posible 3-branch=>hoora
+									// 4-common Unit=> Its OK
+			Unit parent = puitr.next();
+			String methodSig = icfg.getMethodOf(parent).getSignature();
+			if (tmp.getStackTraceOfMethods().isEmpty())
+				tmp.getStackTraceOfMethods().push(methodSig);
+			else if(!tmp.getStackTraceOfMethods().peek().equals(methodSig))
+				tmp.getStackTraceOfMethods().push(methodSig);
+			if (parent.branches()) {
+				System.out.println(u);
+				// process of then or else
+				boolean thenOrElse = true;
+				SootMethod nn=icfg.getMethodOf(parent);
+				IfStmtInfo stm = new IfStmtInfo(parent.toString(), icfg.getPredsOf(parent).get(0).toString(), thenOrElse);
+				tmp.getMap().put(parent.toString(), stm);
+			} else if (icfg.isStartPoint(parent)) {
+				// parent method shoud be analyzed
+				// this sootmetod is finished
+				// fin condition
+				System.out.println("entry point of" + icfg.getMethodOf(parent));
+				Collection<Unit> ListOfCallers = icfg.getCallersOf(icfg.getMethodOf(parent));
+				Iterator<Unit> citr = ListOfCallers.iterator();
+				while (citr.hasNext()) {
+					visitCFG(citr.next(), icfg, tmp);
+				}
+			} else {
+				System.out.println("Usual Unit" + parent);
+				visitCFG(parent, icfg, tmp);
 			}
 		}
-
-		// iterate over unvisited children
-		/*
-		 * Iterator<MethodOrMethodContext> ctargets = new Targets(cg.edgesOutOf(k));
-		 * 
-		 * 
-		 * if (ctargets != null) { while (ctargets.hasNext()) { SootMethod c =
-		 * (SootMethod) ctargets.next(); if (c == null) System.out.println("c is null");
-		 * // dot.drawEdge(identifier, c.getName());
-		 * 
-		 * 
-		 * if (!visited.containsKey(c.getSignature())) visit(cg, c); } }
-		 */
 	}
 
 	private static void makeSPFdummyMainInfo(Stack<SootMethod> stack) {
