@@ -154,6 +154,78 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	// System.err.println(methodName);
 	// }
 	// }
+	@Override
+	public void choiceGeneratorAdvanced(VM vm, ChoiceGenerator<?> currentCG) {
+		if (currentCG instanceof PCChoiceGenerator) {
+			PCChoiceGenerator pccg = (PCChoiceGenerator) currentCG;
+			// findBestChoice(pccg, vm);// third: next new branch is selected
+		}
+		// super.choiceGeneratorAdvanced(vm, currentCG);
+	}
+
+	@Override
+	public void choiceGeneratorProcessed(VM vm, ChoiceGenerator<?> processedCG) {
+		// TODO Auto-generated method stub
+		if (processedCG instanceof PCChoiceGenerator) {
+			PCChoiceGenerator pccg = (PCChoiceGenerator) processedCG;
+			// findBestChoice(pccg, vm);// last one: isDone=true
+		}
+		// super.choiceGeneratorProcessed(vm, processedCG);
+	}
+
+	@Override
+	public void choiceGeneratorRegistered(VM vm, ChoiceGenerator<?> nextCG, ThreadInfo currentThread,
+			Instruction executedInstruction) {
+		if (nextCG instanceof PCChoiceGenerator) {
+			PCChoiceGenerator pccg = (PCChoiceGenerator) nextCG;
+			findBestChoice(pccg, vm);// first
+		}
+		// super.choiceGeneratorRegistered(vm, nextCG, currentThread,
+		// executedInstruction);
+	}
+
+	@Override
+	public void choiceGeneratorSet(VM vm, ChoiceGenerator<?> newCG) {
+		if (newCG instanceof PCChoiceGenerator) {
+			PCChoiceGenerator pccg = (PCChoiceGenerator) newCG;
+			// findBestChoice(pccg, vm);// second: next choice is selected
+		}
+	}
+
+	// if has 2 choices and switch has more than 2. amounts of cases!!
+	private void findBestChoice(PCChoiceGenerator pccg, VM vm) {
+		int nextChoice = 0;
+		Object[] all = pccg.getAllChoices();
+		// Object[] UnprocessedChoices = pccg.getUnprocessedChoices();
+		Object[] ProcessedChoices = pccg.getProcessedChoices();
+
+		if (all.length == 2) {// if stmt: 1 means condition is true
+			// Soot Info should be added here!!!!!!!!
+			pccg.reverse();
+
+		} else if (all.length > 2) {
+			// if (ProcessedChoices.length == 0) {// first choice
+			// nextChoice = 1;
+			// } else {
+			// nextChoice = 0;
+			// }
+			// pccg.reorder(new java.util.Comparator<Integer>() {
+			//
+			// @Override
+			// public int compare(Integer o1, Integer o2) {
+			// if (o2 > o1)
+			// return 1;
+			// else
+			// return -1;
+			// }
+			// });
+		} else {
+			return;
+		}
+		// pccg.select(nextChoice);
+		// pccg.setNextChoice(nextChoice);
+
+	}
 
 	@Override
 	public void propertyViolated(Search search) {
