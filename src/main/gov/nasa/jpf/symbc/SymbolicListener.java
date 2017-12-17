@@ -78,6 +78,12 @@ import java.util.Stack;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import ICFG.ExtractICFG;
+import ICFG.IfStmtInfo;
+import ICFG.PathInfo;
+import ICFG.Test;
 import choco.cp.solver.constraints.global.geost.dataStructures.LinkedList;
 
 public class SymbolicListener extends ListenerAdapter implements PublisherExtension {
@@ -94,6 +100,7 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	// private HashMap<String, ArrayList<VulPart>> vulResult = new HashMap<>();
 	private VulnerabiltyResult vulResult = new VulnerabiltyResult();
 	private ArrayList<VulPart> vulArrayList = new ArrayList<>();
+	private ArrayList<PathInfo> SootAllTargetPathes;
 	// private boolean sinkMethodFound = false;
 	// private String resultofLeakage;
 	// private int warningCounter = 1;
@@ -102,6 +109,14 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 	public SymbolicListener(Config conf, JPF jpf) {
 		jpf.addPublisherExtension(ConsolePublisher.class, this);
 		allSummaries = new HashMap<String, MethodSummary>();
+		try {
+			SootAllTargetPathes = ExtractICFG.bestPathes(
+					"/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/APK-SRC/BistoDovom/bistopanjom8.apk",
+					Test.androidJar);
+		} catch (IOException | XmlPullParserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	// Writes the method summaries to a file for use in another application
@@ -201,7 +216,9 @@ public class SymbolicListener extends ListenerAdapter implements PublisherExtens
 
 		if (all.length == 2) {// if stmt: 1 means condition is true
 			// Soot Info should be added here!!!!!!!!
-			pccg.reverse();
+			IfStmtInfo curIf = SootAllTargetPathes.get(0).getSMap().pop();
+			if (curIf.isIsLeftorRight())
+				pccg.reverse();
 
 		} else if (all.length > 2) {
 			// if (ProcessedChoices.length == 0) {// first choice

@@ -36,5 +36,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/proteus.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/soot-infoflow-android"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/lib/AXMLPrinter2.jar"/>
+	<classpathentry kind="lib" path="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/jpf/jpf-symbc/lib/axml-2.0.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>
