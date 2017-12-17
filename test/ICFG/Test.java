@@ -18,7 +18,7 @@ import soot.jimple.toolkits.callgraph.Targets;
  *
  */
 public class Test {
-	private static String androidJar = "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android/android-sdk-linux/platforms/android-26/android.jar";
+	public static String androidJar = "/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/Programs/Android/android-sdk-linux/platforms/android-26/android.jar";
 
 	/**
 	 * @param args
@@ -29,7 +29,7 @@ public class Test {
 	 */
 	public static void main(String[] args) throws IOException, XmlPullParserException {
 		// CallGraph cfg = ExtractCFG.analyzeAPKFile(args[0], args[1]);
-		CallGraph cfg = ExtractICFG.bestPathes(args[0], androidJar);
+		ExtractICFG.bestPathes(args[0], androidJar);
 		// ExtractICFG.serializeCallGraph(cfg, 0, args[2]);
 
 		// Iterator<Edge> it= cfg.

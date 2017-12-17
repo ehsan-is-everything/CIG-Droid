@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class PathInfo {
-	private HashMap<String, IfStmtInfo> map;
+	private Stack<IfStmtInfo> map;
 	private Stack<String> traceOfMethods;
 
 	public PathInfo() {
-		map = new HashMap<>();
+		map = new Stack<>();
 		traceOfMethods = new Stack<>();
 	}
 
@@ -20,11 +20,11 @@ public class PathInfo {
 		this.traceOfMethods = traceOfMethods;
 	}
 
-	public HashMap<String, IfStmtInfo> getMap() {
+	public Stack <IfStmtInfo> getSMap() {
 		return map;
 	}
 
-	public void setMap(HashMap<String, IfStmtInfo> map) {
+	public void setSMap(Stack<IfStmtInfo> map) {
 		this.map = map;
 	}
 

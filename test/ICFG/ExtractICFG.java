@@ -39,11 +39,14 @@ import soot.Scene;
 import soot.SootClass;
 import soot.SootMethod;
 import soot.Unit;
+import soot.UnitBox;
 import soot.Value;
+import soot.ValueBox;
 import soot.jimple.infoflow.android.SetupApplication;
 import soot.jimple.infoflow.results.InfoflowResults;
 import soot.jimple.infoflow.solver.cfg.InfoflowCFG;
 import soot.jimple.infoflow.taintWrappers.EasyTaintWrapper;
+import soot.jimple.internal.JNeExpr;
 import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.jimple.toolkits.callgraph.Edge;
 import soot.jimple.toolkits.callgraph.Targets;
@@ -150,7 +153,7 @@ public class ExtractICFG {
 
 	}
 
-	public static CallGraph bestPathes(String fileName, String androidJars) throws IOException, XmlPullParserException {
+	public static ArrayList<PathInfo> bestPathes(String fileName, String androidJars) throws IOException, XmlPullParserException {
 
 		CallGraph cg = analyzeAPKFile(fileName, androidJars);
 
@@ -177,7 +180,7 @@ public class ExtractICFG {
 			visitCallGraph(targetMethod, tmp);
 			AllTrgtInfoPathes.add(tmp);
 		}
-		return cg;
+		return AllTrgtInfoPathes;
 	}
 
 	private static void visitCallGraph(SootMethod targetMethod, PathInfo tmp) {
@@ -186,11 +189,11 @@ public class ExtractICFG {
 		Iterator<Unit> uit = uc.iterator();
 		while (uit.hasNext()) {
 			Unit u = uit.next();
-			visitCFG(u, icfg, tmp);
+			visitCFG(u, null, icfg, tmp);
 		}
 	}
 
-	private static void visitCFG(Unit u, InfoflowCFG icfg, PathInfo tmp) {
+	private static void visitCFG(Unit u, Unit prevUnit, InfoflowCFG icfg, PathInfo tmp) {
 		if (icfg.getMethodOf(u).getName().equals("dummyMainMethod")) {
 			return;
 		}
@@ -202,28 +205,51 @@ public class ExtractICFG {
 			String methodSig = icfg.getMethodOf(parent).getSignature();
 			if (tmp.getStackTraceOfMethods().isEmpty())
 				tmp.getStackTraceOfMethods().push(methodSig);
-			else if(!tmp.getStackTraceOfMethods().peek().equals(methodSig))
+			else if (!tmp.getStackTraceOfMethods().peek().equals(methodSig))
 				tmp.getStackTraceOfMethods().push(methodSig);
 			if (parent.branches()) {
-				System.out.println(u);
+
 				// process of then or else
-				boolean thenOrElse = true;
-				SootMethod nn=icfg.getMethodOf(parent);
-				IfStmtInfo stm = new IfStmtInfo(parent.toString(), icfg.getPredsOf(parent).get(0).toString(), thenOrElse);
-				tmp.getMap().put(parent.toString(), stm);
+
+				// ValueBox x = parent.getUseBoxes().get(2);
+				// if(x.getValue() instanceof JNeExpr) {
+				//
+				// }
+				SootMethod nn = icfg.getMethodOf(parent);
+				Unit nextUnit = icfg.getPredsOf(parent).get(0);
+				if (!prevUnit.toString().contains("AssertionError")) {
+					// momkene dastan beshe add "khodesh == "assertion disable""
+					System.out.println("Branch::" + u);
+					List<Unit> succs = icfg.getSuccsOf(parent);
+					List<UnitBox> UnitBox = parent.getUnitBoxes();
+					// List<Unit> preds = icfg.getPredsOf(prevUnit);
+					boolean thenOrElse;
+					if (succs.indexOf(UnitBox.get(0)) == 1) {
+						thenOrElse = false;
+					} else
+						thenOrElse = true;
+					// if (prevUnit.toString().contains("label")) {
+					// thenOrElse = false;
+					// }
+					//
+					IfStmtInfo stm = new IfStmtInfo(parent.toString(), prevUnit.toString(), thenOrElse);
+					tmp.getSMap().push(stm);
+				} else
+					System.out.println("Other Branch::" + u);// nemikhaim!!!!
+				visitCFG(parent, u, icfg, tmp);
 			} else if (icfg.isStartPoint(parent)) {
 				// parent method shoud be analyzed
 				// this sootmetod is finished
 				// fin condition
-				System.out.println("entry point of" + icfg.getMethodOf(parent));
+				System.out.println("entry point of::" + icfg.getMethodOf(parent));
 				Collection<Unit> ListOfCallers = icfg.getCallersOf(icfg.getMethodOf(parent));
 				Iterator<Unit> citr = ListOfCallers.iterator();
 				while (citr.hasNext()) {
-					visitCFG(citr.next(), icfg, tmp);
+					visitCFG(citr.next(), u, icfg, tmp);
 				}
 			} else {
-				System.out.println("Usual Unit" + parent);
-				visitCFG(parent, icfg, tmp);
+				System.out.println("Usual Unit::" + parent);
+				visitCFG(parent, u, icfg, tmp);
 			}
 		}
 	}
