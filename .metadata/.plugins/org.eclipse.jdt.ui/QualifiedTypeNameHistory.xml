@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="ICFG.ExtractCFG"/>
 <fullyQualifiedTypeName name="soot.Scene"/>
-<fullyQualifiedTypeName name="soot.jimple.toolkits.callgraph.CallGraph"/>
 <fullyQualifiedTypeName name="soot.jimple.infoflow.results.InfoflowResults"/>
 <fullyQualifiedTypeName name="soot.util.dot.DotGraph"/>
 <fullyQualifiedTypeName name="soot.util.queue.QueueReader"/>
@@ -58,4 +57,6 @@
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="com.example.lab.testak_textinput.R"/>
 <fullyQualifiedTypeName name="org.robolectric.annotation.Config"/>
+<fullyQualifiedTypeName name="soot.coffi.class_element_value"/>
+<fullyQualifiedTypeName name="soot.jimple.toolkits.callgraph.CallGraph"/>
 </qualifiedTypeNameHistroy>

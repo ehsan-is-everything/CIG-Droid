@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/ehsan/eclipse-java-workspace/Mocked-com.andreadec.musicplayer/src"/>
 		<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git"/>
 		<item value="/media/ehsan/a2c41319-a56d-4856-b979-aeaebaea4e50/git/FlowDroid"/>
 	</list>
