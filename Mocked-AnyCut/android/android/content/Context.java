@@ -1,6 +1,7 @@
 package android.content;
 
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 public class Context {
 
@@ -18,5 +19,7 @@ public class Context {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	public PackageManager getPackageManager() {
+		return new PackageManager<>();
+	}
 }

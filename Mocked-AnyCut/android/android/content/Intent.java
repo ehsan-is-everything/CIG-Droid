@@ -1453,4 +1453,9 @@ public class Intent {
 		mExtras.putSerializable(extraShortcutIcon, (Serializable) generatePhoneNumberIcon);
 		return this;
 	}
+
+	public void setComponent(ComponentName componentName) {
+		// TODO Auto-generated method stub
+		
+	}
 }

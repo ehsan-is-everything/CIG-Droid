@@ -26,13 +26,21 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-public class Activity extends Context{
+public class Activity extends Context {
 	View mWindow;
 	Intent mIntent;
 	public static final int RESULT_CANCELED = 0;
 	public static final int RESULT_OK = -1;
 
 	public void setContentView(int layoutResID) {
+
+	}
+
+	public final boolean requestWindowFeature(int featureId) {
+		return false;
+	}
+
+	public final void setProgressBarIndeterminateVisibility(boolean visible) {
 
 	}
 

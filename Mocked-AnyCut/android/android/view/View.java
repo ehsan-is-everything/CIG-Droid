@@ -4763,7 +4763,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
     /**
      * Non-public constructor for use in testing
      */
-    View() {
+    public View() {
         mResources = null;
         mRenderNode = RenderNode.create(getClass().getName(), this);
     }

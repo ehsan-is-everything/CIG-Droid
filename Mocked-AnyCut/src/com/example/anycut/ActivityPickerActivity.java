@@ -44,7 +44,7 @@ import com.google.android.photostream.UserTask;
  * that have ACTION_MAIN, since other types may require data as input.
  */
 public class ActivityPickerActivity extends ListActivity {
-    PackageManager mPackageManager;
+    PackageManager<ResolveInfo> mPackageManager;
 
     /**
      * This class is used to wrap ResolveInfo so that it can be filtered using
@@ -107,7 +107,7 @@ public class ActivityPickerActivity extends ListActivity {
 
             // Sort the list
             Collections.sort(list, new ResolveInfo.DisplayNameComparator(mPackageManager));
-
+            
             // Make the wrappers
             ArrayList<ResolveInfoWrapper> activities = new ArrayList<ResolveInfoWrapper>(list.size());
             for(ResolveInfo item : list) {
