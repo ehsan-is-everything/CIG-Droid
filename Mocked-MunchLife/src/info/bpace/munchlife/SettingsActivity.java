@@ -62,6 +62,8 @@ public class SettingsActivity extends PreferenceActivity
 		Preference levelPreference;
     levelPreference = getPreferenceScreen().findPreference("maxlevelPref");
 		levelPreference.setOnPreferenceChangeListener(levelListener);
+		
+		assert(false);
 	}
 
 	

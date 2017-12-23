@@ -167,7 +167,7 @@ public class Activity extends Context {
 	}
 
 	public Object getSystemService(String s) {
-		return null;
+		return new Object();
 	}
 
 	public final void setResult(int resultCode, Intent intent) {
