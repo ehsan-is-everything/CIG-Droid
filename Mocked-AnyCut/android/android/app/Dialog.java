@@ -2,7 +2,7 @@ package android.app;
 
 import android.content.DialogInterface;
 
-public class Dialog implements DialogInterface{
+public class Dialog extends Activity implements DialogInterface{
 
 	@Override
 	public void cancel() {

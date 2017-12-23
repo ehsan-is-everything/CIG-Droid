@@ -1,12 +1,14 @@
 package android.support.v7.widget;
 
-import com.andreadec.musicplayer.SearchActivity;
+import android.app.Activity;
+
+//import com.andreadec.musicplayer.SearchActivity;
 
 public class LinearLayoutManager extends RecyclerView.LayoutManager{
 
 	public static final String VERTICAL = "";
 
-	public LinearLayoutManager(SearchActivity searchActivity) {
+	public LinearLayoutManager(Activity searchActivity) {
 		// TODO Auto-generated constructor stub
 	}
 

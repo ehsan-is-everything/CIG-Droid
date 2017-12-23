@@ -42,12 +42,12 @@ public class EditText extends View {
 	}
 
 	public void setOnKeyListener(OnKeyListener keyL) {
-		this.mOnKeyListener = keyL;
+		//this.mOnKeyListener = keyL;
 
 	}
 
 	public void setOnFocusChangeListener(OnFocusChangeListener onFocusChangeListener) {
-		this.mOnFocusChangeListener = onFocusChangeListener;
+		//this.mOnFocusChangeListener = onFocusChangeListener;
 
 	}
 

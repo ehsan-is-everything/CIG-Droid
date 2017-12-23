@@ -2,7 +2,7 @@ package android.support.v7.widget;
 
 import java.util.List;
 
-import com.andreadec.musicplayer.SearchResultsAdapter;
+//import com.andreadec.musicplayer.SearchResultsAdapter;
 
 import android.view.View;
 import android.view.ViewGroup;

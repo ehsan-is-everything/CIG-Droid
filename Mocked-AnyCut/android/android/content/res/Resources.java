@@ -19,4 +19,9 @@ public class Resources {
 		return 0;
 	}
 
+	public int getIdentifier(String resourceName, Object object, String packageName) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
