@@ -22,6 +22,7 @@ import android.os.PowerManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import gov.nasa.jpf.symbc.Debug;
 import android.widget.ImageView;
 
 import android.view.MenuInflater;
@@ -63,7 +64,7 @@ public class MunchLifeActivity extends Activity {
 	public int gear_level = 0;
 	public boolean sleepPref;
 	public boolean victoryPref;
-	public String maxlevelPref;
+	public int maxlevelPref;
 
 	/**
 	 * Pulls preferences and makes sure current application state matches what is
@@ -72,27 +73,29 @@ public class MunchLifeActivity extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		pm = new PowerManager();//(PowerManager) getSystemService(POWER_SERVICE);
+		pm = new PowerManager();// (PowerManager) getSystemService(POWER_SERVICE);
 		wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, TAG);
 		SharedPreferences prefs;
 		prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		sleepPref = prefs.getBoolean("sleepPref", false);
 		victoryPref = prefs.getBoolean("victoryPref", true);
-		maxlevelPref = prefs.getString("maxlevelPref", "10");
+		maxlevelPref = prefs.getInteger("maxlevelPref", 10);
 
 		try {
-			max_level = Integer.parseInt(maxlevelPref);
+			max_level = maxlevelPref;// Integer.parseInt(maxlevelPref);
 		} catch (NumberFormatException error) {
 			System.err.println("NumberFormatException: " + error.getMessage());
 			max_level = 10;
 		}
-
+		// Debug.printSymbolicRef(max_level, "max_level");
 		if (level > max_level) {
+			// if (!sleepPref) {
+			// Debug.printSymbolicRef(max_level, "max_level in IF");
 			level = max_level;
-			current_level.setText(Integer.toString(level));
-			total_level.setText(Integer.toString(level + gear_level));
-
-			assert (false);
+			current_level.setText(level + "");
+			total_level.setText("" + (level + gear_level));
+			if (sleepPref)
+				assert (false);
 
 		}
 	}
@@ -131,9 +134,9 @@ public class MunchLifeActivity extends Activity {
 		level = savedInstanceState != null ? savedInstanceState.getInt(KEY_LEVEL) : 1;
 		gear_level = savedInstanceState != null ? savedInstanceState.getInt(KEY_GEAR_LEVEL) : 0;
 
-		current_level.setText(Integer.toString(level));
-		current_gear_level.setText(Integer.toString(gear_level));
-		total_level.setText(Integer.toString(level + gear_level));
+		current_level.setText(level + "");
+		current_gear_level.setText(gear_level + "");
+		total_level.setText("" + (level + gear_level));
 	}
 
 	/**
@@ -180,39 +183,39 @@ public class MunchLifeActivity extends Activity {
 	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-//		switch (item.getItemId()) {
-//		case R.id.reset:
-//			level = 1;
-//			gear_level = 0;
-//			current_level.setText(Integer.toString(level));
-//			current_gear_level.setText(Integer.toString(gear_level));
-//			total_level.setText("1");
-//			return true;
-//		case R.id.diceroller:
-//			showDialog(DIALOG_DICEROLLER);
-//			return true;
-//		case R.id.settings:
-//			Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-//			startActivity(i);
-//			return true;
-//		default:
-//			return super.onOptionsItemSelected(item);
-//		}
-		if(item.getItemId()==R.id.reset) {
+		// switch (item.getItemId()) {
+		// case R.id.reset:
+		// level = 1;
+		// gear_level = 0;
+		// current_level.setText(Integer.toString(level));
+		// current_gear_level.setText(Integer.toString(gear_level));
+		// total_level.setText("1");
+		// return true;
+		// case R.id.diceroller:
+		// showDialog(DIALOG_DICEROLLER);
+		// return true;
+		// case R.id.settings:
+		// Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+		// startActivity(i);
+		// return true;
+		// default:
+		// return super.onOptionsItemSelected(item);
+		// }
+		if (item.getItemId() == R.id.reset) {
 			level = 1;
 			gear_level = 0;
 			current_level.setText(Integer.toString(level));
 			current_gear_level.setText(Integer.toString(gear_level));
 			total_level.setText("1");
 			return true;
-		}else if(item.getItemId()==R.id.diceroller) {
+		} else if (item.getItemId() == R.id.diceroller) {
 			showDialog(DIALOG_DICEROLLER);
 			return true;
-		}else if(item.getItemId()==R.id.settings) {
+		} else if (item.getItemId() == R.id.settings) {
 			Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
 			startActivity(i);
 			return true;
-		}else {
+		} else {
 			return super.onOptionsItemSelected(item);
 		}
 	}

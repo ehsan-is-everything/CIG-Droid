@@ -14,4 +14,9 @@ public class SharedPreferences {
 		return ""+Debug.makeSymbolicInteger(string);
 	}
 
+	public int getInteger(String string, int i) {
+		// TODO Auto-generated method stub
+		return Debug.makeSymbolicInteger(string);
+	}
+
 }

@@ -9,9 +9,10 @@ public class DummyMain {
 	public static void main(String[] args) {
 		MunchLifeActivity mla=new MunchLifeActivity();
 		//Bundle savedInstanceState=(Bundle) Debug.makeSymbolicRef("savedInstanceState", new Bundle());//new Bundle();
+		mla.onCreate(null);
 		mla.onStart();
 		//Bundle savedInstanceState=new Bundle();
-		mla.onCreate(null);
-		mla.onOptionsItemSelected(new MenuItem());
+		
+		//mla.onOptionsItemSelected(new MenuItem());
 	}
 }
