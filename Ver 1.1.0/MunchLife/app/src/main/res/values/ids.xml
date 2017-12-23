@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="up_button" type="id" />
+    <item name="down_button" type="id" />
+    <item name="up_gear_button" type="id" />
+    <item name="down_gear_button" type="id" />
+    <item name="current_level" type="id" />
+    <item name="current_gear_level" type="id" />
+    <item name="total_level" type="id" />
+    <item name="reset" type="id" />
+    <item name="diceroller" type="id" />
+    <item name="settings" type="id" />
+</resources>
