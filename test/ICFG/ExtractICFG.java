@@ -176,20 +176,21 @@ public class ExtractICFG {
 		}
 
 		for (SootMethod targetMethod : listofTargetMethods) {
-			PathInfo tmp = new PathInfo();
-			visitCallGraph(targetMethod, tmp);
-			AllTrgtInfoPathes.add(tmp);
+			
+			visitCallGraph(targetMethod);
 		}
 		return AllTrgtInfoPathes;
 	}
 
-	private static void visitCallGraph(SootMethod targetMethod, PathInfo tmp) {
+	private static void visitCallGraph(SootMethod targetMethod) {
 		InfoflowCFG icfg = new InfoflowCFG();
 		Collection<Unit> uc = icfg.getCallersOf(targetMethod);
 		Iterator<Unit> uit = uc.iterator();
 		while (uit.hasNext()) {
+			PathInfo tmp = new PathInfo();
 			Unit u = uit.next();
 			visitCFG(u, null, icfg, tmp);
+			AllTrgtInfoPathes.add(tmp);
 		}
 	}
 
