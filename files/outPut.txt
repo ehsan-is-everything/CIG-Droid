@@ -1,0 +1,821 @@
+[Console output redirected to file:/home/ehsan/eclipse/java-oxygen/eclipse/output]
+Running Symbolic PathFinder ...
+symbolic.dp=choco
+symbolic.string_dp_timeout_ms=0
+symbolic.string_dp=none
+symbolic.concolic=true
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=32
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 32+) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+com.example.lab.testak_textinput.dummyMain.main()
+
+====================================================== search started: 11/5/17 2:43 PM
+com.example.lab.testak_textinput.dummyMain.main
+com.example.lab.testak_textinput.MainActivity.onCreate
+gov.nasa.jpf.vm.Verify.randomBool
+gov.nasa.jpf.symbc.Debug.makeSymbolicNull
+New sym int R.id.editText[-1] min=-2147483648, max=2147483647
+com.example.lab.testak_textinput.MainActivity$2.onClick
+--------->property violated
+pc 1 constraint # = 1
+R.id.editText[-1] = -1
+numeric PC: constraint # = 1
+R.id.editText[-1] = -1 -> true
+
+Property Violated: PC is constraint # = 0
+Property Violated: result is  "java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object..."
+****************************
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object
+	at com.example.lab.testak_textinput.MainActivity$2.onClick(MainActivity.java:54)
+	at com.example.lab.testak_textinput.dummyMain.main(dummyMain.java:12)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at com.example.lab.testak_textinput.MainActivity$2.onClick(MainActivity.java:54)
+	at com.example.lab.testak_textinput.dummyMain.main(dummyMain.java:12)
+
+gov.nasa.jpf.symbc.Debug.makeFieldsSymbolic
+New sym int R.id.editText[379] min=-2147483648, max=2147483647
+New sym int R.id.editText[379].content.length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 1
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 1
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 1
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() != 0
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 1
+dbCursor.moveToNext() = 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 1
+dbCursor.moveToNext() = 0
+concolicPC constraint # = 0
+simplePC constraint # = 1
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 1
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() = 0
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+dbCursor.moveToNext() = 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 2
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 -> true
+
+constraint # = 2
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 2
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 2
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 3
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 3
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:5 sat:5 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:6 sat:6 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 4
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 4
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:7 sat:7 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:8 sat:8 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 5
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 5
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:9 sat:9 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:10 sat:10 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+numeric PC: constraint # = 6
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+constraint # = 6
+R.id.editText[379] != -1 &&
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+
+====================================================== search constraint
+depth limit reached: 10
+
+====================================================== snapshot 
+no live threads
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.getString().length min=-2147483648, max=2147483647
+New sym int dbCursor.moveToNext() min=0, max=1
+--------original PC------------0
+original pc constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+### PCs: total:11 sat:11 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--------original PC------------0
+original pc constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+--- end printing original PC ---
+--------begin after splitting------------
+originalPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+concolicPC constraint # = 0
+simplePC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+--------end after splitting------------
+numeric PC: constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() = 0
+### PCs: total:12 sat:12 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 6
+dbCursor.moveToNext() = 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0 &&
+dbCursor.moveToNext() != 0
+com.example.lab.testak_textinput.MainActivity$2.onClick
+====================================================== search constraint
+depth limit reached: 10
+
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at com.example.lab.testak_textinput.MainActivity$2.onClick(MainActivity.java:57)
+	at com.example.lab.testak_textinput.dummyMain.main(dummyMain.java:12)
+
+
+====================================================== Method Sequences
+[(expected = java.lang.NullPointerException.class), 		com_example_lab_testak_textinput_mainactivity.onCreate(null);, ##EXCEPTION## "java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object..."]
+[		com_example_lab_testak_textinput_mainactivity.onCreate(null);]
+
+====================================================== JUnit 4.0 test class
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class com_example_lab_testak_textinput_MainActivityTest {
+
+	private com.example.lab.testak_textinput.MainActivity com_example_lab_testak_textinput_mainactivity;
+
+	@Before
+	public void setUp() throws Exception {
+		com_example_lab_testak_textinput_mainactivity = new com.example.lab.testak_textinput.MainActivity();
+	}
+
+	@Test(expected = java.lang.NullPointerException.class)
+	public void test0() {
+		com_example_lab_testak_textinput_mainactivity.onCreate(null);
+		//should lead to ##EXCEPTION## "java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object..."
+	}
+
+	@Test
+	public void test1() {
+		com_example_lab_testak_textinput_mainactivity.onCreate(null);
+	}
+}
+
+====================================================== Method Summaries
+Inputs: savedInstanceState_CONCRETE,
+
+com.example.lab.testak_textinput.MainActivity.onCreate(null)  --> "java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object..."
+
+====================================================== Method Summaries (HTML)
+<h1>Test Cases Generated by Symbolic JavaPath Finder for com.example.lab.testak_textinput.MainActivity.onCreate (Path Coverage) </h1>
+<table border=1>
+<tr><td>savedInstanceState_CONCRETE</td><td>RETURN</td></tr>
+<tr><td>null</td><td>"java.lang.NullPointerException: Calling 'getText()Ljava/lang/Object;' on null object..."</td></tr>
+</table>
+
+====================================================== Vulnerability Detection Result
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.rawQueryWithFactory(SQLiteDatabase$CursorFactory,String,String[],String,CancellationSignal)
+2) android.database.sqlite.SQLiteDatabase.rawQuery(String,String[])
+3) com.example.lab.testak_textinput.MainActivity$2.onClick(View)
+4) com.example.lab.testak_textinput.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editText developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.widget.TextView.setText()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
+-----------------STACK TRACE OF CURRENT APPLICATION RUN FOR CATCHING VULNERABILITY--------------
+
+1) android.database.sqlite.SQLiteDatabase.rawQuery(String,String[])
+2) com.example.lab.testak_textinput.MainActivity$2.onClick(View)
+3) com.example.lab.testak_textinput.dummyMain.main(String[])
+
+-----------------END OF STACK TRACE--------------
+
+-----------------INFO OF INPUTS OF APP THAT CAUSE INJECTION VULNERABILITY--------------
+
+1) R.id.editText developer sanitizer for this input is OFF
+
+-----------------END OF NAME OF IDS----------------------------
+
+-----------------INFO OF OBJECT THAT CAUSE LEAKAGE--------------
+
+1) Method is android.widget.TextView.setText()
+
+
+-----------------END OF OBJECT INFO----------------------------
+
+
+
+====================================================== coverage statistics
+
+-------------------------------------------- class coverage ------------------------------------------------
+bytecode            line                basic-block         branch              methods             location
+------------------------------------------------------------------------------------------------------------
+ -                   -                   -                   -                   -                  [B
+ -                   -                   -                   -                   -                  [C
+ -                   -                   -                   -                   -                  [D
+ -                   -                   -                   -                   -                  [F
+ -                   -                   -                   -                   -                  [I
+ -                   -                   -                   -                   -                  [J
+ -                   -                   -                   -                   -                  [Ljava.io.ObjectStreamField;
+ -                   -                   -                   -                   -                  [Ljava.lang.String;
+ -                   -                   -                   -                   -                  [Ljava.lang.Thread$State;
+ -                   -                   -                   -                   -                  [Ljava.lang.Thread;
+ -                   -                   -                   -                   -                  [Ljava.util.Hashtable$Entry;
+ -                   -                   -                   -                   -                  [S
+ -                   -                   -                   -                   -                  [Z
+0.70 (14/20)        0.57 (4/7)          0.67 (6/9)           -                  0.50 (3/6)          android.app.Activity
+0.50 (3/6)          0.50 (1/2)          0.33 (1/3)           -                  0.50 (1/2)          android.content.Context
+ -                   -                   -                   -                   -                  android.database.Cursor
+0.23 (70/298)       0.23 (14/60)        0.18 (14/77)        0.00 (0/6)          0.35 (8/23)         android.database.sqlite.SQLiteDatabase
+0.10 (12/119)       0.11 (4/37)         0.08 (6/72)          -                  0.09 (3/35)         android.database.sqlite.SQLiteDatabase$1
+1.00 (7/7)          1.00 (3/3)          1.00 (4/4)           -                  1.00 (2/2)          android.support.v4.app.BaseFragmentActivityDonut
+0.88 (7/8)          0.75 (3/4)          0.80 (4/5)           -                  0.67 (2/3)          android.support.v4.app.FragmentActivity
+1.00 (9/9)          1.00 (5/5)          1.00 (6/6)           -                  1.00 (4/4)          android.support.v7.app.AppCompatActivity
+1.00 (3/3)          1.00 (1/1)          1.00 (2/2)           -                  1.00 (1/1)          android.support.v7.widget.Toolbar
+0.85 (11/13)        0.83 (5/6)          0.83 (5/6)          0.00 (0/1)          1.00 (3/3)          android.view.View
+ -                   -                   -                   -                   -                  android.view.View$OnClickListener
+1.00 (3/3)          1.00 (1/1)          1.00 (2/2)           -                  1.00 (1/1)          android.view.ViewGroup
+1.00 (12/12)        1.00 (4/4)          1.00 (4/4)           -                  1.00 (2/2)          android.widget.EditText
+1.00 (13/13)        1.00 (5/5)          1.00 (4/4)           -                  1.00 (2/2)          android.widget.TextView
+ -                   -                   -                   -                   -                  boolean
+ -                   -                   -                   -                   -                  byte
+ -                   -                   -                   -                   -                  char
+0.78 (69/88)        0.74 (17/23)        0.72 (21/29)        0.00 (0/1)          0.50 (2/4)          com.example.lab.testak_textinput.MainActivity
+0.41 (9/22)         0.33 (2/6)          0.29 (2/7)           -                  0.50 (1/2)          com.example.lab.testak_textinput.MainActivity$1
+1.00 (92/92)        1.00 (11/11)        1.00 (37/37)        1.00 (1/1)          1.00 (2/2)          com.example.lab.testak_textinput.MainActivity$2
+0.86 (18/21)        0.83 (5/6)          0.75 (6/8)           -                  0.50 (1/2)          com.example.lab.testak_textinput.dummyMain
+ -                   -                   -                   -                   -                  double
+ -                   -                   -                   -                   -                  float
+0.00 (0/3)          0.00 (0/1)          0.00 (0/2)           -                  0.00 (0/1)          gov.nasa.jpf.BoxObjectCaches
+0.00 (0/31)         0.00 (0/11)         0.00 (0/17)         0.00 (0/2)          0.00 (0/6)          gov.nasa.jpf.ConsoleOutputStream
+0.00 (0/36)         0.00 (0/13)         0.00 (0/19)         0.00 (0/3)          0.00 (0/5)          gov.nasa.jpf.FinalizerThread
+0.36 (21/59)        0.45 (5/11)         0.45 (13/29)        0.20 (1/5)          0.40 (2/5)          gov.nasa.jpf.symbc.Debug
+0.00 (0/261)        0.00 (0/45)         0.00 (0/121)        0.00 (0/7)          0.00 (0/91)         gov.nasa.jpf.vm.Verify
+ -                   -                   -                   -                   -                  int
+ -                   -                   -                   -                   -                  java.io.Closeable
+0.00 (0/101)        0.00 (0/18)         0.00 (0/35)         0.00 (0/6)          0.00 (0/6)          java.io.FilterOutputStream
+ -                   -                   -                   -                   -                  java.io.Flushable
+0.00 (0/126)        0.00 (0/37)         0.00 (0/43)         0.00 (0/11)         0.00 (0/9)          java.io.InputStream
+0.00 (0/58)         0.00 (0/14)         0.00 (0/23)         0.00 (0/8)          0.00 (0/5)          java.io.OutputStream
+0.00 (0/815)        0.00 (0/245)        0.00 (0/277)        0.00 (0/22)         0.00 (0/52)         java.io.PrintStream
+ -                   -                   -                   -                   -                  java.io.Serializable
+0.00 (0/1518)       0.00 (0/295)        0.00 (0/389)        0.00 (0/86)         0.00 (0/61)         java.lang.AbstractStringBuilder
+ -                   -                   -                   -                   -                  java.lang.Appendable
+ -                   -                   -                   -                   -                  java.lang.AutoCloseable
+0.15 (20/137)       0.21 (6/29)         0.09 (6/69)         0.00 (0/14)         0.11 (2/19)         java.lang.Boolean
+0.02 (4/167)        0.03 (1/36)         0.03 (2/68)         0.00 (0/6)          0.04 (1/25)         java.lang.Byte
+0.00 (0/29)         0.00 (0/5)          0.00 (0/11)          -                  0.00 (0/4)          java.lang.CharSequence
+0.00 (0/976)        0.00 (0/187)        0.00 (0/427)        0.00 (0/107)        0.00 (0/96)         java.lang.Character
+0.00 (0/266)        0.00 (0/55)         0.00 (0/107)        0.00 (0/12)         0.00 (0/33)         java.lang.Class
+0.00 (0/228)        0.00 (0/58)         0.00 (0/93)         0.00 (0/8)          0.00 (0/25)         java.lang.ClassLoader
+ -                   -                   -                   -                   -                  java.lang.Cloneable
+ -                   -                   -                   -                   -                  java.lang.Comparable
+0.02 (4/265)        0.02 (1/57)         0.02 (2/104)        0.00 (0/14)         0.03 (1/30)         java.lang.Double
+0.08 (9/119)        0.13 (4/30)         0.04 (2/51)         0.00 (0/6)          0.07 (1/14)         java.lang.Enum
+0.00 (0/23)         0.00 (0/10)         0.00 (0/10)          -                  0.00 (0/5)          java.lang.Exception
+0.02 (4/192)        0.02 (1/44)         0.03 (2/79)         0.00 (0/9)          0.03 (1/31)         java.lang.Float
+0.54 (1000/1846)    0.03 (5/167)        0.01 (2/209)        0.00 (0/42)         0.02 (1/55)         java.lang.Integer
+0.00 (4/1125)       0.00 (1/209)        0.01 (2/269)        0.00 (0/55)         0.02 (1/55)         java.lang.Long
+0.04 (7/175)        0.00 (0/29)         0.05 (3/64)         0.00 (0/16)         0.05 (1/19)         java.lang.Math
+0.00 (0/7)          0.00 (0/4)          0.00 (0/4)           -                  0.00 (0/2)          java.lang.NullPointerException
+0.00 (0/11)         0.00 (0/3)          0.00 (0/6)           -                  0.00 (0/3)          java.lang.Number
+0.07 (1/15)         0.33 (1/3)          0.11 (1/9)          0.00 (0/1)          0.17 (1/6)          java.lang.Object
+ -                   -                   -                   -                   -                  java.lang.Runnable
+0.00 (0/23)         0.00 (0/10)         0.00 (0/10)          -                  0.00 (0/5)          java.lang.RuntimeException
+0.03 (4/147)        0.03 (1/31)         0.04 (2/56)         0.00 (0/4)          0.04 (1/26)         java.lang.Short
+0.07 (34/468)       0.09 (10/108)       0.07 (10/143)       0.00 (0/14)         0.12 (5/43)         java.lang.String
+0.35 (6/17)         0.00 (0/2)          0.50 (4/8)           -                  0.50 (2/4)          java.lang.String$CaseInsensitiveComparator
+0.00 (0/455)        0.00 (0/61)         0.00 (0/174)         -                  0.00 (0/89)         java.lang.StringBuilder
+0.38 (50/130)       0.27 (11/41)        0.33 (16/49)        0.25 (1/4)          0.11 (2/19)         java.lang.System
+0.07 (3/42)         0.10 (1/10)         0.11 (2/18)          -                  0.11 (1/9)          java.lang.System$1
+0.00 (0/339)        0.00 (0/102)        0.00 (0/107)        0.00 (0/14)         0.00 (0/36)         java.lang.Thread
+0.00 (0/6)          0.00 (0/2)          0.00 (0/2)           -                  0.00 (0/1)          java.lang.Thread$Permit
+0.88 (69/78)        1.00 (1/1)          0.69 (9/13)          -                  0.50 (2/4)          java.lang.Thread$State
+ -                   -                   -                   -                   -                  java.lang.Thread$UncaughtExceptionHandler
+0.00 (0/840)        0.00 (0/194)        0.00 (0/240)        0.00 (0/69)         0.00 (0/35)         java.lang.ThreadGroup
+0.00 (0/118)        0.00 (0/43)         0.00 (0/40)         0.00 (0/5)          0.00 (0/13)         java.lang.Throwable
+0.00 (0/25)         0.00 (0/12)         0.00 (0/8)           -                  0.00 (0/6)          java.lang.ref.Reference
+0.00 (0/9)          0.00 (0/4)          0.00 (0/4)           -                  0.00 (0/2)          java.lang.ref.WeakReference
+0.00 (0/84)         0.00 (0/19)         0.00 (0/36)         0.00 (0/7)          0.00 (0/5)          java.lang.reflect.AnnotatedElement
+ -                   -                   -                   -                   -                  java.lang.reflect.GenericDeclaration
+0.00 (0/3)          0.00 (0/1)          0.00 (0/2)           -                  0.00 (0/1)          java.lang.reflect.Type
+0.00 (0/428)        0.00 (0/32)         0.00 (0/190)        0.00 (0/43)         0.00 (0/23)         java.util.Comparator
+1.00 (3/3)          1.00 (2/2)          1.00 (2/2)           -                  1.00 (1/1)          java.util.Dictionary
+0.11 (199/1740)     0.11 (43/383)       0.07 (33/453)       0.04 (4/110)        0.11 (5/47)         java.util.Hashtable
+0.13 (15/114)       0.27 (6/22)         0.05 (2/43)         0.00 (0/9)          0.13 (1/8)          java.util.Hashtable$Entry
+0.00 (0/290)        0.00 (0/78)         0.00 (0/113)        0.00 (0/22)         0.00 (0/11)         java.util.Map
+0.00 (0/226)        0.00 (0/11)         0.00 (0/106)        0.00 (0/28)         0.00 (0/9)          java.util.Map$Entry
+0.07 (78/1054)      0.03 (6/227)        0.02 (5/315)        0.00 (0/68)         0.12 (3/26)         java.util.Properties
+ -                   -                   -                   -                   -                  long
+ -                   -                   -                   -                   -                  short
+ -                   -                   -                   -                   -                  sun.misc.JavaLangAccess
+0.05 (6/110)        0.06 (3/49)         0.07 (3/46)         0.00 (0/7)          0.09 (2/22)         sun.misc.SharedSecrets
+0.06 (8/127)        0.07 (2/29)         0.10 (4/41)          -                  0.10 (2/21)         sun.misc.Unsafe
+ -                   -                   -                   -                   -                  void
+
+------------------------------------------------------------------------------------------------------------
+0.13 (1901/15139)   0.06 (196/3125)     0.05 (251/4571)     0.01 (7/753)        0.07 (77/1170)      1.00 (83/83)       total
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Calling 'getText()..."
+
+====================================================== statistics
+elapsed time:       00:00:02
+states:             new=17,visited=0,backtracked=17,end=5
+search:             maxDepth=10,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=10
+heap:               new=639,released=217,maxLive=464,gcCycles=14
+instructions:       4159
+max memory:         371MB
+loaded code:        classes=85,methods=1717
+
+====================================================== search finished: 11/5/17 2:43 PM
