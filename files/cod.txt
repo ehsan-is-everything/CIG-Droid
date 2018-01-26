@@ -1,40 +1,20 @@
 public Cursor rawQueryWithFactory(CursorFactory cursorFactory, String sql, String[] selectionArgs, String editTable,
-			CancellationSignal cancellationSignal) {
-		return new Cursor() {
-
-			@Override
-			public void setExtras(Bundle extras) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public Bundle respond(Bundle extras) {
-				// TODO Auto-generated method stub
-				return (Bundle) Debug.makeSymbolicRef("dbCursor.Bundle", extras);
-			}
-
-			@Override
-			public boolean requery() {
-				// TODO Auto-generated method stub
-				return Debug.makeSymbolicBoolean("dbCursor.requery()");
-			}
-
-			@Override
-			public boolean moveToPrevious() {
-				// TODO Auto-generated method stub
-				return Debug.makeSymbolicBoolean("dbCursor.moveToPrevious()");
-			}
-
-			@Override
-			public boolean moveToPosition(int position) {
-				// TODO Auto-generated method stub
-				return Debug.makeSymbolicBoolean("dbCursor.moveToPosition()");
-			}
-
-			@Override
-			public boolean moveToNext() {
-				// TODO Auto-generated method stub
-
-				return Debug.makeSymbolicBoolean("dbCursor.moveToNext()");
-			}
+CancellationSignal cancellationSignal) { return new Cursor() {
+@Override
+public void setExtras(Bundle extras) {	}
+	@Override
+	public Bundle respond(Bundle extras) {
+		return (Bundle) Debug.makeSymbolicRef("dbCursor.Bundle", extras);
+	}
+	@Override
+	public boolean requery() {
+		return Debug.makeSymbolicBoolean("dbCursor.requery()");
+	}
+	@Override
+	public boolean moveToPrevious() {
+		return Debug.makeSymbolicBoolean("dbCursor.moveToPrevious()");
+	}
+	@Override
+	public boolean moveToPosition(int position) {
+						return Debug.makeSymbolicBoolean("dbCursor.moveToPosition()");		
+	}
